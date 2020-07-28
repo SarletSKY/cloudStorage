@@ -19,4 +19,6 @@ const (
 	StatusInvalidToken
 	// FileAlreadExists : 10006 文件已存在
 	FileAlreadExists
+	// StatusUserNotExists : 10007 用户不存在
+	StatusUserNotExists
 )
