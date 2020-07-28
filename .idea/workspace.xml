@@ -25,20 +25,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ceph.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/ceph.go">
+      <file leaf-file-name="auth.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/handler/auth.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="62" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="62" />
+            <state relative-caret-position="475">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oss.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/oss.go">
+      <file leaf-file-name="download.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/download.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="125" column="56" lean-forward="true" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="handler.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/handler.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="348" selection-start-line="348" selection-end-line="348" />
+              <folding>
+                <element signature="n#!!block;n#UploadHandler#0" />
+                <element signature="n#!!block;n#UploadSucHandler#0" />
+                <element signature="n#!!block;n#GetFileMetaInfo#0" />
+                <element signature="n#!!block;n#GetManyFileMetaInfo#0" />
+                <element signature="n#!!block;n#UpdateFileInfo#0" />
+                <element signature="n#!!block;n#DeleteFile#0" />
+                <element signature="n#!!block;n#FastUploadUserFile#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mpupload.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handler/mpupload.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -90,6 +117,9 @@
     </replaceStrings>
   </component>
   <component name="GOROOT" path="/opt/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -162,6 +192,7 @@
     <option name="width" value="921" />
     <option name="height" value="1022" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <showMembers ProjectPane="true" />
@@ -178,12 +209,16 @@
             <path>
               <item name="filestore-server-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="filestore-server-study" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="filestore-server-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="filestore-server-study" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="meta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="filestore-server-study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -206,18 +241,18 @@
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/util" />
+      <recent name="$PROJECT_DIR$/doc" />
+      <recent name="$PROJECT_DIR$/static/view" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/service/upload" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/test/mpupload" />
       <recent name="$PROJECT_DIR$/test/mpload" />
       <recent name="$PROJECT_DIR$/db" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/util" />
-      <recent name="$PROJECT_DIR$/doc" />
-      <recent name="$PROJECT_DIR$/static/view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -303,24 +338,38 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14671814" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50398177" side_tool="true" weight="0.5533769" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50398177" side_tool="true" weight="0.5533769" />
+      <window_info anchor="bottom" id="GenProtobuf" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4960182" weight="0.45454547" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4960182" weight="0.28033474" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32929516" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49917263" weight="0.33590308" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13899614" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32819384" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49917263" weight="0.33751306" />
+      <window_info anchor="right" id="make" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14671814" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4960182" weight="0.45454547" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50398177" side_tool="true" weight="0.5533769" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39916405" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49917263" weight="0.33751306" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,13 +518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../filestore-server/db/file.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../filestore-server/db/file.go" />
     <entry file="file://$PROJECT_DIR$/test/mpupload/signin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -574,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/mpupload.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/store.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -592,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding>
-            <element signature="e#14#184#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -617,9 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#12#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -635,41 +665,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/handler.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="348" selection-start-line="348" selection-end-line="348" />
-          <folding>
-            <element signature="n#!!block;n#UploadHandler#0" />
-            <element signature="n#!!block;n#UploadSucHandler#0" />
-            <element signature="n#!!block;n#GetFileMetaInfo#0" />
-            <element signature="n#!!block;n#GetManyFileMetaInfo#0" />
-            <element signature="n#!!block;n#UpdateFileInfo#0" />
-            <element signature="e#6238#6573#0" />
-            <element signature="n#!!block;n#DeleteFile#0" />
-            <element signature="n#!!block;n#FastUploadUserFile#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/userfile.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="596">
           <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handler/download.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="125" column="56" lean-forward="true" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handler/auth.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -698,6 +697,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/download.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="125" column="56" lean-forward="true" selection-start-line="125" selection-start-column="56" selection-end-line="125" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/handler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="348" selection-start-line="348" selection-end-line="348" />
+          <folding>
+            <element signature="n#!!block;n#UploadHandler#0" />
+            <element signature="n#!!block;n#UploadSucHandler#0" />
+            <element signature="n#!!block;n#GetFileMetaInfo#0" />
+            <element signature="n#!!block;n#GetManyFileMetaInfo#0" />
+            <element signature="n#!!block;n#UpdateFileInfo#0" />
+            <element signature="n#!!block;n#DeleteFile#0" />
+            <element signature="n#!!block;n#FastUploadUserFile#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/mpupload.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" column="46" lean-forward="true" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handler/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>

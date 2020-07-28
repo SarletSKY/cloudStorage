@@ -1,35 +1,38 @@
 package handler
 
 import (
+	"filestore-server-study/common"
+	"filestore-server-study/util"
+	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 // token 拦截器
-func HTTPInterceptor(h http.HandlerFunc) http.HandlerFunc {
-	return http.HandlerFunc(
-		func(writer http.ResponseWriter, request *http.Request) {
-			request.ParseForm()
+func HTTPInterceptor(c *gin.Context) {
+	username := c.Request.Form.Get("username")
+	token := c.Request.Form.Get("token")
 
-			username := request.Form.Get("username")
-			token := request.Form.Get("token")
-
-			// 验证token
-			if len(username) < 3 || !ValidToToken(token) {
-				writer.WriteHeader(http.StatusForbidden)
-				return
-			}
-
-			h(writer, request)
-		})
+	c.Abort() //报错后面的方法不用在执行
+	// 验证token
+	if len(username) < 3 || !ValidToToken(token) {
+		resp := util.NewRespMsg(int(common.StatusInvalidToken), "token无效", nil)
+		c.JSON(http.StatusOK, resp)
+		return
+	}
+	c.Next()
 }
 
-// 跨域请求
-func ReceiveClientRequest(h http.HandlerFunc) http.HandlerFunc {
-	return http.HandlerFunc(
-		func(writer http.ResponseWriter, request *http.Request) {
-			writer.Header().Set("Access-Control-Allow-Origin", "*") //允许访问所有域
+// 允许跨域
+func CORS(c *gin.Context) {
+	c.Writer.Header().Set("text/plain", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Headers", "*")
+	c.Writer.Header().Set("Access-Control-Allow-Methods", "*")
 
-			request.ParseForm()
-			h(writer, request)
-		})
+	if c.Request.Method == "OPTIONS" {
+		c.String(http.StatusOK, "")
+	}
+
+	// 调用下个中间件
+	c.Next()
 }

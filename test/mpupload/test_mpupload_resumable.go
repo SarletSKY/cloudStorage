@@ -5,8 +5,8 @@ package mpupload
 import (
 	"encoding/json"
 	cmn "filestore-server-study/common"
+	"filestore-server-study/util"
 	fsUtil "filestore-server-study/util"
-	"filestore-server/util"
 	"flag"
 	"fmt"
 	"io/ioutil"

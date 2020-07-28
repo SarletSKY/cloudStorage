@@ -9,7 +9,7 @@ import (
 // 初始化连接池
 var (
 	pool      *redis.Pool
-	redisHost = "192.168.126.129:8080"
+	redisHost = "127.0.0.1:6379"
 	redisPass = "137908"
 )
 

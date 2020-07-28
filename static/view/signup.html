@@ -105,7 +105,8 @@
                 alert(textStatus);
             },
             success: function (data) {
-                if (data == 'SUCCESS') {
+                console.log(data);
+                if (data.msg == '注册成功') {
                     // 成功后跳到登录页
                     document.getElementById("login_hint").style.display = "block";
                     setTimeout(() => {

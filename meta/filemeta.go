@@ -71,10 +71,10 @@ func UpdateFileMetaDB(fm FileMeta) bool {
 }
 
 // 获取元信息[数据库]
-func GetFileMetaDB(sha1 string) (FileMeta, error) {
+func GetFileMetaDB(sha1 string) (*FileMeta, error) {
 	tableFile, err := db.GetFileInfoTodb(sha1)
 	if err != nil {
-		return FileMeta{}, err
+		return nil, err
 	}
 	fileMeta := FileMeta{
 		FileSha1: tableFile.FileSha1,
@@ -82,7 +82,7 @@ func GetFileMetaDB(sha1 string) (FileMeta, error) {
 		FileSize: tableFile.FileSize.Int64,
 		Location: tableFile.FileAdd.String,
 	}
-	return fileMeta, nil
+	return &fileMeta, nil
 }
 
 // 查询多个元信息,业务实现通过输入数量来返回查询个数 [数据库]

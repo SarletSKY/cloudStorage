@@ -61,6 +61,7 @@ const (
 func RemovePathByShell(delPath string) bool {
 	// 1. 将接收的文件路径进行传惨到变量中
 	cmdStr := strings.Replace(FileBlockDelCMD, "$1", delPath, 1)
+	cmdStr = strings.Replace(cmdStr, "#CHUNKDIR#", config.BlockLocalRootDir, 1)
 	// 2. 提取该bash命令进行cmd执行
 	cmd := exec.Command("bash", "-c", cmdStr)
 	if _, err := cmd.Output(); err != nil {
@@ -74,7 +75,7 @@ func RemovePathByShell(delPath string) bool {
 func MergeBlocksByShell(blockDir string, mergeDir string, filehash string) bool {
 	// 合并分块
 	cmdStr := strings.Replace(MergeFileCMD, "$1", blockDir, 1)
-	cmdStr = strings.Replace(MergeFileCMD, "#CHUNKDIR#", config.BlockLocalRootDir, 1)
+	cmdStr = strings.Replace(cmdStr, "$2", mergeDir, 1)
 	// 执行shell
 	cmd := exec.Command("bash", "-c", cmdStr)
 	if _, err := cmd.Output(); err != nil {
