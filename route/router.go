@@ -14,16 +14,17 @@ func Router() *gin.Engine {
 	//加载静态资源
 	router.Static("/static/", "./static")
 
-	// 加载中间件
-	//router.Use(http.HTTPInterceptor)
-	router.Use(handler.CORS)
-	router.Use(handler.HTTPInterceptor)
-
 	// 不需要验证的路由接口
 	router.GET("/user/signup", handler.SignUpUser)
 	router.GET("/user/signin", handler.SignInUser)
 	router.POST("/user/signup", handler.DoSignUpUser)
 	router.POST("/user/signin", handler.DoSignInUser)
+	router.POST("/user/info", handler.QueryUserInfo)
+
+	// 加载中间件
+	//router.Use(http.HTTPInterceptor)
+	router.Use(handler.CORS)
+	router.Use(handler.HTTPInterceptor)
 
 	// 需要验证的路由接口
 	router.GET("/file/upload", handler.UploadHandler)
@@ -46,8 +47,6 @@ func Router() *gin.Engine {
 	router.POST("/file/mpupload/uppart", handler.MultipartUpload)
 	router.POST("/file/mpupload/complete", handler.CompleteMultipartUpload)
 	router.POST("/file/mpupload/delete", handler.CancelUpload)
-
-	router.POST("/user/info", handler.QueryUserInfo)
 
 	return router
 }
