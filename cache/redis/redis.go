@@ -50,6 +50,12 @@ func newRedisPool() *redis.Pool {
 // 初始化就创建连接池
 func init() {
 	pool = newRedisPool()
+	// 初始化redis时查所有的keys
+	data, err := pool.Get().Do("KEYS", "*")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(data)
 }
 
 // 向外暴露连接池的接口

@@ -21,4 +21,6 @@ const (
 	FileAlreadExists
 	// StatusUserNotExists : 10007 用户不存在
 	StatusUserNotExists
+	// StatusMarshalInvalid : 10008 序列化出错
+	StatusMarshalInvalid
 )

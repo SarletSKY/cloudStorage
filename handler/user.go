@@ -132,22 +132,3 @@ func QueryUserInfo(c *gin.Context) {
 	}
 	c.Data(http.StatusOK, "octet-stream", resp.JSONBytes())
 }
-
-// 验证token
-func ValidToToken(token string) bool {
-	//token是否为40位
-	if len(token) != 40 {
-		return false
-	}
-	// TODO: 判断token的时效性，是否过期
-	// example，假设token的有效期为1天   (根据同学们反馈完善, 相对于视频有所更新)
-	tokenTS := token[:8]
-	if util.Hex2Dec(tokenTS) < time.Now().Unix()-86400 {
-		return false
-	}
-
-	// TODO: 从数据库表tbl_user_token查询username对应的token信息
-	// TODO: 对比两个token是否一致
-
-	return true
-}

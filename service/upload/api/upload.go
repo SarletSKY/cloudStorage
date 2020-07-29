@@ -1,24 +1,22 @@
-package handler
+package api
 
 import (
-	"encoding/json"
-	"filestore-server-study/common"
-	"filestore-server-study/config"
-	"filestore-server-study/db"
-	"filestore-server-study/meta"
-	"filestore-server-study/mq"
-	"filestore-server-study/store/ceph"
-	"filestore-server-study/store/oss"
-	"filestore-server-study/util"
-	"fmt"
 	"github.com/gin-gonic/gin"
-	"io"
 	"io/ioutil"
 	"net/http"
-	"os"
-	"strconv"
 	"time"
+	"os"
+	"io"
+	"encoding/json"
+	"strconv"
 )
+
+// 上传/秒传
+
+// 初始化api
+func init() {
+
+}
 
 // 上传文件[GET]
 func UploadHandler(c *gin.Context) {
@@ -208,163 +206,3 @@ func FastUploadUserFile(c *gin.Context) {
 	c.Data(http.StatusOK, "application/json", resp.JSONBytes())
 	return
 }
-
-//返回成功页面
-func UploadSucHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"code": 0,
-		"msg":  "Upload Finish!",
-	})
-}
-
-//获取元信息路由 获取时在终端使用命令[sha1sum 文件路径]获取sha1加密
-func GetFileMetaInfo(c *gin.Context) {
-
-	// 2.3 根据url上的filehash参数来去Meta中寻找元信息， 并进行json序列化返回
-	filehash := c.Request.FormValue("filehash") // 根据url上的参数对应来赋值
-	//fileMeta := meta.GetFileMeta(filehash)
-	fileMeta, err := meta.GetFileMetaDB(filehash)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"code": -2,
-			"msg":  "Upload failed",
-		})
-		return
-	}
-
-	if fileMeta != nil {
-		fileMtaBytes, err := json.Marshal(fileMeta)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{
-				"code": -3,
-				"msg":  "Upload failed",
-			})
-			return
-		}
-		c.Data(http.StatusOK, "application/json", fileMtaBytes)
-	} else {
-		c.JSON(http.StatusOK, gin.H{
-			"code": -4,
-			"msg":  "No sub file",
-		})
-	}
-}
-
-//获取多个元信息数据
-func GetManyFileMetaInfo(c *gin.Context) {
-
-	limitCount := c.Request.FormValue("limit")
-	// 转换int类型
-	limit, _ := strconv.Atoi(limitCount)
-
-	//fileMeta := meta.GetLastFileMeta(limit)
-	//5.4 升级为批量查询用户文件接口
-	//fileMeta, err := meta.GetLastFileMetaDB(limit)
-	username := c.Request.FormValue("username")
-	userFile, err := db.QueryMantUserFileDB(username, limit)
-
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"code": -1,
-			"msg":  "Query failed",
-		})
-		return
-	}
-	// 序列化数据
-	fileMetaBytes, err := json.Marshal(userFile)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"code": -2,
-			"msg":  "Query failed",
-		})
-		return
-	}
-	c.Data(http.StatusOK, "application/json", fileMetaBytes)
-}
-
-// 更新文件元信息(重命名)
-func UpdateFileInfo(c *gin.Context) {
-
-	// 通过sha1获取文件的元信息 op是指客户端需要操作的类型的标志
-	opType := c.Request.FormValue("op")
-	filehash := c.Request.FormValue("filehash")
-	fileName := c.Request.FormValue("filename")
-
-	// TODO: 6. 进行优化[将更新用户文件表元信息同时也要修改]
-	username := c.Request.Form.Get("username")
-
-	if opType != "0" || len(fileName) == 0 { // 0表示复制或者修改操作
-		c.Status(http.StatusForbidden)
-		return
-	}
-
-	// TODO: 6. 添加修改用户文件表, 并更改接口：文件元信息更新。也就是重命名，不需要更改文件表
-	_ = db.UpdateUserFileInfoDB(username, fileName, filehash)
-	/*	//curFileMeta := meta.GetFileMeta(filehash)
-		curFileMeta, err := meta.GetFileMetaDB(filehash)
-		if err != nil {
-			writer.WriteHeader(http.StatusInternalServerError)
-			return
-		}
-
-
-		// 修改文件名称名进行sha1哈系修改, 并加到fileMetaMap中
-		curFileMeta.FileName = fileName
-		//meta.UploadFileMeta(curFileMeta)
-		meta.UpdateFileMetaDB(curFileMeta)*/
-
-	// 返回成功页面
-	// 序列化数据
-	// TODO: 6. 将用户文件表中更改的那条数据重新获取出来，序列化返回
-	userFile, err := db.QueryUserFileDB(username, filehash)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-
-	//fileMetaBytes, err := json.Marshal(curFileMeta)
-	fileMetaBytes, err := json.Marshal(userFile)
-
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-	c.JSON(http.StatusOK, fileMetaBytes)
-}
-
-// 删除文件元信息
-func DeleteFile(c *gin.Context) {
-
-	// 删除备份
-	filehash := c.Request.FormValue("filehash")
-	username := c.Request.FormValue("username")
-
-	//fileMeta := meta.GetFileMeta(filehash)
-	fileMeta, err := meta.GetFileMetaDB(filehash)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-
-	err = os.Remove(fileMeta.Location)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-
-	// 删除元信息的map
-	//meta.DeleteFileMeta(filehash)
-	/*	if suc := meta.DeleteFileMetaDB(filehash); !suc {
-		writer.WriteHeader(http.StatusInternalServerError)
-		return
-	}*/
-	// TODO: 6. 修改删除接口，不要删除文件表的数据，而是删除文件表的数据
-	suc := db.DeleteUserFileDB(username, filehash)
-	if !suc {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-	c.Status(http.StatusOK)
-}
-
-

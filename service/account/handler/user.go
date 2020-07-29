@@ -5,13 +5,21 @@ import (
 	"filestore-server-study/common"
 	"filestore-server-study/config"
 	"filestore-server-study/db"
-	"filestore-server-study/handler"
 	proto "filestore-server-study/service/account/proto"
 	"filestore-server-study/util"
 	"fmt"
+	"time"
 )
 
 type User struct{}
+
+// 获取token
+func GetToken(username string) string {
+	timeNow := fmt.Sprintf("%x", time.Now().Unix())
+	tokenSalt := "private_zwx_key"
+	encToken := util.MD5([]byte(username + timeNow + tokenSalt))
+	return encToken + timeNow[:8]
+}
 
 // 注册用户
 func (u *User) Signup(ctx context.Context, req *proto.ReqSignup, resp *proto.RespSignup) error {
@@ -20,7 +28,7 @@ func (u *User) Signup(ctx context.Context, req *proto.ReqSignup, resp *proto.Res
 
 	// 判断用户密码的正确性
 	if len(username) < 3 || len(password) < 5 {
-		resp.Code = common.StatusRegisterFailed
+		resp.Code = common.StatusParamInvalid
 		resp.Message = "注册参数无效"
 		return nil
 	}
@@ -52,7 +60,7 @@ func (u *User) Signin(ctx context.Context, req *proto.ReqSignin, resp *proto.Res
 	}
 
 	// 生成token凭证 [token 40位  md5加密]
-	token := handler.GetToken(username)
+	token := GetToken(username)
 	suc = db.RegisterTokendb(username, token)
 	if !suc {
 		resp.Code = common.StatusServerError

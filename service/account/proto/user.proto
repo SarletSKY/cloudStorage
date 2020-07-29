@@ -9,6 +9,10 @@ service UserService {
     rpc Signin(ReqSignin) returns (RespSignin) {}
     // 获取用户信息
     rpc UserInfo(ReqUserInfo) returns (RespUserInfo) {}
+    // 获取用户文件表[信息]
+    rpc UserFiles(ReqUserFile) returns (RespUserFile) {}
+    // 获取用户文件[重命名]
+    rpc UserFileRename(ReqUserFileRename) returns (RespUserFileRename) {}
 }
 
 message ReqSignup {
@@ -45,4 +49,27 @@ message RespUserInfo {
     string signupAt = 6;
     string lastActiveAt = 7;
     int32 status = 8;
+}
+
+message ReqUserFile {
+    string username = 1;
+    int32 limit = 2;
+}
+
+message RespUserFile {
+    int32 code = 1;
+    string message = 2;
+    bytes fileData = 3;
+}
+
+message ReqUserFileRename {
+    string username = 1;
+    string filehash = 2;
+    string newFileName = 3;
+}
+
+message RespUserFileRename {
+    int32 code = 1;
+    string message = 2;
+    bytes fileData = 3;
 }

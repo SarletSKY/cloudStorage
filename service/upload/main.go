@@ -1,34 +1,48 @@
 package main
 
 import (
+	"filestore-server-study/config"
+	upCfg "filestore-server-study/service/upload/config"
+	upProto "filestore-server-study/service/upload/proto"
+	"filestore-server-study/service/upload/route"
+	upRpc "filestore-server-study/service/upload/rpc"
 	"fmt"
-	"net/http"
+	"github.com/micro/go-micro"
+	"time"
 )
 
-func main() {
-	// 静态资源处理
-	//http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
+// 启动rpc服务 micro服务
+func startRPCService() {
+	service := micro.NewService(
+		micro.Name("go.micro.service.upload"),
+		micro.RegisterTTL(time.Second*10),
+		micro.RegisterInterval(time.Second*5),
+		micro.Registry(config.RegistryConsul()),
+	)
+	// 初始化服务
+	service.Init()
 
-	//http.HandleFunc("/file/upload", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.UploadHandler)))
-	//http.HandleFunc("/file/upload/success", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.UploadSucHandler)))
-	//http.HandleFunc("/file/meta", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.GetFileMetaInfo)))
-	//http.HandleFunc("/file/query", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.GetManyFileMetaInfo)))
-	//http.HandleFunc("/file/download", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.DownLoadFile)))
-	//http.HandleFunc("/file/download/range", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.RangeDownload)))
-	//http.HandleFunc("/file/update", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.UpdateFileInfo)))
-	//http.HandleFunc("/file/delete", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.DeleteFile)))
-	//http.HandleFunc("/file/downloadurl", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.DownloadURL)))
+	// 加入服务
+	upProto.RegisterUploadServiceHandler(service.Server(), new(upRpc.Upload))
 
-	//http.HandleFunc("/file/fastupload", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.FastUploadUserFile)))
-
-	//http.HandleFunc("/file/mpupload/init", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.InitMultipartUpload)))
-	//http.HandleFunc("/file/mpupload/upload", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.MultipartUpload)))
-	//http.HandleFunc("/file/mpupload/complete", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.CompleteMultipartUpload)))
-	//http.HandleFunc("/file/mpupload/delete", handler.ReceiveClientRequest(handler.HTTPInterceptor(handler.CancelUpload)))
-
-	fmt.Println("已启动：8080端口......")
-	err := http.ListenAndServe(":8080", nil)
-	if err != nil {
-		fmt.Println("starting server failed")
+	//日动服务
+	if err := service.Run(); err != nil {
+		fmt.Println(err)
 	}
+}
+
+// 启动api服务
+func startAPIService() {
+	router := route.Router()
+	if err := router.Run(upCfg.UploadServiceHost); err != nil {
+		fmt.Println(err)
+	}
+}
+
+func main() {
+	// api服务
+	go startAPIService()
+
+	// rpc服务
+	startRPCService()
 }

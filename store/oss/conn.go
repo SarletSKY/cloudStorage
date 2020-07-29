@@ -51,3 +51,12 @@ func BucketLifecycleRule(bucketName string) {
 	rulesList := []oss.LifecycleRule{rule1}
 	Client().SetBucketLifecycle(bucketName, rulesList)
 }
+
+// 构造文件元信息
+func GenFileMeta(metas map[string]string) []oss.Option {
+	options := []oss.Option{}
+	for k, v := range metas {
+		options = append(options, oss.Meta(k, v))
+	}
+	return options
+}

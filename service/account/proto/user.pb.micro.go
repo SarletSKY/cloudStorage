@@ -40,6 +40,10 @@ type UserService interface {
 	Signin(ctx context.Context, in *ReqSignin, opts ...client.CallOption) (*RespSignin, error)
 	// 获取用户信息
 	UserInfo(ctx context.Context, in *ReqUserInfo, opts ...client.CallOption) (*RespUserInfo, error)
+	// 获取用户文件表[信息]
+	UserFiles(ctx context.Context, in *ReqUserFile, opts ...client.CallOption) (*RespUserFile, error)
+	// 获取用户文件[重命名]
+	UserFileRename(ctx context.Context, in *ReqUserFileRename, opts ...client.CallOption) (*RespUserFileRename, error)
 }
 
 type userService struct {
@@ -90,6 +94,26 @@ func (c *userService) UserInfo(ctx context.Context, in *ReqUserInfo, opts ...cli
 	return out, nil
 }
 
+func (c *userService) UserFiles(ctx context.Context, in *ReqUserFile, opts ...client.CallOption) (*RespUserFile, error) {
+	req := c.c.NewRequest(c.name, "UserService.UserFiles", in)
+	out := new(RespUserFile)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userService) UserFileRename(ctx context.Context, in *ReqUserFileRename, opts ...client.CallOption) (*RespUserFileRename, error) {
+	req := c.c.NewRequest(c.name, "UserService.UserFileRename", in)
+	out := new(RespUserFileRename)
+	err := c.c.Call(ctx, req, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // Server API for UserService service
 
 type UserServiceHandler interface {
@@ -99,6 +123,10 @@ type UserServiceHandler interface {
 	Signin(context.Context, *ReqSignin, *RespSignin) error
 	// 获取用户信息
 	UserInfo(context.Context, *ReqUserInfo, *RespUserInfo) error
+	// 获取用户文件表[信息]
+	UserFiles(context.Context, *ReqUserFile, *RespUserFile) error
+	// 获取用户文件[重命名]
+	UserFileRename(context.Context, *ReqUserFileRename, *RespUserFileRename) error
 }
 
 func RegisterUserServiceHandler(s server.Server, hdlr UserServiceHandler, opts ...server.HandlerOption) error {
@@ -106,6 +134,8 @@ func RegisterUserServiceHandler(s server.Server, hdlr UserServiceHandler, opts .
 		Signup(ctx context.Context, in *ReqSignup, out *RespSignup) error
 		Signin(ctx context.Context, in *ReqSignin, out *RespSignin) error
 		UserInfo(ctx context.Context, in *ReqUserInfo, out *RespUserInfo) error
+		UserFiles(ctx context.Context, in *ReqUserFile, out *RespUserFile) error
+		UserFileRename(ctx context.Context, in *ReqUserFileRename, out *RespUserFileRename) error
 	}
 	type UserService struct {
 		userService
@@ -128,4 +158,12 @@ func (h *userServiceHandler) Signin(ctx context.Context, in *ReqSignin, out *Res
 
 func (h *userServiceHandler) UserInfo(ctx context.Context, in *ReqUserInfo, out *RespUserInfo) error {
 	return h.UserServiceHandler.UserInfo(ctx, in, out)
+}
+
+func (h *userServiceHandler) UserFiles(ctx context.Context, in *ReqUserFile, out *RespUserFile) error {
+	return h.UserServiceHandler.UserFiles(ctx, in, out)
+}
+
+func (h *userServiceHandler) UserFileRename(ctx context.Context, in *ReqUserFileRename, out *RespUserFileRename) error {
+	return h.UserServiceHandler.UserFileRename(ctx, in, out)
 }

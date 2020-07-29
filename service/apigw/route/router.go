@@ -18,12 +18,14 @@ func Router() *gin.Engine {
 	router.GET("/user/signin", microHandler.SignInUser)
 	router.POST("/user/signup", microHandler.DoSignUpUser)
 	router.POST("/user/signin", microHandler.DoSignInUser)
+	router.POST("/user/info", microHandler.QueryUserInfo)
 
 	//中间件
 	router.Use(handler.HTTPInterceptor)
 	router.Use(handler.CORS)
 
-	router.POST("/user/info", microHandler.QueryUserInfo)
+	router.POST("/file/query", handler.GetManyFileMetaInfo)
+	router.POST("/file/update", handler.UpdateFileInfo)
 
 	return router
 }
