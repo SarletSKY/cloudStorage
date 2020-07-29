@@ -7,8 +7,11 @@ import (
 	"filestore-server-study/db"
 	"filestore-server-study/mq"
 	"filestore-server-study/store/oss"
+	"fmt"
+	"github.com/micro/go-micro"
 	"log"
 	"os"
+	"time"
 )
 
 // 实际消费者调用的文件转移函数
@@ -44,10 +47,37 @@ func ProcessTransfer(msg []byte) bool {
 	return true
 }
 
-func main() {
+// TODO: 将rabbitMQ 启动函数修改成微服务
+
+//异步rabbitMQ
+func startTransferService() {
+	if !config.AsyncTransferEnable {
+		log.Println("异步转移文件被禁用，使用同步转移文件...")
+		return
+	}
+	log.Println("文件转移服务启动中，开始监听转移任务队列...")
 	log.Println("开始监听转移消息队列")
 	mq.StartConsume(
 		config.TransOSSQueueName,
 		"transfer_oss",
 		ProcessTransfer)
+}
+
+// rpc服务
+func startRPCService() {
+	service := micro.NewService(
+		micro.Name("go.micro.service.transfer"),
+		micro.RegisterTTL(time.Second*10),
+		micro.RegisterInterval(time.Second*5),
+		micro.Registry(config.RegistryConsul()),
+	)
+	service.Init()
+	if err := service.Run(); err != nil {
+		fmt.Println(err)
+	}
+}
+func main() {
+	go startTransferService()
+
+	startRPCService()
 }
