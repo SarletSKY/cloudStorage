@@ -1,42 +1,54 @@
 package api
 
 import (
+	"encoding/json"
+	"filestore-server-study/common"
+	"filestore-server-study/config"
+	"filestore-server-study/db"
+	"filestore-server-study/meta"
+	"filestore-server-study/mq"
+	"filestore-server-study/store/ceph"
+	"filestore-server-study/store/oss"
+	"filestore-server-study/util"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"io"
 	"io/ioutil"
 	"net/http"
-	"time"
 	"os"
-	"io"
-	"encoding/json"
 	"strconv"
+	"time"
 )
 
 // 上传/秒传
 
 // 初始化api
 func init() {
-
-}
-
-// 上传文件[GET]
-func UploadHandler(c *gin.Context) {
-	data, err := ioutil.ReadFile("./static/view/index.html")
-	if err != nil {
-		c.String(http.StatusBadRequest, "网页不存在")
-		return
+	if err := os.MkdirAll(TempDir, 0744); err != nil {
+		fmt.Println("not found mkdir file" + TempDir)
+		os.Exit(1)
 	}
-	c.Header("Content-Type", "text/html; charset=utf-8")
-	c.String(http.StatusOK, string(data))
+	if err := os.MkdirAll(MergeDir, 0744); err != nil {
+		fmt.Println("found mkdir file" + MergeDir)
+		os.Exit(1)
+	}
 }
 
 // 上传文件[POST]
 func DoUploadHandler(c *gin.Context) {
 	errCode := 0
 	defer func() {
+		c.Header("Access-Control-Allow-Origin", "*")
+		c.Header("Access-Control-Allow-Methods", "POST, GET, OPTIONS")
 		if errCode < 0 {
 			c.JSON(http.StatusOK, gin.H{
 				"code": errCode,
-				"msg":  "Upload failed",
+				"msg":  "上传失败",
+			})
+		} else {
+			c.JSON(http.StatusOK, gin.H{
+				"code": errCode,
+				"msg":  "上传成功",
 			})
 		}
 	}()
@@ -144,22 +156,28 @@ func DoUploadHandler(c *gin.Context) {
 			fileMeta.Location = cephFilePath*/
 
 	//meta.UploadFileMeta(fileMeta)
-	_ = meta.UploadFileMetaDB(fileMeta)
+	suc := meta.UploadFileMetaDB(fileMeta)
+	if !suc {
+		errCode = -6
+		return
+	}
 
 	// 5.3 升级上传接口,将文件上传到用户文件表上
 	// 解析上下文获取username
 
 	username := c.Request.FormValue("username")
-	suc := db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize)
+	suc = db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize)
 	if !suc {
-		errCode = -5
+		errCode = -6
+	} else {
+		errCode = 0
 	}
 
 	// 2.1 处理成功页面
 	// 2.1 成功上传就进行重定向
 	//http.Redirect(writer, request, "/file/upload/success", http.StatusFound) // 重定向的状态码
 	// 5.1 跳转到登录页面
-	c.Redirect(http.StatusFound, "/static/view/home.html")
+
 }
 
 // 秒上传的接口

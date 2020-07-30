@@ -1,0 +1,989 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 17:21:05 | 304 |     270.535µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:21:05 | 304 |     193.576µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 17:21:05 | 304 |     169.927µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 17:21:05 | 304 |     367.006µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 17:21:05 | 304 |     278.139µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 17:21:05 | 304 |     411.388µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 17:21:06 | 404 |      48.006µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:21:07.723024 I | 
+2020-07-30 17:21:07.732040 I | 
+[GIN] 2020/07/30 - 17:21:07 | 200 |   47.795374ms | 192.168.126.135 | POST     "/user/signin"
+2020-07-30 17:23:59.544552 I | 
+2020-07-30 17:23:59.549103 I | 
+[GIN] 2020/07/30 - 17:23:59 | 200 |   43.016673ms | 192.168.126.135 | POST     "/user/signin"
+2020-07-30 17:24:01.150564 I | 
+2020-07-30 17:24:01.153119 I | 
+[GIN] 2020/07/30 - 17:24:01 | 200 |   24.200488ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:24:07 | 200 |    8.672622ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:24:08 | 304 |     188.478µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 17:24:08 | 304 |     141.439µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 17:24:08 | 304 |      99.019µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 17:24:08 | 304 |    2.960272ms | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 17:24:08 | 304 |     177.099µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 17:24:08 | 404 |       63.51µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:24:10.279029 I | 
+2020-07-30 17:24:10.280904 I | 
+[GIN] 2020/07/30 - 17:24:10 | 200 |   14.053798ms | 192.168.126.135 | POST     "/user/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+2020-07-30 17:30:44.734802 I | 
+2020-07-30 17:30:44.749479 I | 
+{10000 登录成功 {/static/view/home.html admin 6066f326ebcf415ff64092f93243990d5f229344 127.0.0.1:28080 127.0.0.1:38080}}
+[GIN] 2020/07/30 - 17:30:44 | 200 |  192.384178ms | 192.168.126.135 | POST     "/user/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 17:38:59 | 304 |     299.926µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:38:59 | 304 |    5.280378ms | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 17:38:59 | 304 |     169.611µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 17:38:59 | 304 |      740.69µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 17:38:59 | 304 |     177.581µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 17:38:59 | 304 |      339.88µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 17:39:00 | 404 |      59.556µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:39:03.525485 I | 
+2020-07-30 17:39:03.543305 I | 
+[GIN] 2020/07/30 - 17:39:03 | 200 |  149.685565ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:39:03 | 200 |     9.97986ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 17:39:04 | 200 |    9.892256ms | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 17:39:04 | 200 |    8.111912ms | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 17:39:04 | 200 |    9.074286ms | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 17:39:04 | 200 |    1.291332ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 17:39:04 | 404 |      46.493µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:39:04 | 200 |     2.72546ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 17:39:05 | 200 |    3.968739ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9368763dbe30166b4c43283938f3d1b95f229537"
+[GIN] 2020/07/30 - 17:39:05 | 200 |      39.338µs | 192.168.126.135 | POST     "/file/query?username=admin&token=9368763dbe30166b4c43283938f3d1b95f229537"
+[GIN] 2020/07/30 - 17:39:09 | 404 |      43.217µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:39:10.639651 I | 
+2020-07-30 17:39:10.642606 I | 
+[GIN] 2020/07/30 - 17:39:10 | 200 |    35.29668ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:39:11 | 404 |     175.111µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:39:12 | 200 |    6.201664ms | 192.168.126.135 | POST     "/user/info?username=admin&token=474a0a31e308e48498386efae4c9733d5f22953e"
+[GIN] 2020/07/30 - 17:39:12 | 200 |     382.377µs | 192.168.126.135 | POST     "/file/query?username=admin&token=474a0a31e308e48498386efae4c9733d5f22953e"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 17:42:36 | 404 |     152.002µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:42:38.107203 I | 
+2020-07-30 17:42:38.129152 I | 
+[GIN] 2020/07/30 - 17:42:38 | 200 |  211.708476ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:42:39 | 404 |      34.651µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:42:39 | 200 |   17.679045ms | 192.168.126.135 | POST     "/user/info?username=admin&token=ac874883ba51390831ddbede5aad9f415f22960e"
+[GIN] 2020/07/30 - 17:42:40 | 200 |      36.818µs | 192.168.126.135 | POST     "/file/query?username=admin&token=ac874883ba51390831ddbede5aad9f415f22960e"
+[GIN] 2020/07/30 - 17:42:44 | 200 |    9.049283ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:42:45 | 404 |      81.675µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:42:48.917142 I | 
+2020-07-30 17:42:48.921261 I | 
+[GIN] 2020/07/30 - 17:42:48 | 200 |   23.115315ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:42:50 | 404 |      64.802µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:42:50 | 200 |    6.926114ms | 192.168.126.135 | POST     "/user/info?username=admin&token=b6224ef2046459a929414140f456e7555f229618"
+[GIN] 2020/07/30 - 17:42:51 | 200 |      91.498µs | 192.168.126.135 | POST     "/file/query?username=admin&token=b6224ef2046459a929414140f456e7555f229618"
+[GIN] 2020/07/30 - 17:42:53 | 404 |      40.519µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:42:55 | 200 |     9.22024ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:42:59 | 200 |    7.629592ms | 192.168.126.135 | POST     "/user/signin"
+2020-07-30 17:43:27.542905 I | 
+2020-07-30 17:43:27.553380 I | 
+[GIN] 2020/07/30 - 17:43:27 | 200 |   47.623436ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:43:28 | 404 |      46.629µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:43:28 | 200 |     5.29204ms | 192.168.126.135 | POST     "/user/info?username=admin&token=63407dd47d7b960f246fd7f342d3f4945f22963f"
+[GIN] 2020/07/30 - 17:43:29 | 200 |      32.617µs | 192.168.126.135 | POST     "/file/query?username=admin&token=63407dd47d7b960f246fd7f342d3f4945f22963f"
+[GIN] 2020/07/30 - 17:43:31 | 404 |      43.418µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:43:44 | 302 |      49.523µs | 192.168.126.135 | GET      "/user/signup"
+[GIN] 2020/07/30 - 17:43:46 | 404 |      76.207µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:43:52 | 200 |   50.532147ms | 192.168.126.135 | POST     "/user/signup"
+[GIN] 2020/07/30 - 17:43:54 | 302 |      199.42µs | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/30 - 17:43:54 | 304 |     221.653µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:43:56 | 404 |      43.562µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:44:00.605350 I | 
+2020-07-30 17:44:00.620134 I | 
+[GIN] 2020/07/30 - 17:44:00 | 200 |    39.05691ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:44:02 | 404 |      35.462µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:44:03 | 200 |     4.70713ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=2a68a7fcf18340f399846fa6fc599b785f229660"
+[GIN] 2020/07/30 - 17:44:03 | 200 |      73.219µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=2a68a7fcf18340f399846fa6fc599b785f229660"
+[GIN] 2020/07/30 - 17:44:07 | 404 |       29.14µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:44:32 | 200 |    4.290251ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 17:44:32 | 304 |      237.61µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 17:44:32 | 304 |     149.573µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 17:44:32 | 304 |     150.185µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 17:44:32 | 304 |      207.83µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 17:44:32 | 304 |     112.119µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 17:44:33 | 404 |       45.57µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 17:53:31 | 304 |    1.410498ms | 192.168.126.135 | GET      "/static/view/signin.html"
+2020-07-30 17:53:31.647020 I | 
+2020-07-30 17:53:31.748968 I | 
+[GIN] 2020/07/30 - 17:53:31 | 200 |  239.998442ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:53:31 | 304 |      451.81µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 17:53:31 | 304 |     603.452µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 17:53:31 | 304 |     160.573µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 17:53:31 | 304 |     148.296µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 17:53:31 | 304 |     168.022µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 17:53:32 | 404 |      65.933µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 17:53:38.749840 I | 
+2020-07-30 17:53:38.752552 I | 
+[GIN] 2020/07/30 - 17:53:38 | 200 |   14.551385ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 17:53:40 | 404 |      42.409µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:53:41 | 200 |    8.197245ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=e59ddaae74e48a6f425c29d6b53b1da15f2298a2"
+[GIN] 2020/07/30 - 17:53:41 | 200 |      71.858µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=e59ddaae74e48a6f425c29d6b53b1da15f2298a2"
+[GIN] 2020/07/30 - 17:53:43 | 404 |      41.991µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 17:53:47 | 200 |    6.244589ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:18:39 | 200 |   11.639278ms | 192.168.126.135 | POST     "/user/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:23:11 | 200 |   31.819077ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:23:47 | 200 |   24.255664ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:23:47 | 304 |     114.748µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:23:47 | 304 |     170.628µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:23:47 | 304 |     109.932µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:23:47 | 304 |     109.247µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:23:47 | 304 |     274.932µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:23:48 | 404 |      190.87µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:23:48 | 200 |    4.182409ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:23:50 | 200 |   12.037667ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:23:56 | 200 |    2.875301ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:24:19 | 200 |     252.752µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:24:19 | 304 |      87.854µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:24:19 | 304 |      91.994µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:24:19 | 304 |    1.121362ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:24:19 | 304 |      90.894µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:24:19 | 304 |      91.396µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:24:20 | 404 |      71.779µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:24:20 | 200 |   10.695981ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:24:21 | 200 |    7.968257ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:24:24 | 200 |    4.385598ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:24:41 | 200 |     153.587µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:24:41 | 304 |     142.087µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:24:41 | 304 |     191.796µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:24:41 | 304 |     100.387µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:24:41 | 304 |     133.148µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:24:41 | 304 |     110.833µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:24:42 | 404 |      32.744µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:24:42 | 200 |    7.991887ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:28:50 | 200 |      508.06µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:28:50 | 304 |      98.677µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:28:50 | 304 |      78.496µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:28:50 | 304 |     108.482µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:28:50 | 304 |      69.905µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:28:50 | 304 |      81.552µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:28:50 | 404 |      30.299µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:28:50 | 200 |   13.455689ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:28:52 | 200 |    9.706318ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:31:13 | 200 |     3.04942ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:31:13 | 304 |     228.932µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:31:13 | 304 |      797.23µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:31:13 | 304 |     116.827µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:31:13 | 304 |     125.846µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:31:13 | 304 |     154.333µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:31:13 | 404 |      31.237µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:33:50 | 200 |     404.915µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:33:51 | 304 |      96.355µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:33:51 | 304 |     130.004µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:33:51 | 304 |      97.496µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:33:51 | 304 |      76.939µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:33:51 | 304 |      99.485µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:33:51 | 404 |     299.928µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:52 | 200 |   12.217891ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:53 | 200 |     5.22038ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:53 | 200 |    9.655733ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:54 | 200 |    2.665278ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:54 | 200 |     9.07098ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:54 | 200 |    4.482762ms | 192.168.126.135 | POST     "/user/signin"
+apigw登录失败 10004
+[GIN] 2020/07/30 - 18:33:54 | 200 |    3.872112ms | 192.168.126.135 | POST     "/user/signin"
+2020-07-30 18:34:01.632311 I | 
+2020-07-30 18:34:01.651596 I | 
+[GIN] 2020/07/30 - 18:34:01 | 200 |   94.784359ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:34:02 | 404 |      41.091µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:34:02 | 200 |    5.185871ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=e1a7c1b75f828a53f75728a5a406fd945f22a219"
+[GIN] 2020/07/30 - 18:34:02 | 200 |      25.052µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=e1a7c1b75f828a53f75728a5a406fd945f22a219"
+[GIN] 2020/07/30 - 18:34:48 | 404 |      58.613µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 18:34:49.668012 I | 
+2020-07-30 18:34:49.670048 I | 
+[GIN] 2020/07/30 - 18:34:49 | 200 |   27.696086ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:34:50 | 404 |      45.254µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:34:50 | 200 |    8.109953ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:34:50 | 200 |        24.4µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:34:59 | 200 |    7.132862ms | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 18:34:59 | 200 |   10.999939ms | 192.168.126.135 | GET      "/static/js/jquery-3.2.1.min.js"
+[GIN] 2020/07/30 - 18:34:59 | 200 |   21.017377ms | 192.168.126.135 | GET      "/static/css/fileinput.min.css"
+[GIN] 2020/07/30 - 18:34:59 | 200 |   10.900221ms | 192.168.126.135 | GET      "/static/js/piexif.min.js"
+[GIN] 2020/07/30 - 18:34:59 | 200 |    19.26843ms | 192.168.126.135 | GET      "/static/js/sortable.min.js"
+[GIN] 2020/07/30 - 18:34:59 | 200 |   18.059933ms | 192.168.126.135 | GET      "/static/js/purify.min.js"
+[GIN] 2020/07/30 - 18:34:59 | 200 |    2.155024ms | 192.168.126.135 | GET      "/static/js/fileinput.min.js"
+[GIN] 2020/07/30 - 18:34:59 | 200 |    9.009641ms | 192.168.126.135 | GET      "/static/js/theme.js"
+[GIN] 2020/07/30 - 18:35:00 | 404 |      79.692µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:13 | 404 |     103.848µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     285.093µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     105.253µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:51:14 | 304 |      80.398µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:51:14 | 304 |      87.264µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     109.646µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     173.345µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     100.575µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:51:14 | 304 |      322.88µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     122.901µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 18:51:14 | 404 |      48.147µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:14 | 304 |    5.212479ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 18:51:14 | 304 |     286.383µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 18:51:14 | 200 |   10.142588ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:14 | 200 |     105.457µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:16 | 304 |     137.396µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 18:51:16 | 304 |     124.329µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:51:16 | 304 |     136.766µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:51:16 | 304 |      86.563µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:51:16 | 304 |      90.129µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:51:16 | 304 |     124.798µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 18:51:16 | 304 |      85.507µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 18:51:16 | 304 |      64.052µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:51:16 | 304 |     280.497µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 18:51:17 | 304 |      95.495µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 18:51:17 | 304 |      99.979µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 18:51:17 | 404 |      27.057µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:17 | 200 |    3.697943ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:17 | 200 |      22.236µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:18 | 304 |       91.74µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 18:51:18 | 304 |      89.858µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:51:18 | 304 |     101.079µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:51:18 | 304 |      78.739µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:51:18 | 304 |      96.286µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:51:18 | 304 |      85.583µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 18:51:18 | 304 |     102.021µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:51:18 | 304 |       97.18µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 18:51:18 | 304 |      90.646µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 18:51:18 | 304 |     267.932µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 18:51:18 | 304 |     114.205µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 18:51:18 | 404 |      27.255µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:18 | 200 |    7.917444ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:18 | 200 |     121.434µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:21 | 404 |      33.419µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:24 | 404 |      32.975µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:26 | 404 |      31.208µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:32 | 404 |      27.106µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:32 | 304 |      111.26µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 18:51:33 | 304 |      90.778µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 18:51:33 | 304 |     189.314µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 18:51:33 | 304 |      99.121µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 18:51:33 | 304 |       86.71µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 18:51:33 | 304 |     136.343µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 18:51:33 | 304 |     114.506µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 18:51:33 | 304 |      92.104µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 18:51:33 | 304 |       96.57µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 18:51:33 | 404 |      38.209µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:33 | 304 |     100.597µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 18:51:33 | 304 |     164.575µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 18:51:34 | 200 |      3.5655ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:34 | 200 |      34.456µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=ae4f84643a22d9357cc84afa151cb5b45f22a249"
+[GIN] 2020/07/30 - 18:51:48 | 200 |     161.594µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 18:51:49 | 404 |      28.735µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 18:51:55.323311 I | 
+2020-07-30 18:51:55.334543 I | 
+[GIN] 2020/07/30 - 18:51:55 | 200 |    34.33934ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:51:55 | 404 |        73.2µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:51:56 | 200 |     3.13728ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=4b82bba127be92d708edc16c11bc9ead5f22a64b"
+[GIN] 2020/07/30 - 18:51:56 | 200 |      25.667µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=4b82bba127be92d708edc16c11bc9ead5f22a64b"
+[GIN] 2020/07/30 - 18:52:02 | 404 |      40.421µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:52:43 | 404 |      40.709µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (3 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 18:55:44 | 404 |     1.46519ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:55:44 | 404 |      35.006µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 18:55:46 | 404 |      18.501µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:55:46 | 404 |      23.012µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 18:55:46.685212 I | 
+2020-07-30 18:55:46.700028 I | 
+[GIN] 2020/07/30 - 18:55:46 | 200 |   74.179411ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 18:55:47 | 404 |      18.868µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:55:47 | 200 |    3.173345ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=6a426d0aae663665ff9be5fb4f8dd9055f22a732"
+[GIN] 2020/07/30 - 18:55:47 | 200 |      33.642µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=6a426d0aae663665ff9be5fb4f8dd9055f22a732"
+[GIN] 2020/07/30 - 18:55:47 | 404 |     177.388µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 18:55:48 | 404 |      21.183µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 18:55:49 | 404 |       18.29µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 19:10:30 | 404 |     1.17965ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:10:30 | 404 |     501.158µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:10:31 | 404 |      33.974µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 19:10:33.405101 I | 
+[GIN] 2020/07/30 - 19:10:33 | 404 |      73.214µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 19:10:33.432006 I | 
+[GIN] 2020/07/30 - 19:10:33 | 200 |  155.144332ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 19:10:34 | 404 |      32.078µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:10:35 | 200 |    5.637264ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:10:35 | 200 |      33.025µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:10:35 | 404 |      29.318µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:10:37 | 404 |      33.043µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:10:38 | 404 |      26.726µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:12:34 | 404 |      83.288µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:12:34 | 404 |      28.417µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:12:35 | 304 |       123.1µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     191.055µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 19:12:35 | 304 |      182.03µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     144.578µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     881.528µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     104.681µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     779.878µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     254.548µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 19:12:35 | 304 |     179.183µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 19:12:35 | 304 |    7.573682ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 19:12:35 | 304 |      121.77µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 19:12:35 | 404 |     110.488µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:12:36 | 200 |   14.800789ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:12:36 | 200 |      38.359µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:12:36 | 404 |      89.255µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:14:12 | 404 |      66.693µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:14:15 | 404 |      39.917µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:15:00 | 200 |   10.938648ms | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     126.422µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     141.033µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 19:15:01 | 304 |      236.65µs | 192.168.126.135 | GET      "/static/css/fileinput.min.css"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     196.866µs | 192.168.126.135 | GET      "/static/js/jquery-3.2.1.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     165.378µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     226.209µs | 192.168.126.135 | GET      "/static/js/sortable.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |       99.75µs | 192.168.126.135 | GET      "/static/js/piexif.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     113.501µs | 192.168.126.135 | GET      "/static/js/purify.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     170.023µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     279.003µs | 192.168.126.135 | GET      "/static/js/fileinput.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     161.278µs | 192.168.126.135 | GET      "/static/js/theme.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |      168.86µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 19:15:01 | 304 |     118.743µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:15:01 | 404 |      73.439µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:15:04 | 404 |      35.913µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:16:27 | 404 |      37.921µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:16:27 | 404 |      33.245µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:18:32 | 200 |    1.829951ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     137.823µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     122.112µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     121.663µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     142.476µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 19:18:32 | 304 |      192.61µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     240.886µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     121.828µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 19:18:32 | 304 |     139.963µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 19:18:33 | 404 |      41.831µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:18:33 | 304 |      96.027µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 19:18:33 | 304 |     127.542µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 19:18:33 | 200 |   19.188486ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:18:33 | 200 |      33.569µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:18:34 | 404 |      32.082µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:19:16 | 200 |    2.460963ms | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 19:19:17 | 404 |      39.215µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:19:18 | 404 |      35.602µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 19:26:25 | 404 |    5.575251ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:26:25 | 200 |   14.588272ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 19:26:25 | 404 |     2.15513ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     239.088µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     228.669µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     198.045µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     151.527µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     216.439µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 19:26:26 | 304 |      206.25µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     298.682µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 19:26:26 | 304 |     188.785µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 19:26:27 | 404 |      88.146µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:26:27 | 304 |    2.365012ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 19:26:27 | 304 |    1.834873ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 19:26:28 | 200 |  135.766933ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:26:28 | 200 |      41.005µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=66210aadb715985cf479faec6441ab215f22aaa9"
+[GIN] 2020/07/30 - 19:26:29 | 404 |      43.807µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:27:34 | 404 |      38.809µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 19:27:36.776015 I | 
+2020-07-30 19:27:36.801348 I | 
+[GIN] 2020/07/30 - 19:27:36 | 200 |  115.943262ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 19:27:37 | 304 |     140.543µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 19:27:37 | 404 |     276.454µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:27:38 | 404 |      42.057µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:27:40 | 200 |   19.460554ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 19:27:40 | 200 |      41.759µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 19:27:40 | 404 |     163.943µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:28:41 | 200 |     165.686µs | 192.168.126.135 | GET      "/file/query"
+[GIN] 2020/07/30 - 19:28:46 | 404 |      44.437µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:28:47 | 200 |   21.799328ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 19:28:47 | 200 |      38.696µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 19:28:47 | 404 |      45.598µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:29:37 | 304 |      200.83µs | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 19:29:38 | 404 |      39.015µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:29:39 | 404 |       42.05µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 19:31:30 | 200 |     555.549µs | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     277.564µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     148.839µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     199.496µs | 192.168.126.135 | GET      "/static/css/fileinput.min.css"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     126.894µs | 192.168.126.135 | GET      "/static/js/jquery-3.2.1.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     123.716µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     174.229µs | 192.168.126.135 | GET      "/static/js/piexif.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     498.212µs | 192.168.126.135 | GET      "/static/js/sortable.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     193.519µs | 192.168.126.135 | GET      "/static/js/purify.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     259.386µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     114.741µs | 192.168.126.135 | GET      "/static/js/fileinput.min.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     530.361µs | 192.168.126.135 | GET      "/static/js/theme.js"
+[GIN] 2020/07/30 - 19:31:31 | 304 |     137.089µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 19:31:32 | 304 |     439.902µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 19:31:32 | 404 |      40.007µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 19:31:34 | 404 |      30.589µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:08:08 | 404 |     155.266µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:08:08 | 200 |   32.881551ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 20:08:08 | 200 |     127.827µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 20:08:09 | 404 |      43.887µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     129.123µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     149.563µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     140.727µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     133.002µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     129.806µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     120.377µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     133.853µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     199.309µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:08:10 | 304 |     148.897µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:08:10 | 404 |      29.959µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:08:11 | 304 |     147.528µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:08:11 | 304 |     130.056µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:08:11 | 200 |    3.673358ms | 192.168.126.135 | POST     "/user/info?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 20:08:12 | 200 |     670.259µs | 192.168.126.135 | POST     "/file/query?username=zhaoweixiong&token=7619b3164bbef5434800d57625dc30425f22aea8"
+[GIN] 2020/07/30 - 20:08:12 | 404 |       36.91µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 20:26:08 | 302 |    2.630029ms | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/30 - 20:26:08 | 304 |     742.625µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 20:26:09 | 404 |     462.899µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:09 | 404 |     696.385µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:26:16 | 302 |      19.634µs | 192.168.126.135 | GET      "/user/signup"
+[GIN] 2020/07/30 - 20:26:16 | 304 |      94.114µs | 192.168.126.135 | GET      "/static/view/signup.html"
+[GIN] 2020/07/30 - 20:26:17 | 404 |      17.772µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:17 | 404 |      19.437µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:26:22 | 200 |   64.266873ms | 192.168.126.135 | POST     "/user/signup"
+[GIN] 2020/07/30 - 20:26:23 | 302 |       29.46µs | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/30 - 20:26:23 | 404 |      24.219µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:24 | 404 |       16.03µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 20:26:27.256257 I | 
+2020-07-30 20:26:27.260696 I | 
+[GIN] 2020/07/30 - 20:26:27 | 200 |   21.109981ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:26:27 | 304 |      72.614µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:26:27 | 404 |      28.285µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:27 | 200 |    1.866473ms | 192.168.126.135 | POST     "/user/info?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:26:27 | 200 |       21.17µs | 192.168.126.135 | POST     "/file/query?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:26:27 | 404 |      19.454µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:26:31 | 200 |    3.517876ms | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/30 - 20:26:31 | 404 |      19.652µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:31 | 404 |      21.471µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:26:38 | 404 |      22.798µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:26:38 | 200 |    1.504188ms | 192.168.126.135 | POST     "/user/info?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:26:38 | 200 |      49.867µs | 192.168.126.135 | POST     "/file/query?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:26:38 | 404 |      18.327µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:30:19 | 200 |    1.444771ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:30:19 | 304 |     187.224µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:30:19 | 304 |     695.813µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:30:19 | 304 |     161.254µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:30:19 | 304 |     171.658µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:30:19 | 304 |     142.087µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:30:19 | 304 |      146.24µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:30:19 | 304 |      156.05µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:30:19 | 304 |    1.041458ms | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:30:20 | 404 |      61.328µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:30:20 | 304 |    8.328439ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:30:20 | 304 |     275.661µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:30:20 | 200 |   10.957112ms | 192.168.126.135 | POST     "/user/info?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:30:20 | 200 |      41.835µs | 192.168.126.135 | POST     "/file/query?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:30:21 | 404 |      62.334µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:31:56 | 200 |     389.075µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     280.142µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     126.268µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     287.583µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     123.361µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     127.035µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     954.418µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     132.153µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     186.922µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:31:57 | 404 |      36.632µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:31:57 | 304 |     266.327µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:31:57 | 304 |        98.7µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:31:57 | 200 |    7.810999ms | 192.168.126.135 | POST     "/user/info?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:31:58 | 200 |      56.656µs | 192.168.126.135 | POST     "/file/query?username=admin&token=2a06d7692eca13740267dff6d540c97c5f22bc73"
+[GIN] 2020/07/30 - 20:31:58 | 404 |      33.006µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:32:06 | 404 |      48.987µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:32:07 | 404 |      80.037µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:32:09 | 404 |      72.937µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:32:09 | 404 |      27.948µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:32:10 | 404 |     132.406µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:32:11 | 404 |      41.996µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 20:32:11.746807 I | 
+2020-07-30 20:32:11.774433 I | 
+[GIN] 2020/07/30 - 20:32:11 | 200 |   48.796403ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:32:12 | 304 |     241.045µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:32:12 | 404 |      34.713µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:32:12 | 200 |    3.035952ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4049fd7326cd8a559c6837a46d6759aa5f22bdcb"
+[GIN] 2020/07/30 - 20:32:12 | 200 |      41.756µs | 192.168.126.135 | POST     "/file/query?username=admin&token=4049fd7326cd8a559c6837a46d6759aa5f22bdcb"
+[GIN] 2020/07/30 - 20:32:13 | 404 |      35.536µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 20:41:39 | 404 |     103.086µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 20:41:41.301568 I | 
+2020-07-30 20:41:41.315501 I | 
+[GIN] 2020/07/30 - 20:41:41 | 200 |  159.985032ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:41:41 | 304 |     185.895µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:41:41 | 404 |      67.466µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:41:42 | 404 |      39.745µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:41:43 | 200 |     6.28236ms | 192.168.126.135 | POST     "/user/info?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:41:43 | 200 |      97.618µs | 192.168.126.135 | POST     "/file/query?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+[GIN] 2020/07/30 - 20:41:43 | 404 |      29.184µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      66.471µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      95.346µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      42.568µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      48.362µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      44.229µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      50.539µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      65.047µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      83.085µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:47:18 | 304 |      63.819µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:47:18 | 304 |    1.026885ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:47:18 | 304 |     279.658µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:47:18 | 404 |      62.584µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:47:18 | 200 |    6.612533ms | 192.168.126.135 | POST     "/user/info?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:47:18 | 200 |      46.747µs | 192.168.126.135 | POST     "/file/query?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+[GIN] 2020/07/30 - 20:47:18 | 404 |      16.629µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      52.347µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      59.549µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:47:20 | 304 |        44.6µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      43.557µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      65.813µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      39.648µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      50.051µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      91.121µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      64.713µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      61.145µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:47:20 | 304 |      59.076µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:47:20 | 404 |      99.469µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:47:20 | 200 |    1.785047ms | 192.168.126.135 | POST     "/user/info?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:47:20 | 200 |      48.803µs | 192.168.126.135 | POST     "/file/query?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+[GIN] 2020/07/30 - 20:47:20 | 404 |      21.084µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      51.831µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      70.506µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      58.242µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      38.784µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      36.111µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      35.706µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      33.706µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      55.269µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      52.429µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:47:21 | 304 |     382.618µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:47:21 | 304 |      68.158µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:47:21 | 404 |      19.337µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:47:21 | 200 |     6.21354ms | 192.168.126.135 | POST     "/user/info?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:47:21 | 200 |      54.027µs | 192.168.126.135 | POST     "/file/query?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+[GIN] 2020/07/30 - 20:47:21 | 404 |      29.738µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      56.126µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:47:33 | 304 |       53.26µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/30 - 20:47:33 | 304 |       38.31µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      38.146µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      36.142µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      41.478µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      63.965µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/30 - 20:47:33 | 304 |     287.489µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      54.806µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/30 - 20:47:33 | 304 |       77.52µs | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/30 - 20:47:33 | 304 |      52.012µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/30 - 20:47:33 | 404 |      27.968µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:47:33 | 200 |    1.379119ms | 192.168.126.135 | POST     "/user/info?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:47:34 | 200 |      82.812µs | 192.168.126.135 | POST     "/file/query?username=admin&token=cc55fc8191381e34fdc137e16b4eac2e5f22c005"
+[GIN] 2020/07/30 - 20:47:34 | 404 |      23.959µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 20:49:14 | 404 |    1.045849ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:49:15 | 404 |      729.96µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 20:49:15.978543 I | 
+2020-07-30 20:49:16.000155 I | 
+[GIN] 2020/07/30 - 20:49:16 | 200 |   93.040614ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:49:16 | 304 |     572.062µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:49:16 | 404 |       18.97µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+zhaoweixiong 0 true
+[GIN] 2020/07/30 - 20:49:16 | 200 |      45.935µs | 192.168.126.135 | POST     "/user/info?username=admin&token=398a5ed377b94b5903d7f288a3bad5fe5f22c1cb"
+[GIN] 2020/07/30 - 20:49:16 | 304 |      90.075µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/30 - 20:49:16 | 404 |      15.878µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:49:16 | 404 |      25.316µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (4 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (4 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+2020-07-30 20:50:49.042482 I | 
+2020-07-30 20:50:49.047585 I | 
+[GIN] 2020/07/30 - 20:50:49 | 200 |   74.454664ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:50:49 | 404 |      27.912µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:50:49 | 200 |    1.733699ms | 192.168.126.135 | POST     "/user/info?username=admin&token=adad1dbb8e43caf4ae995a0cf6e076b35f22c229"
+------
+fileData:"[{\"UserName\":\"\",\"FileName\":\"a.log\",\"FileSize\":14,\"UploadAt\":\"2020-07-30 12:26:36\",\"LastUpdated\":\"2020-07-30 20:26:36\",\"FileHash\":\"c536e325231ccfb30f3333a9754fa70b84ef1365\"}]" 
+[91 123 34 85 115 101 114 78 97 109 101 34 58 34 34 44 34 70 105 108 101 78 97 109 101 34 58 34 97 46 108 111 103 34 44 34 70 105 108 101 83 105 122 101 34 58 49 52 44 34 85 112 108 111 97 100 65 116 34 58 34 50 48 50 48 45 48 55 45 51 48 32 49 50 58 50 54 58 51 54 34 44 34 76 97 115 116 85 112 100 97 116 101 100 34 58 34 50 48 50 48 45 48 55 45 51 48 32 50 48 58 50 54 58 51 54 34 44 34 70 105 108 101 72 97 115 104 34 58 34 99 53 51 54 101 51 50 53 50 51 49 99 99 102 98 51 48 102 51 51 51 51 97 57 55 53 52 102 97 55 48 98 56 52 101 102 49 51 54 53 34 125 93]
+[GIN] 2020/07/30 - 20:50:49 | 200 |    7.292343ms | 192.168.126.135 | POST     "/file/query?username=admin&token=adad1dbb8e43caf4ae995a0cf6e076b35f22c229"
+[GIN] 2020/07/30 - 20:50:49 | 404 |      58.055µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 20:54:40 | 404 |    1.356862ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:54:41 | 404 |   14.599924ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 20:54:41.297645 I | 
+2020-07-30 20:54:41.331543 I | 
+[GIN] 2020/07/30 - 20:54:41 | 200 |  198.636936ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:54:41 | 304 |     983.527µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:54:41 | 404 |      31.329µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:54:42 | 200 |    4.728101ms | 192.168.126.135 | POST     "/user/info?username=admin&token=23552a62f5ae3c4af812f8ecf53fa58d5f22c311"
+[GIN] 2020/07/30 - 20:54:42 | 200 |      41.854µs | 192.168.126.135 | POST     "/file/query?username=admin&token=23552a62f5ae3c4af812f8ecf53fa58d5f22c311"
+[GIN] 2020/07/30 - 20:54:42 | 404 |       29.58µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 20:57:35 | 404 |    1.376184ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:57:35 | 404 |      653.61µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 20:57:36.005694 I | 
+2020-07-30 20:57:36.044286 I | 
+[GIN] 2020/07/30 - 20:57:36 | 200 |  158.903344ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 20:57:36 | 304 |    4.191783ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 20:57:36 | 404 |      30.822µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 20:57:36 | 200 |    4.616602ms | 192.168.126.135 | POST     "/user/info?username=admin&token=24826959b48645fea70677c11f43306f5f22c3bf"
+[GIN] 2020/07/30 - 20:57:36 | 200 |      32.522µs | 192.168.126.135 | POST     "/file/query?username=admin&token=24826959b48645fea70677c11f43306f5f22c3bf"
+[GIN] 2020/07/30 - 20:57:37 | 404 |      90.623µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (4 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 21:01:40 | 404 |     922.112µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 21:01:40 | 404 |    5.299004ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 21:01:41.323300 I | 
+2020-07-30 21:01:41.347989 I | 
+[GIN] 2020/07/30 - 21:01:41 | 200 |  161.003255ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 21:01:41 | 304 |     783.615µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 21:01:41 | 404 |      45.943µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 21:01:42 | 200 |    3.558106ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9c6ebc4a905c9c637cdab12a878ce36e5f22c4b5"
+------
+fileData:"[{\"UserName\":\"\",\"FileName\":\"a.log\",\"FileSize\":14,\"UploadAt\":\"2020-07-30 12:26:36\",\"LastUpdated\":\"2020-07-30 20:26:36\",\"FileHash\":\"c536e325231ccfb30f3333a9754fa70b84ef1365\"}]" 
+[91 123 34 85 115 101 114 78 97 109 101 34 58 34 34 44 34 70 105 108 101 78 97 109 101 34 58 34 97 46 108 111 103 34 44 34 70 105 108 101 83 105 122 101 34 58 49 52 44 34 85 112 108 111 97 100 65 116 34 58 34 50 48 50 48 45 48 55 45 51 48 32 49 50 58 50 54 58 51 54 34 44 34 76 97 115 116 85 112 100 97 116 101 100 34 58 34 50 48 50 48 45 48 55 45 51 48 32 50 48 58 50 54 58 51 54 34 44 34 70 105 108 101 72 97 115 104 34 58 34 99 53 51 54 101 51 50 53 50 51 49 99 99 102 98 51 48 102 51 51 51 51 97 57 55 53 52 102 97 55 48 98 56 52 101 102 49 51 54 53 34 125 93]
+[GIN] 2020/07/30 - 21:01:42 | 200 |    8.439162ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9c6ebc4a905c9c637cdab12a878ce36e5f22c4b5"
+[GIN] 2020/07/30 - 21:01:42 | 404 |      31.221µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 21:04:39 | 404 |      86.469µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 21:04:40 | 404 |      27.581µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+2020-07-30 21:04:40.463579 I | 
+2020-07-30 21:04:40.471413 I | 
+[GIN] 2020/07/30 - 21:04:40 | 200 |   34.119234ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 21:04:40 | 304 |     165.797µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/30 - 21:04:41 | 404 |     145.473µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 21:04:41 | 200 |    8.009371ms | 192.168.126.135 | POST     "/user/info?username=admin&token=a66bd857207121e78f9d03cee00eb5d45f22c568"
+------
+fileData:"[{\"UserName\":\"\",\"FileName\":\"a.log\",\"FileSize\":14,\"UploadAt\":\"2020-07-30 12:26:36\",\"LastUpdated\":\"2020-07-30 20:26:36\",\"FileHash\":\"c536e325231ccfb30f3333a9754fa70b84ef1365\"}]" 
+[91 123 34 85 115 101 114 78 97 109 101 34 58 34 34 44 34 70 105 108 101 78 97 109 101 34 58 34 97 46 108 111 103 34 44 34 70 105 108 101 83 105 122 101 34 58 49 52 44 34 85 112 108 111 97 100 65 116 34 58 34 50 48 50 48 45 48 55 45 51 48 32 49 50 58 50 54 58 51 54 34 44 34 76 97 115 116 85 112 100 97 116 101 100 34 58 34 50 48 50 48 45 48 55 45 51 48 32 50 48 58 50 54 58 51 54 34 44 34 70 105 108 101 72 97 115 104 34 58 34 99 53 51 54 101 51 50 53 50 51 49 99 99 102 98 51 48 102 51 51 51 51 97 57 55 53 52 102 97 55 48 98 56 52 101 102 49 51 54 53 34 125 93]
+[GIN] 2020/07/30 - 21:04:41 | 200 |    3.199898ms | 192.168.126.135 | POST     "/file/query?username=admin&token=a66bd857207121e78f9d03cee00eb5d45f22c568"
+[GIN] 2020/07/30 - 21:04:41 | 404 |      30.055µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (4 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (4 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (4 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (4 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/30 - 21:06:51 | 404 |    1.659478ms | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+2020-07-30 21:06:51.930797 I | 
+2020-07-30 21:06:51.938629 I | 
+[GIN] 2020/07/30 - 21:06:51 | 200 |  129.612202ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/30 - 21:06:52 | 404 |     640.539µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN] 2020/07/30 - 21:06:52 | 404 |      39.827µs | 192.168.126.135 | GET      "/static/js/popper.min.js.map"
+[GIN] 2020/07/30 - 21:06:52 | 200 |    4.463661ms | 192.168.126.135 | POST     "/user/info?username=admin&token=f61cfc4ed884a3e2572f6f2d04839ada5f22c5eb"
+------
+fileData:"[{\"UserName\":\"\",\"FileName\":\"a.log\",\"FileSize\":14,\"UploadAt\":\"2020-07-30 12:26:36\",\"LastUpdated\":\"2020-07-30 20:26:36\",\"FileHash\":\"c536e325231ccfb30f3333a9754fa70b84ef1365\"}]" 
+[91 123 34 85 115 101 114 78 97 109 101 34 58 34 34 44 34 70 105 108 101 78 97 109 101 34 58 34 97 46 108 111 103 34 44 34 70 105 108 101 83 105 122 101 34 58 49 52 44 34 85 112 108 111 97 100 65 116 34 58 34 50 48 50 48 45 48 55 45 51 48 32 49 50 58 50 54 58 51 54 34 44 34 76 97 115 116 85 112 100 97 116 101 100 34 58 34 50 48 50 48 45 48 55 45 51 48 32 50 48 58 50 54 58 51 54 34 44 34 70 105 108 101 72 97 115 104 34 58 34 99 53 51 54 101 51 50 53 50 51 49 99 99 102 98 51 48 102 51 51 51 51 97 57 55 53 52 102 97 55 48 98 56 52 101 102 49 51 54 53 34 125 93]
+[GIN] 2020/07/30 - 21:06:53 | 200 |    7.152838ms | 192.168.126.135 | POST     "/file/query?username=admin&token=f61cfc4ed884a3e2572f6f2d04839ada5f22c5eb"
+[GIN] 2020/07/30 - 21:06:53 | 404 |      60.704µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"

@@ -10,18 +10,20 @@ import (
 )
 
 // token 拦截器
-func HTTPInterceptor(c *gin.Context) {
-	username := c.Request.Form.Get("username")
-	token := c.Request.Form.Get("token")
+func HTTPInterceptor() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		username := c.Request.FormValue("username")
+		token := c.Request.FormValue("token")
 
-	c.Abort() //报错后面的方法不用在执行
-	// 验证token
-	if len(username) < 3 || !ValidToToken(token) {
-		resp := util.NewRespMsg(int(common.StatusInvalidToken), "token无效", nil)
-		c.JSON(http.StatusOK, resp)
-		return
+		// 验证token
+		if len(username) < 3 || !ValidToToken(token) {
+			c.Abort() //报错后面的方法不用在执行
+			resp := util.NewRespMsg(int(common.StatusInvalidToken), "token无效", nil)
+			c.JSON(http.StatusOK, resp)
+			return
+		}
+		c.Next()
 	}
-	c.Next()
 }
 
 // 允许跨域

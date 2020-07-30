@@ -3,6 +3,7 @@ package handler
 import (
 	"context"
 	userProto "filestore-server-study/service/account/proto"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -34,6 +35,10 @@ func GetManyFileMetaInfo(c *gin.Context) {
 		rpcResp.FileData = []byte("[]")
 	}
 
+	fmt.Println("------")
+	fmt.Println(rpcResp)
+	fmt.Println(rpcResp.FileData)
+
 	c.Data(http.StatusOK, "application/json", rpcResp.FileData)
 }
 
@@ -46,7 +51,7 @@ func UpdateFileInfo(c *gin.Context) {
 	fileName := c.Request.FormValue("filename")
 
 	// TODO: 6. 进行优化[将更新用户文件表元信息同时也要修改]
-	username := c.Request.Form.Get("username")
+	username := c.Request.FormValue("username")
 
 	if opType != "0" || len(fileName) == 0 { // 0表示复制或者修改操作
 		c.Status(http.StatusForbidden)

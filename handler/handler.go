@@ -22,7 +22,7 @@ import (
 
 // 上传文件[GET]
 func UploadHandler(c *gin.Context) {
-	data, err := ioutil.ReadFile("./static/view/index.html")
+	data, err := ioutil.ReadFile("./static/view/upload.html")
 	if err != nil {
 		c.String(http.StatusBadRequest, "网页不存在")
 		return
@@ -291,7 +291,7 @@ func UpdateFileInfo(c *gin.Context) {
 	fileName := c.Request.FormValue("filename")
 
 	// TODO: 6. 进行优化[将更新用户文件表元信息同时也要修改]
-	username := c.Request.Form.Get("username")
+	username := c.Request.FormValue("username")
 
 	if opType != "0" || len(fileName) == 0 { // 0表示复制或者修改操作
 		c.Status(http.StatusForbidden)
@@ -366,5 +366,3 @@ func DeleteFile(c *gin.Context) {
 	}
 	c.Status(http.StatusOK)
 }
-
-

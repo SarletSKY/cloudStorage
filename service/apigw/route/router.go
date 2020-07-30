@@ -1,10 +1,10 @@
 package route
 
 import (
-	microHandler "filestore-server-study/service/apigw/handler"
+	"filestore-server-study/service/apigw/handler"
 	"github.com/gin-gonic/gin"
 
-	"filestore-server-study/handler"
+	"filestore-server-study/middleware"
 )
 
 // Router: 网关api路由
@@ -13,17 +13,17 @@ func Router() *gin.Engine {
 
 	router.Static("/static/", "./static")
 
+	router.Use(middleware.CORS)
 	// 注册
-	router.GET("/user/signup", microHandler.SignUpUser)
-	router.GET("/user/signin", microHandler.SignInUser)
-	router.POST("/user/signup", microHandler.DoSignUpUser)
-	router.POST("/user/signin", microHandler.DoSignInUser)
-	router.POST("/user/info", microHandler.QueryUserInfo)
+	router.GET("/user/signup", handler.SignUpUser)
+	router.GET("/user/signin", handler.SignInUser)
+	router.POST("/user/signup", handler.DoSignUpUser)
+	router.POST("/user/signin", handler.DoSignInUser)
 
 	//中间件
-	router.Use(handler.HTTPInterceptor)
-	router.Use(handler.CORS)
+	router.Use(middleware.HTTPInterceptor())
 
+	router.POST("/user/info", handler.QueryUserInfo)
 	router.POST("/file/query", handler.GetManyFileMetaInfo)
 	router.POST("/file/update", handler.UpdateFileInfo)
 

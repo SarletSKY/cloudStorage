@@ -75,19 +75,20 @@ func DoSignInUser(c *gin.Context) {
 	password := c.Request.FormValue("password")
 
 	// 用户登录
-	userCli, err := userCli.Signin(context.TODO(), &userProto.ReqSignin{
+	rpcResp, err := userCli.Signin(context.TODO(), &userProto.ReqSignin{
 		Username: username,
 		Password: password,
 	})
+
 	if err != nil {
 		log.Println(err.Error())
 		c.Status(http.StatusInternalServerError)
 		return
 	}
 
-	if userCli.Code != common.StatusOK {
+	if rpcResp.Code != common.StatusOK {
 		c.JSON(http.StatusOK, gin.H{
-			"code": userCli.Code,
+			"code": rpcResp.Code,
 			"msg":  "登录失败",
 		})
 		return
@@ -121,12 +122,12 @@ func DoSignInUser(c *gin.Context) {
 		}{
 			Location:    "/static/view/home.html",
 			Username:    username,
-			Token:       userCli.Token,
+			Token:       rpcResp.Token,
 			UploadEntry: uploadEntryResp.Entry,
 			DownEntry:   downloadEntryResp.Entry,
 		},
 	}
-	c.Data(http.StatusOK, "octet-stream", cliResp.JSONBytes())
+	c.Data(http.StatusOK, "application/json", cliResp.JSONBytes())
 }
 
 //查询用户信息 [这里要返回到前端两个数据,username与注册时间]
@@ -153,5 +154,5 @@ func QueryUserInfo(c *gin.Context) {
 			"LastActive": resp.LastActiveAt,
 		},
 	}
-	c.Data(http.StatusOK, "octet-stream", cliResp.JSONBytes())
+	c.Data(http.StatusOK, "application/json", cliResp.JSONBytes())
 }

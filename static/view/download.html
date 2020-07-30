@@ -13,7 +13,7 @@
         var filename = "unknown";
         var filesize = -1;
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             req.open("GET", url, true);
             addListeners(req);
             req.setRequestHeader('Range', 'bytes=' + lastByteLoaded + '-');
@@ -30,7 +30,7 @@
 
         function addListeners(req) {
             //监听进度事件
-            req.onprogress = function (evt) {
+            req.onprogress = function(evt) {
                 if (evt.lengthComputable) {
                     // 第一次获取文件总大小
                     if (filesize < 0) {
@@ -50,7 +50,7 @@
             };
 
             req.responseType = "arraybuffer"; // "blob";
-            req.onreadystatechange = function () {
+            req.onreadystatechange = function() {
                 if (req.status !== 200 && req.status !== 206) {
                     return;
                 }
@@ -60,7 +60,7 @@
                 if (req.readyState === 4) {}
             };
 
-            req.onload = function (oEvent) {
+            req.onload = function(oEvent) {
                 var arrayBuffer = req.response; // Note: not oReq.responseText
                 if (arrayBuffer) {
                     fileParts.push(new Uint8Array(arrayBuffer));

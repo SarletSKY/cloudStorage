@@ -13,13 +13,19 @@ check_process(){
     fi
 }
 
+build_service() {
+    go build -o service/bin/$1 service/$1/main.go
+    resbin=`ls service/bin/ | grep $1`
+    echo -e "\033[32m 编译完成: \033[0m service/bin/$resbin"
+}
+
 run_service(){
     nohup ./service/bin/$1 --registry=consul >> $logpath/$1.log 2>&1 &
     sleep 1
     check_process $1
 }
 
-logpath=/home/zwx/go/src/filestore-server-study
+logpath=/home/zwx/go/src/filestore-server-study/log
 
 mkdir -p $logpath
 
@@ -30,7 +36,7 @@ upload
 download
 transfer
 account
-apipw
+apigw
 "
 
 #执行编译service

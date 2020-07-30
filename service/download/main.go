@@ -1,4 +1,4 @@
-package download
+package main
 
 import (
 	"filestore-server-study/config"

@@ -9,41 +9,44 @@
     <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
 
+    <link rel="stylesheet" href="/static/css/custom.css">
+
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/js/bootstrap.min.js"></script>
 
     <script src="/static/js/auth.js"></script>
     <script src="/static/js/layer.js"></script>
+    <title>我的云盘</title>
 </head>
 
-<body style="width:100%;height:100%;background:#f8f8f8">
-    <div style="width:100%;height:100%;margin:0 0 10px 0;text-align: center;">
-        <div style="font-size:20px;font-weight:bold;color:#ddd; 
-      margin:0;padding-top:3px;background:#383e4b;height:40px;">
-            文件云盘首页
+<body class="home">
+    <div class="home-content">
+        <div class="home-title">
+            我的云盘
+            <button class="btn btn-primary logout" onclick="toLogout()">登出
+            </button>
         </div>
-        <table style="height:100%;width:100%;text-align: left;border-width: 2px; border-color: rgb(203, 215, 248);">
+        <table class="home-table">
             <tbody>
                 <tr style="margin-bottom: 20px;">
-                    <td style="width:15%;height: 100%;background: rgb(138, 186, 248);">
-                        <div style="text-align: top;height:20%;margin: 10px 0 0 10px;">
-                            <img style="width:80px;height:80px;" src="/static/img/avatar.jpeg"></img><br>
-                            用户名: <p id="username" style="color: seagreen"></p>
-                            注册时间: <p id="regtime" style="color: seagreen"></p>
+                    <td style="width:15%;height: 100%;">
+                        <div class="account">
+                            <img class="avatar" src="/static/img/avatar.jpg"></img><br>
+                            <span class="font-title">用户名:</span>
+                            <span class="font-content" id="username"></span><br>
+
+                            <span class="font-title">注册时间:</span>
+                            <span class="font-content" id="regtime"></span><br>
                         </div>
-                        <div style="height: 80%;"></div>
-                    </td>
-                    <td style="width: 3px;height:100%;">
-                        <div style="width:100%;height: 100%;background:rgb(68, 152, 248);"></div>
                     </td>
                     <td style="text-align: top;vertical-align: top;">
                         <div style="width:100%;">
                             <span>文件列表</span>
-                            <button class="btn btn-primary" onclick="toUploadFile()" style="margin:5px;">上传文件
+                            <button class="btn btn-primary home-button" onclick="toUploadFile()">上传文件
                             </button>
-                            <button class="btn btn-primary" onclick="toMPUploadFile()" style="margin:5px;">分块上传文件
+                            <button class="btn btn-primary home-button" onclick="toMPUploadFile()">分块上传文件
                             </button>
-                            <div style="width:100%;height: 1px;background:rgb(48, 143, 252);"></div>
+                            <div class="line-horizon"></div>
                         </div>
                         <div style="width:100%;">
                             <table id="filetbl" style="margin-left:3%;width:96%;">
@@ -67,27 +70,25 @@
 </body>
 
 <script lang="javascript">
-    window.onload = function () {
+    window.onload = function() {
         var username = document.getElementById('username');
         $.ajax({
             url: "/user/info?" + queryParams(),
             type: "POST",
-            error: function (err) {
+            error: function(err) {
                 alert(JSON.stringify(err));
             },
-            success: function (body) {
+            success: function(body) {
                 var resp = body;
-                if (typeof (resp) == 'string') {
+                if (typeof(resp) == 'string') {
                     resp = JSON.parse(body);
                 }
                 if (resp.code == 10005) {
                     window.location.href = "/static/view/signin.html";
                 }
-                if (resp.data) {
-                    document.getElementById("username").innerHTML = resp.data.Username;
-                    document.getElementById("regtime").innerHTML = resp.data.SignupAt;
-                    updateFileList();
-                }
+                document.getElementById("username").innerHTML = resp.data.Username;
+                document.getElementById("regtime").innerHTML = resp.data.SignupAt;
+                updateFileList();
             }
         });
     }
@@ -99,33 +100,30 @@
             data: {
                 limit: 15
             },
-            error: function (err) {
-                alert(err);
+            error: function(err) {
+                alert(JSON.stringify(err));
             },
-            success: function (body) {
+            success: function(body) {
                 if (!body) {
                     return;
                 }
                 var data = body;
-                if (typeof (data) === 'string') {
-                    data = JSON.parse(data);
-                }
                 if (!data || data.length <= 0) {
                     return;
                 }
+                var dlHost = 'http://localhost:8080';
+                var dlEntry = localStorage.getItem('downloadEntry');
+                if (dlEntry != '') {
+                    dlHost = 'http://' + dlEntry;
+                }
 
-                var downloadHtml = '<button class="btn btn-info" ' +
-                    'style="height:30px;margin:5px 3px;"' +
-                    'onClick = "downloadFile(\''+serverHost+'/file/' + 
-                    'downloadurl?filehash={0}&{1}\')">下载</button>';
-                var renameFileHtml = '<button class="btn btn-warning" ' +
-                    'style="height:30px;margin:5px 3px;"' +
-                    'onClick = "renameFile(\'{0}\',\'{1}\',\''+serverHost+'/file/' +
+                var downloadHtml = '<button class="btn btn-info home-button" ' +
+                    'onClick = "downloadFile(\'' + dlHost + '/file/downloadurl?filehash={0}&{1}\')">下载</button>';
+                var renameFileHtml = '<button class="btn btn-warning home-button" ' +
+                    'onClick = "renameFile(\'{0}\',\'{1}\',\'' + serverHost + '/file/' +
                     'update?op=0&filehash={2}&{3}\')">重命名</button>';
-                var cdlFileHtml = '<button class="btn btn-info" ' +
-                    'style="height:30px;margin:5px 3px;"' +
-                    'onClick = "cdlFile(\''+serverHost+'/file/' +
-                    'download/range?filehash={0}&{1}\')">断点下载(火狐)</button>';
+                var cdlFileHtml = '<button class="btn btn-info home-button" ' +
+                    'onClick = "cdlFile(\'' + dlHost + '/file/download/range?filehash={0}&{1}\')">断点下载</button>';
 
                 for (var i = 0; i < data.length; i++) {
                     var x = document.getElementById('filetbl').insertRow();
@@ -155,29 +153,32 @@
     }
 
     function toUploadFile() {
-        window.location.href = '/file/upload?' + queryParams();
+        // window.location.href = '/file/upload?' + queryParams();
+        window.location.href = "/static/view/upload.html";
     }
 
     function toMPUploadFile() {
         window.location.href = '/static/view/mpupload.html';
     }
 
+    function toLogout() {
+        logout();
+    }
+
     function downloadFile(durl) {
         $.ajax({
             url: durl,
             type: "POST",
-            error: function (err) {
-                alert(err);
+            error: function(err) {
+                alert(JSON.stringify(err));
             },
-            success: function (body) {
+            success: function(body) {
                 try {
-                    alert("文件即将下载自: \n" + body);
-                    if (body.indexOf('http:') == 0) {
-                        var elemIF = document.createElement("iframe");
-                        elemIF.src = body;
-                        elemIF.style.display = "none";
-                        document.body.appendChild(elemIF);
-                    }
+                    alert("文件即将下载自: " + body);
+                    var elemIF = document.createElement("iframe");
+                    elemIF.src = body;
+                    elemIF.style.display = "none";
+                    document.body.appendChild(elemIF);
                 } catch (e) {
                     alert(e);
                 }
@@ -199,14 +200,13 @@
 
     function renameFile(filehash, filename, renameUrl) {
         var newFileName = prompt("\n当前文件名: {0}\n\n请输入新的文件名: ".format(filename));
-        if (newFileName == null) {
-            return;
-        }
         newFileName = newFileName.trim();
+
         if (newFileName.length <= 0) {
             alert("文件名不能为空");
             return;
         }
+
         if (newFileName.indexOf(" ") >= 0) {
             alert("文件名不能包含空格");
             return;
@@ -215,10 +215,10 @@
         $.ajax({
             url: renameUrl + "&filename=" + newFileName,
             type: "POST",
-            error: function (msg) {
+            error: function(msg) {
                 alert(msg);
             },
-            success: function (body) {
+            success: function(body) {
                 alert("文件名修改成功");
                 window.location.href = '/static/view/home.html';
             }

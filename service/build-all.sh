@@ -32,12 +32,12 @@ run_service(){
 
 
 # 创建运行日志目录
-logpath=/home/zwx/go/src/filestore-server-study
+logpath=/home/zwx/go/src/filestore-server-study/log
 
 mkdir -p $logpath
 
 # 切换到工程根目录
-cd $GOPATH/src/filestore-service-study
+cd $GOPATH/src/filestore-server-study
 
 # 微服务可以用supervisor进程管理工具;
 # 或者也可以通过docker/k8s进行部署
@@ -47,7 +47,7 @@ upload
 download
 transfer
 account
-apipw
+apigw
 "
 
 # 执行编译service
