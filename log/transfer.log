@@ -138,3 +138,94 @@ data already exist, c536e325231ccfb30f3333a9754fa70b84ef1365
 2020-07-30 21:05:44.004009 I | Transport [http] Listening on [::]:33897
 2020-07-30 21:05:44.005180 I | Broker [http] Connected to [::]:34969
 2020-07-30 21:05:44.007124 I | Registry [consul] Registering node: go.micro.service.transfer-6220a8e8-8ebe-4781-9598-aaaefc614792
+2020-07-30 21:29:37.911977 I | Registry [consul] Deregistering node: go.micro.service.transfer-6220a8e8-8ebe-4781-9598-aaaefc614792
+2020-07-30 22:58:50.212346 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 22:58:50.213459 I | 开始监听转移消息队列
+2020-07-30 22:58:50.216321 I | Transport [http] Listening on [::]:45481
+2020-07-30 22:58:50.216411 I | Broker [http] Connected to [::]:46235
+2020-07-30 22:58:50.217366 I | Registry [consul] Registering node: go.micro.service.transfer-8df13935-4037-4c7a-ac45-63ad19fd3f7a
+2020-07-30 22:59:07.772797 I | {"FileHash":"c536e325231ccfb30f3333a9754fa70b84ef1365","CurLocation":"/data/fileserver_tmp/a.log","DestLocation":"oss/c536e325231ccfb30f3333a9754fa70b84ef1365","DestStoreType":3}
+data already exist, c536e325231ccfb30f3333a9754fa70b84ef1365
+2020-07-30 23:04:11.183302 I | Registry [consul] Deregistering node: go.micro.service.transfer-8df13935-4037-4c7a-ac45-63ad19fd3f7a
+2020-07-30 23:04:29.066106 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:04:29.067447 I | 开始监听转移消息队列
+2020-07-30 23:04:29.098107 I | Transport [http] Listening on [::]:34939
+2020-07-30 23:04:29.098183 I | Broker [http] Connected to [::]:41287
+2020-07-30 23:04:29.099258 I | Registry [consul] Registering node: go.micro.service.transfer-83c1b284-a33d-43f7-922a-c1768c32df7a
+2020-07-30 23:05:45.418176 I | {"FileHash":"a64e9fede92c55932ce82d77891f77a1f015a9f1","CurLocation":"/data/fileserver_tmp/examples.desktop","DestLocation":"oss/a64e9fede92c55932ce82d77891f77a1f015a9f1","DestStoreType":3}
+2020-07-30 23:18:17.627258 I | Registry [consul] Deregistering node: go.micro.service.transfer-83c1b284-a33d-43f7-922a-c1768c32df7a
+2020-07-30 23:18:32.685697 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:18:32.686256 I | 开始监听转移消息队列
+2020-07-30 23:18:32.705352 I | Transport [http] Listening on [::]:43021
+2020-07-30 23:18:32.705453 I | Broker [http] Connected to [::]:34863
+2020-07-30 23:18:32.706452 I | Registry [consul] Registering node: go.micro.service.transfer-231c16a1-6bb2-4f5b-8eba-aed9d97f53f8
+2020-07-30 23:19:01.489484 I | Registry [consul] Deregistering node: go.micro.service.transfer-231c16a1-6bb2-4f5b-8eba-aed9d97f53f8
+2020-07-30 23:19:07.727589 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:19:07.728511 I | 开始监听转移消息队列
+2020-07-30 23:19:07.732553 I | Transport [http] Listening on [::]:34079
+2020-07-30 23:19:07.732628 I | Broker [http] Connected to [::]:36633
+2020-07-30 23:19:07.733589 I | Registry [consul] Registering node: go.micro.service.transfer-a8743611-4074-4d7f-9111-92236c55c06a
+2020-07-30 23:20:22.450192 I | Registry [consul] Deregistering node: go.micro.service.transfer-a8743611-4074-4d7f-9111-92236c55c06a
+2020-07-30 23:20:38.530186 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:20:38.531303 I | 开始监听转移消息队列
+2020-07-30 23:20:38.554892 I | Transport [http] Listening on [::]:42049
+2020-07-30 23:20:38.555088 I | Broker [http] Connected to [::]:40731
+2020-07-30 23:20:38.557375 I | Registry [consul] Registering node: go.micro.service.transfer-3cb219fb-cc93-4ad3-950c-feb33cd49438
+2020-07-30 23:25:22.376711 I | Registry [consul] Deregistering node: go.micro.service.transfer-3cb219fb-cc93-4ad3-950c-feb33cd49438
+2020-07-30 23:25:43.978978 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:25:43.980965 I | 开始监听转移消息队列
+2020-07-30 23:25:44.019223 I | Transport [http] Listening on [::]:46237
+2020-07-30 23:25:44.020057 I | Broker [http] Connected to [::]:45761
+2020-07-30 23:25:44.021141 I | Registry [consul] Registering node: go.micro.service.transfer-4b5ff7f3-0d7f-45e3-9bdc-9e7ec02e2efa
+2020-07-30 23:31:38.340494 I | Registry [consul] Deregistering node: go.micro.service.transfer-4b5ff7f3-0d7f-45e3-9bdc-9e7ec02e2efa
+2020-07-30 23:31:57.066651 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:31:57.066758 I | 开始监听转移消息队列
+2020-07-30 23:31:57.094645 I | Transport [http] Listening on [::]:43057
+2020-07-30 23:31:57.095483 I | Broker [http] Connected to [::]:36477
+2020-07-30 23:31:57.097667 I | Registry [consul] Registering node: go.micro.service.transfer-1cff6d16-a148-4347-8c68-30f2bf0f8065
+2020-07-30 23:33:24.256826 I | Registry [consul] Deregistering node: go.micro.service.transfer-1cff6d16-a148-4347-8c68-30f2bf0f8065
+2020-07-30 23:33:52.914604 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:33:52.917533 I | 开始监听转移消息队列
+2020-07-30 23:33:52.965700 I | Transport [http] Listening on [::]:37673
+2020-07-30 23:33:52.967481 I | Broker [http] Connected to [::]:39565
+2020-07-30 23:33:52.972575 I | Registry [consul] Registering node: go.micro.service.transfer-d64fd832-7a4d-4b23-89b7-074961a88576
+2020-07-30 23:47:28.350407 I | Registry [consul] Deregistering node: go.micro.service.transfer-d64fd832-7a4d-4b23-89b7-074961a88576
+2020-07-30 23:48:21.328642 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-30 23:48:21.328778 I | 开始监听转移消息队列
+2020-07-30 23:48:21.349208 I | Transport [http] Listening on [::]:44665
+2020-07-30 23:48:21.349396 I | Broker [http] Connected to [::]:44049
+2020-07-30 23:48:21.351180 I | Registry [consul] Registering node: go.micro.service.transfer-d63272ca-203c-44b1-a1c1-ef8e1b70c2dd
+2020-07-30 23:57:15.984209 I | {"FileHash":"c536e325231ccfb30f3333a9754fa70b84ef1365","CurLocation":"/data/fileserver_tmp/a.log","DestLocation":"oss/c536e325231ccfb30f3333a9754fa70b84ef1365","DestStoreType":3}
+data already exist, c536e325231ccfb30f3333a9754fa70b84ef1365
+2020-07-31 00:22:35.813681 I | Registry [consul] Deregistering node: go.micro.service.transfer-d63272ca-203c-44b1-a1c1-ef8e1b70c2dd
+2020-07-31 00:23:05.813056 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 00:23:05.813811 I | 开始监听转移消息队列
+2020-07-31 00:23:05.815214 I | Transport [http] Listening on [::]:46485
+2020-07-31 00:23:05.818640 I | Broker [http] Connected to [::]:45505
+2020-07-31 00:23:05.821060 I | Registry [consul] Registering node: go.micro.service.transfer-08d375d3-81e7-4567-9945-9af5651f652a
+2020-07-31 00:25:30.818652 I | Registry [consul] Deregistering node: go.micro.service.transfer-08d375d3-81e7-4567-9945-9af5651f652a
+2020-07-31 00:25:56.361427 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 00:25:56.361653 I | 开始监听转移消息队列
+2020-07-31 00:25:56.374772 I | Transport [http] Listening on [::]:43125
+2020-07-31 00:25:56.374892 I | Broker [http] Connected to [::]:40645
+2020-07-31 00:25:56.380527 I | Registry [consul] Registering node: go.micro.service.transfer-f6af9245-aa8a-4d55-a737-f6361551a8a2
+2020-07-31 00:27:34.157183 I | Registry [consul] Deregistering node: go.micro.service.transfer-f6af9245-aa8a-4d55-a737-f6361551a8a2
+2020-07-31 00:28:02.261833 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 00:28:02.261980 I | 开始监听转移消息队列
+2020-07-31 00:28:02.276031 I | Transport [http] Listening on [::]:43295
+2020-07-31 00:28:02.276216 I | Broker [http] Connected to [::]:37065
+2020-07-31 00:28:02.279366 I | Registry [consul] Registering node: go.micro.service.transfer-df7466d1-fcfa-4802-ae9c-d7bfcfba8d88
+2020-07-31 00:29:24.049244 I | Registry [consul] Deregistering node: go.micro.service.transfer-df7466d1-fcfa-4802-ae9c-d7bfcfba8d88
+2020-07-31 00:29:48.332999 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 00:29:48.350691 I | 开始监听转移消息队列
+2020-07-31 00:29:48.350764 I | Transport [http] Listening on [::]:35723
+2020-07-31 00:29:48.350963 I | Broker [http] Connected to [::]:37955
+2020-07-31 00:29:48.353326 I | Registry [consul] Registering node: go.micro.service.transfer-e6d2a97b-5d1b-4ea0-bb19-9f3a7c57195a
+2020-07-31 00:31:37.710689 I | {"FileHash":"a64e9fede92c55932ce82d77891f77a1f015a9f1","CurLocation":"/data/fileserver_tmp/examples.desktop","DestLocation":"oss/a64e9fede92c55932ce82d77891f77a1f015a9f1","DestStoreType":3}
+data already exist, a64e9fede92c55932ce82d77891f77a1f015a9f1
+2020-07-31 00:37:05.872126 I | Registry [consul] Deregistering node: go.micro.service.transfer-e6d2a97b-5d1b-4ea0-bb19-9f3a7c57195a
+2020-07-31 00:37:32.071766 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 00:37:32.073346 I | 开始监听转移消息队列
+2020-07-31 00:37:32.123632 I | Transport [http] Listening on [::]:44635
+2020-07-31 00:37:32.125069 I | Broker [http] Connected to [::]:42281
+2020-07-31 00:37:32.128014 I | Registry [consul] Registering node: go.micro.service.transfer-bdb0060e-c563-41a1-abdc-7688163f3361

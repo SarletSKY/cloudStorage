@@ -192,7 +192,7 @@
 
                     currentChunk++;
 
-                    if (currentChunk < upInitRes.ChunkCount) {
+                    if (currentChunk < upInitRes.BlockCount) {
                         loadNext();
                     } else {
                         console.log(chunksSha1);
@@ -201,23 +201,23 @@
                 };
 
                 function loadNext() {
-                    if (currentChunk >= upInitRes.ChunkCount) {
+                    if (currentChunk >= upInitRes.BlockCount) {
                         resolve();
                         return;
                     }
 
                     let existChunk =
-                        upInitRes.ChunkExists.indexOf(currentChunk + 1) > -1;
+                        upInitRes.BlockExists.indexOf(currentChunk + 1) > -1;
                     if (existChunk) {
                         // 跳过已上传的分块
                         currentChunk++;
                         loadNext();
                     } else {
-                        let start = currentChunk * upInitRes.ChunkSize;
+                        let start = currentChunk * upInitRes.BlockCount;
                         let end =
-                            start + upInitRes.ChunkSize >= file.size ?
+                            start + upInitRes.BlockCount >= file.size ?
                             file.size :
-                            start + upInitRes.ChunkSize;
+                            start + upInitRes.BlockCount;
                         fileReader.readAsBinaryString(
                             blobSlice.apply(file, [start, end])
                         );
@@ -241,15 +241,15 @@
 
         // 检查已上传分块，并上传未上传分块
         async function uploadChunks() {
-            let hasUploaded = upInitRes.ChunkExists.length;
+            let hasUploaded = upInitRes.BlockExists.length;
             let percent =
                 Math.floor((hasUploaded / upInitRes.ChunkCount) * 100) + "%";
             $("#uploadProcessStyle2").css({
                 width: percent,
             });
             $("#uploadProcessValue2").html(percent);
-            for (let i = 0; i < upInitRes.ChunkCount; i++) {
-                let existChunk = upInitRes.ChunkExists.indexOf(i + 1) > -1;
+            for (let i = 0; i < upInitRes.BlockCount; i++) {
+                let existChunk = upInitRes.BlockExists.indexOf(i + 1) > -1;
                 //存在则不再上传
                 if (existChunk) {
                     continue;
@@ -260,7 +260,7 @@
 
                 //计算百分比
                 let percent =
-                    Math.floor((hasUploaded / upInitRes.ChunkCount) * 100) + "%";
+                    Math.floor((hasUploaded / upInitRes.BlockCount) * 100) + "%";
                 $("#uploadProcessStyle2").css({
                     width: percent,
                 });
@@ -272,9 +272,9 @@
         function doUploadChunk(chunkIdx) {
             return new Promise((resolve, reject) => {
                 let end =
-                    (chunkIdx + 1) * upInitRes.ChunkSize >= file.size ?
+                    (chunkIdx + 1) * upInitRes.BlockCount >= file.size ?
                     file.size :
-                    (chunkIdx + 1) * upInitRes.ChunkSize;
+                    (chunkIdx + 1) * upInitRes.BlockCount;
                 //构建表单参数
                 let url =
                     `${uploadHost}/file/mpupload/uppart?${queryParams()}` +
@@ -284,7 +284,7 @@
                 $.ajax({
                     url: url,
                     type: "post",
-                    data: file.slice(chunkIdx * upInitRes.ChunkSize, end),
+                    data: file.slice(chunkIdx * upInitRes.BlockCount, end),
                     async: true,
                     processData: false,
                     contentType: false,

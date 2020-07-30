@@ -301,3 +301,229 @@
 [GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
 [GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
 2020-07-30 21:05:42.055949 I | Registry [consul] Registering node: go.micro.service.download-edb587c4-b42a-42fc-88a8-e2bf14d4795a
+2020-07-30 21:29:36.804160 I | Registry [consul] Deregistering node: go.micro.service.download-edb587c4-b42a-42fc-88a8-e2bf14d4795a
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 22:58:48.334202 I | Transport [http] Listening on [::]:32945
+2020-07-30 22:58:48.335193 I | Broker [http] Connected to [::]:42179
+2020-07-30 22:58:48.336122 I | Registry [consul] Registering node: go.micro.service.download-c6e47638-0ae5-4ae3-9caf-b68ca3fcabe0
+2020-07-30 23:04:10.131130 I | Registry [consul] Deregistering node: go.micro.service.download-c6e47638-0ae5-4ae3-9caf-b68ca3fcabe0
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:04:26.891276 I | Transport [http] Listening on [::]:42257
+2020-07-30 23:04:26.891376 I | Broker [http] Connected to [::]:33829
+2020-07-30 23:04:26.892453 I | Registry [consul] Registering node: go.micro.service.download-e46a40ee-04e5-4c30-9fce-1fc7ab53e38d
+2020-07-30 23:18:16.569925 I | Registry [consul] Deregistering node: go.micro.service.download-e46a40ee-04e5-4c30-9fce-1fc7ab53e38d
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:18:30.478232 I | Transport [http] Listening on [::]:44063
+2020-07-30 23:18:30.478310 I | Broker [http] Connected to [::]:36751
+2020-07-30 23:18:30.481185 I | Registry [consul] Registering node: go.micro.service.download-d508e598-f422-45ea-93df-2064214516a1
+2020-07-30 23:19:00.431348 I | Registry [consul] Deregistering node: go.micro.service.download-d508e598-f422-45ea-93df-2064214516a1
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:19:05.681623 I | Transport [http] Listening on [::]:38585
+2020-07-30 23:19:05.681706 I | Broker [http] Connected to [::]:35243
+2020-07-30 23:19:05.682733 I | Registry [consul] Registering node: go.micro.service.download-4fc9f9c8-f996-4f62-837d-194d1546a940
+2020-07-30 23:20:21.386605 I | Registry [consul] Deregistering node: go.micro.service.download-4fc9f9c8-f996-4f62-837d-194d1546a940
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:20:36.239711 I | Transport [http] Listening on [::]:45331
+2020-07-30 23:20:36.239834 I | Broker [http] Connected to [::]:46109
+2020-07-30 23:20:36.240786 I | Registry [consul] Registering node: go.micro.service.download-41045cae-0943-4a55-bebb-ff165ef822db
+2020-07-30 23:25:21.317366 I | Registry [consul] Deregistering node: go.micro.service.download-41045cae-0943-4a55-bebb-ff165ef822db
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:25:41.972169 I | Transport [http] Listening on [::]:37425
+2020-07-30 23:25:41.976727 I | Broker [http] Connected to [::]:35015
+2020-07-30 23:25:41.977972 I | Registry [consul] Registering node: go.micro.service.download-d3a6b5b9-7cc9-469b-bf90-a75116c2b1ee
+2020-07-30 23:31:37.291285 I | Registry [consul] Deregistering node: go.micro.service.download-d3a6b5b9-7cc9-469b-bf90-a75116c2b1ee
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:31:54.708375 I | Transport [http] Listening on [::]:43897
+2020-07-30 23:31:54.708871 I | Broker [http] Connected to [::]:45429
+2020-07-30 23:31:54.713450 I | Registry [consul] Registering node: go.micro.service.download-366966e6-dc37-4a50-b020-5f043fc9290e
+2020-07-30 23:33:23.159550 I | Registry [consul] Deregistering node: go.micro.service.download-366966e6-dc37-4a50-b020-5f043fc9290e
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:33:50.553193 I | Transport [http] Listening on [::]:41685
+2020-07-30 23:33:50.553872 I | Broker [http] Connected to [::]:46019
+2020-07-30 23:33:50.556868 I | Registry [consul] Registering node: go.micro.service.download-10a25c88-318e-406e-96b3-26b07b38d536
+2020-07-30 23:47:27.230115 I | Registry [consul] Deregistering node: go.micro.service.download-10a25c88-318e-406e-96b3-26b07b38d536
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-30 23:48:19.042469 I | Transport [http] Listening on [::]:46369
+2020-07-30 23:48:19.042800 I | Broker [http] Connected to [::]:33649
+2020-07-30 23:48:19.045044 I | Registry [consul] Registering node: go.micro.service.download-3e912b10-b2ca-489a-9552-cb6e541cf8c7
+2020-07-31 00:22:34.755941 I | Registry [consul] Deregistering node: go.micro.service.download-3e912b10-b2ca-489a-9552-cb6e541cf8c7
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-31 00:23:03.716514 I | Transport [http] Listening on [::]:40517
+2020-07-31 00:23:03.718797 I | Broker [http] Connected to [::]:42125
+2020-07-31 00:23:03.721802 I | Registry [consul] Registering node: go.micro.service.download-479ea63b-679a-45eb-a6d7-c04e053671ef
+2020-07-31 00:25:29.729336 I | Registry [consul] Deregistering node: go.micro.service.download-479ea63b-679a-45eb-a6d7-c04e053671ef
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-31 00:25:55.620411 I | Transport [http] Listening on [::]:43055
+2020-07-31 00:25:55.718490 I | Broker [http] Connected to [::]:44901
+2020-07-31 00:25:55.722073 I | Registry [consul] Registering node: go.micro.service.download-93bba0e8-4fa4-4c3f-9833-39fb928ec50f
+2020-07-31 00:27:33.051101 I | Registry [consul] Deregistering node: go.micro.service.download-93bba0e8-4fa4-4c3f-9833-39fb928ec50f
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-31 00:27:59.689272 I | Transport [http] Listening on [::]:44311
+2020-07-31 00:27:59.690240 I | Broker [http] Connected to [::]:37883
+2020-07-31 00:27:59.692380 I | Registry [consul] Registering node: go.micro.service.download-9ff0821a-b2d5-4574-9db0-998772eae977
+2020-07-31 00:29:22.940170 I | Registry [consul] Deregistering node: go.micro.service.download-9ff0821a-b2d5-4574-9db0-998772eae977
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-31 00:29:46.298969 I | Transport [http] Listening on [::]:36935
+2020-07-31 00:29:46.300044 I | Broker [http] Connected to [::]:41485
+2020-07-31 00:29:46.302631 I | Registry [consul] Registering node: go.micro.service.download-69cfac2a-45bf-40d2-840b-2c90b70731c5
+2020-07-31 00:37:04.778590 I | Registry [consul] Deregistering node: go.micro.service.download-69cfac2a-45bf-40d2-840b-2c90b70731c5
+2020-07-31 00:37:30.063421 I | Transport [http] Listening on [::]:37643
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /file/download            --> filestore-server-study/service/download/api.DownLoadFile (4 handlers)
+[GIN-debug] GET    /file/download/range      --> filestore-server-study/service/download/api.RangeDownload (4 handlers)
+[GIN-debug] POST   /file/downloadurl         --> filestore-server-study/service/download/api.DownloadURL (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:38080
+2020-07-31 00:37:30.074424 I | Broker [http] Connected to [::]:46365
+2020-07-31 00:37:30.077139 I | Registry [consul] Registering node: go.micro.service.download-9510365d-48c5-40ec-ad2d-32956bfa1c83
+赵薇熊：
+[GIN] 2020/07/31 - 00:39:03 | 200 |   27.558879ms |       127.0.0.1 | POST     "/file/downloadurl?filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=3d29be4a112be04b235d5f5e4877655d5f22f7a0"

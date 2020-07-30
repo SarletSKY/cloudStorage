@@ -129,12 +129,12 @@ func DownloadURL(c *gin.Context) {
 		username := c.Request.FormValue("username")
 		token := c.Request.FormValue("token")
 		downloadURL := fmt.Sprintf("http://%s/file/download?filehash=%s&username=%s&token=%s",
-			c.Request.FormValue, filehash, username, token)
+			c.Request.Host, filehash, username, token)
 		c.Data(http.StatusOK, "octet-stream", []byte(downloadURL))
 	} else if strings.HasPrefix(row.FileAdd.String, "oss/") {
 		signedURL := oss.DownloadURL(row.FileAdd.String)
 		c.Data(http.StatusOK, "octet-stream", []byte(signedURL))
 	} else {
-		c.String(http.StatusInternalServerError, "ERROR: 下载链接错误")
+		c.String(http.StatusOK, "ERROR: 下载链接错误")
 	}
 }

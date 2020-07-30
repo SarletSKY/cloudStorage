@@ -114,17 +114,17 @@ func DoSignInUser(c *gin.Context) {
 		Code: int(common.StatusOK),
 		Msg:  "登录成功",
 		Data: struct {
-			Location    string
-			Username    string
-			Token       string
-			UploadEntry string
-			DownEntry   string
+			Location      string
+			Username      string
+			Token         string
+			UploadEntry   string
+			DownloadEntry string
 		}{
-			Location:    "/static/view/home.html",
-			Username:    username,
-			Token:       rpcResp.Token,
-			UploadEntry: uploadEntryResp.Entry,
-			DownEntry:   downloadEntryResp.Entry,
+			Location:      "/static/view/home.html",
+			Username:      username,
+			Token:         rpcResp.Token,
+			UploadEntry:   uploadEntryResp.Entry,
+			DownloadEntry: downloadEntryResp.Entry,
 		},
 	}
 	c.Data(http.StatusOK, "application/json", cliResp.JSONBytes())

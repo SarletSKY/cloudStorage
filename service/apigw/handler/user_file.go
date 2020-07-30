@@ -3,7 +3,6 @@ package handler
 import (
 	"context"
 	userProto "filestore-server-study/service/account/proto"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -34,10 +33,6 @@ func GetManyFileMetaInfo(c *gin.Context) {
 	if len(rpcResp.FileData) <= 0 {
 		rpcResp.FileData = []byte("[]")
 	}
-
-	fmt.Println("------")
-	fmt.Println(rpcResp)
-	fmt.Println(rpcResp.FileData)
 
 	c.Data(http.StatusOK, "application/json", rpcResp.FileData)
 }

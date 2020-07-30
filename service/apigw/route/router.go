@@ -13,13 +13,13 @@ func Router() *gin.Engine {
 
 	router.Static("/static/", "./static")
 
-	router.Use(middleware.CORS)
 	// 注册
 	router.GET("/user/signup", handler.SignUpUser)
 	router.GET("/user/signin", handler.SignInUser)
 	router.POST("/user/signup", handler.DoSignUpUser)
 	router.POST("/user/signin", handler.DoSignInUser)
 
+	router.Use(middleware.CORS)
 	//中间件
 	router.Use(middleware.HTTPInterceptor())
 

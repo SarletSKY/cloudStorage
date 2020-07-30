@@ -21,6 +21,7 @@ import (
 // 下载文件
 func DownLoadFile(c *gin.Context) {
 
+	fmt.Println("zhaoweixiong：")
 	filehash := c.Request.FormValue("filehash")
 	username := c.Request.FormValue("username")
 
@@ -63,7 +64,7 @@ func DownLoadFile(c *gin.Context) {
 			c.Status(http.StatusInternalServerError)
 			return
 		}
-	} else if strings.HasPrefix(fileMeta.Location, "oss") { // 从oss下载
+	} else if strings.HasPrefix(fileMeta.Location, config.OSSRootDir) { // 从oss下载
 		fmt.Println("to download file from oss...")
 		var err1 error
 		var err2 error
@@ -75,13 +76,13 @@ func DownLoadFile(c *gin.Context) {
 			}
 		}
 		if err1 != nil || err2 != nil {
+			c.Header("content-disposition", "attachment; filename=\""+userFileInfo.FileName+"\"")
 			c.Data(http.StatusInternalServerError, "application/octet-stream", fileBytes)
 		}
 	}
 
 	// 写数据到前端页面去
-	c.Writer.Header().Set("Content-Type", "application/octet-stream") // 下载二进制流
-	c.Writer.Header().Set("content-disposition", "attachment; filename=\""+userFileInfo.FileName+"\"")
+	c.Header("content-disposition", "attachment; filename=\""+userFileInfo.FileName+"\"")
 	c.FileAttachment(fileMeta.Location, userFileInfo.FileName)
 	c.Data(http.StatusOK, "application/octet-stream", fileBytes)
 }
@@ -132,6 +133,7 @@ func RangeDownload(c *gin.Context) {
 
 // 生成文件下载地址
 func DownloadURL(c *gin.Context) {
+	fmt.Println("赵薇熊：")
 	// TODO: 8. 对下载地址进行修改
 	filehash := c.Request.FormValue("filehash")
 	// 从文件表查找信息
@@ -145,16 +147,16 @@ func DownloadURL(c *gin.Context) {
 
 	// TODO: 8. 在oss中下载文件，不加上下载不了，因为要跨域请求。已经转移到auth.go文件
 	// 进行判断是oss还是ceph下载地址
-	if strings.HasPrefix(row.FileAdd.String, config.MergeLocalRootDir) || strings.HasPrefix(row.FileAdd.String, "/ceph") {
+	if strings.HasPrefix(row.FileAdd.String, config.MergeLocalRootDir) || strings.HasPrefix(row.FileAdd.String, config.CephRootDir) {
 		username := c.Request.FormValue("username")
 		token := c.Request.FormValue("token")
 		downloadURL := fmt.Sprintf("http://%s/file/download?filehash=%s&username=%s&token=%s",
-			c.Request.FormValue, filehash, username, token)
-		c.Data(http.StatusOK, "octet-stream", []byte(downloadURL))
-	} else if strings.HasPrefix(row.FileAdd.String, "oss/") {
+			c.Request.Host, filehash, username, token)
+		c.Data(http.StatusOK, "application/octet-stream", []byte(downloadURL))
+	} else if strings.HasPrefix(row.FileAdd.String, config.OSSRootDir) {
 		signedURL := oss.DownloadURL(row.FileAdd.String)
-		c.Data(http.StatusOK, "octet-stream", []byte(signedURL))
+		c.Data(http.StatusOK, "application/octet-stream", []byte(signedURL))
 	} else {
-		c.String(http.StatusInternalServerError, "ERROR: 下载链接错误")
+		c.Data(http.StatusOK, "application/octet-stream", []byte("ERROR: 下载链接错误"))
 	}
 }

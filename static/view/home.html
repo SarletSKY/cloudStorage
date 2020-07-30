@@ -170,10 +170,12 @@
             url: durl,
             type: "POST",
             error: function(err) {
+                console.log(durl);
                 alert(JSON.stringify(err));
             },
             success: function(body) {
                 try {
+                    console.log(durl);
                     alert("文件即将下载自: " + body);
                     var elemIF = document.createElement("iframe");
                     elemIF.src = body;

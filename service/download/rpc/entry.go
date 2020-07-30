@@ -8,7 +8,7 @@ import (
 
 type Download struct{}
 
-func (d *Download) DownloadEntry(ctx context.Context, req *dlProto.ReqEntry, resp *dlProto.RespEntry) error {
+func (u *Download) DownloadEntry(ctx context.Context, req *dlProto.ReqEntry, resp *dlProto.RespEntry) error {
 	resp.Entry = config.DownloadEntry
 	return nil
 }

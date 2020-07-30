@@ -11,6 +11,5 @@ type Upload struct{}
 //获取上传入口
 func (u *Upload) UploadEntry(ctx context.Context, req *upProto.ReqEntry, resp *upProto.RespEntry) error {
 	resp.Entry = config.UploadEntry
-	resp.Code = 0
 	return nil
 }
