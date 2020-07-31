@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"filestore-server-study/common"
+	"filestore-server-study/db"
 	"filestore-server-study/util"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -16,7 +17,7 @@ func HTTPInterceptor() gin.HandlerFunc {
 		token := c.Request.FormValue("token")
 
 		// 验证token
-		if len(username) < 3 || !ValidToToken(token) {
+		if len(username) < 3 || !ValidToToken(username, token) {
 			c.Abort() //报错后面的方法不用在执行
 			resp := util.NewRespMsg(int(common.StatusInvalidToken), "token无效", nil)
 			c.JSON(http.StatusOK, resp)
@@ -42,7 +43,7 @@ func CORS(c *gin.Context) {
 }
 
 // 验证token
-func ValidToToken(token string) bool {
+func ValidToToken(username string, token string) bool {
 	//token是否为40位
 	if len(token) != 40 {
 		return false
@@ -55,8 +56,9 @@ func ValidToToken(token string) bool {
 		return false
 	}
 
-	// TODO: 从数据库表tbl_user_token查询username对应的token信息
-	// TODO: 对比两个token是否一致
-
+	tokenToDB, err := db.GetUserToken(username)
+	if err != nil || tokenToDB != token {
+		return false
+	}
 	return true
 }

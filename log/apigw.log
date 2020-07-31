@@ -1637,3 +1637,86 @@ fileData:"[{\"UserName\":\"\",\"FileName\":\"1.log\",\"FileSize\":14,\"UploadAt\
 [GIN] 2020/07/31 - 00:38:58 | 200 |    5.059465ms | 192.168.126.135 | POST     "/user/info?username=admin&token=3d29be4a112be04b235d5f5e4877655d5f22f7a0"
 [GIN] 2020/07/31 - 00:38:58 | 200 |    3.934791ms | 192.168.126.135 | POST     "/file/query?username=admin&token=3d29be4a112be04b235d5f5e4877655d5f22f7a0"
 [GIN] 2020/07/31 - 00:38:59 | 404 |      33.396µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css.map"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 11:47:49 | 302 |     969.037µs | 192.168.126.135 | GET      "/user/signup"
+[GIN] 2020/07/31 - 11:47:49 | 304 |     740.856µs | 192.168.126.135 | GET      "/static/view/signup.html"
+[GIN] 2020/07/31 - 11:47:50 | 304 |     556.944µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 11:47:50 | 304 |     258.862µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 11:47:50 | 304 |     859.528µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/31 - 11:47:50 | 304 |     188.306µs | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/31 - 11:47:50 | 304 |     252.267µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 11:48:02 | 302 |      52.789µs | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/31 - 11:48:02 | 304 |     319.932µs | 192.168.126.135 | GET      "/static/view/signin.html"
+2020-07-31 11:48:06.557238 I | 
+2020-07-31 11:48:06.564739 I | 
+[GIN] 2020/07/31 - 11:48:06 | 200 |    94.69369ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 11:48:06 | 200 |    6.524387ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 11:48:06 | 304 |     201.831µs | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/31 - 11:48:06 | 304 |     119.361µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 11:48:06 | 304 |     280.769µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 11:48:06 | 304 |     708.732µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 11:48:06 | 304 |    1.021678ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+sql exec failed,err:  sql: Scan error on column index 0, name "user_token": destination not a pointer
+[GIN] 2020/07/31 - 11:48:07 | 200 |    1.294137ms | 192.168.126.135 | POST     "/user/info?username=admin&token=850a375883e4c8fb998c9637cb609e835f239476"
+2020-07-31 11:48:17.606993 I | 
+2020-07-31 11:48:17.608825 I | 
+[GIN] 2020/07/31 - 11:48:17 | 200 |   18.596576ms | 192.168.126.135 | POST     "/user/signin"
+sql exec failed,err:  sql: Scan error on column index 0, name "user_token": destination not a pointer
+[GIN] 2020/07/31 - 11:48:18 | 200 |    2.104234ms | 192.168.126.135 | POST     "/user/info?username=admin&token=25aa62fe95b3c33159aa9766d051401d5f239481"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+2020-07-31 11:52:42.407823 I | 
+2020-07-31 11:52:42.419823 I | 
+[GIN] 2020/07/31 - 11:52:42 | 200 |   98.146586ms | 192.168.126.135 | POST     "/user/signin"
+d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
+[GIN] 2020/07/31 - 11:52:43 | 200 |     6.13943ms | 192.168.126.135 | POST     "/user/info?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
+d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
+[GIN] 2020/07/31 - 11:52:43 | 200 |   16.333127ms | 192.168.126.135 | POST     "/file/query?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"

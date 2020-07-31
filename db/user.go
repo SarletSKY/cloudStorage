@@ -103,3 +103,20 @@ func QueryUserInfodb(username string) (TableUser, error) {
 	}
 	return user, nil
 }
+
+// 查询用户token信息
+func GetUserToken(username string) (string, error) {
+	var token string
+	stmt, err := mysql.DBConn().Prepare("select user_token from tbl_user_token where user_name=?")
+	if err != nil {
+		fmt.Println("Failed to prepare statement query token failed ,err", err.Error())
+		return "", err
+	}
+
+	err = stmt.QueryRow(username).Scan(&token)
+	if err != nil {
+		fmt.Println("sql exec failed,err: ", err.Error())
+		return "", err
+	}
+	return token, nil
+}
