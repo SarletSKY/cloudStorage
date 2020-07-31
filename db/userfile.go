@@ -134,16 +134,22 @@ func DeleteUserFileDB(username string, filehash string) bool {
 }
 
 // 用户文件名改之前，文件名有没有被使用
-func QueryUserFileNameExist(username string, filehash string, filename string) bool {
-	stmt, err := mysql.DBConn().Prepare("select * from tbl_user_file where user_name=? and file_name=? and file_sha1=?")
+func QueryUserFileNameExist(username string, filename string) bool {
+	var queryFileName string
+	stmt, err := mysql.DBConn().Prepare("select file_name from tbl_user_file where user_name=? and file_name=? limit 1")
 	if err != nil {
 		fmt.Println(err.Error())
 		return false
 	}
 
 	defer stmt.Close()
-	row := stmt.QueryRow(username, filename, filehash).Scan()
-	if row == nil {
+	err = stmt.QueryRow(username, filename).Scan(&queryFileName)
+	if err != nil {
+		fmt.Println(err.Error())
+		return false
+	}
+
+	if queryFileName != "" {
 		return true
 	}
 	return false

@@ -218,16 +218,18 @@
             url: renameUrl + "&filename=" + newFileName,
             type: "POST",
             error: function(msg) {
+                console.log(msg);
                 alert(msg);
             },
             success: function(body) {
                 var resp = body;
                 console.log(resp);
-                if (resp.data.Code == 10006) {
-                    alert("文件名已经存在，请重新输入");
-                    window.location.href = '/static/view/home.html';
+                console.log(resp.code);
+                if (resp.code == 10006){
+                    alert("文件名已经存在，操作失败")
+                }else{
+                    alert("文件名修改成功");
                 }
-                alert("文件名修改成功");
                 window.location.href = '/static/view/home.html';
             }
         });

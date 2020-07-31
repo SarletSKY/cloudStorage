@@ -2,7 +2,9 @@ package handler
 
 import (
 	"context"
+	"filestore-server-study/common"
 	userProto "filestore-server-study/service/account/proto"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -66,7 +68,14 @@ func UpdateFileInfo(c *gin.Context) {
 	}
 
 	if len(rpcResp.FileData) <= 0 {
-		rpcResp.FileData = []byte("[]")
+		if rpcResp.Code == common.FileAlreadExists {
+			c.JSON(http.StatusOK, gin.H{
+				"code": rpcResp.Code,
+				"msg":  rpcResp.Message,
+			})
+		} else {
+			rpcResp.FileData = []byte("[]")
+		}
 	}
 
 	c.Data(http.StatusOK, "application/json", rpcResp.FileData)

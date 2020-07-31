@@ -768,3 +768,221 @@ ERR Client sent AUTH, but no password is set
 2020-07-31 13:02:21.853317 I | Broker [http] Connected to [::]:37019
 2020-07-31 13:02:21.858564 I | Registry [consul] Registering node: go.micro.service.upload-4916d3e3-746b-4478-8c31-261e80012d97
 2020-07-31 13:02:34.923032 I | Registry [consul] Deregistering node: go.micro.service.upload-4916d3e3-746b-4478-8c31-261e80012d97
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 13:14:32.890059 I | Transport [http] Listening on [::]:44719
+2020-07-31 13:14:32.897041 I | Broker [http] Connected to [::]:38239
+2020-07-31 13:14:32.901017 I | Registry [consul] Registering node: go.micro.service.upload-2bc4c2f1-7035-4609-b455-7d9f53d374e2
+true
+[GIN] 2020/07/31 - 13:15:12 | 200 |  136.635316ms |       127.0.0.1 | POST     "/file/upload?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
+2020-07-31 13:16:56.027015 I | Registry [consul] Deregistering node: go.micro.service.upload-2bc4c2f1-7035-4609-b455-7d9f53d374e2
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 13:18:05.902620 I | Transport [http] Listening on [::]:33633
+2020-07-31 13:18:05.902913 I | Broker [http] Connected to [::]:38495
+2020-07-31 13:18:05.910778 I | Registry [consul] Registering node: go.micro.service.upload-5be84030-94ca-439e-a96f-f5a682167082
+true
+[GIN] 2020/07/31 - 13:18:45 | 200 |  130.446319ms |       127.0.0.1 | POST     "/file/upload?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+true
+[GIN] 2020/07/31 - 13:19:10 | 200 |    41.84836ms |       127.0.0.1 | POST     "/file/upload?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+2020-07-31 15:00:51.684559 I | Registry [consul] Deregistering node: go.micro.service.upload-5be84030-94ca-439e-a96f-f5a682167082
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:01:39.245385 I | Transport [http] Listening on [::]:46211
+2020-07-31 15:01:39.246516 I | Broker [http] Connected to [::]:38545
+2020-07-31 15:01:39.250669 I | Registry [consul] Registering node: go.micro.service.upload-2bfa4be6-78ac-47ed-b814-9e0d3623dfa2
+2020-07-31 15:04:54.316584 I | Registry [consul] Deregistering node: go.micro.service.upload-2bfa4be6-78ac-47ed-b814-9e0d3623dfa2
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:05:35.383264 I | Transport [http] Listening on [::]:34645
+2020-07-31 15:05:35.392330 I | Broker [http] Connected to [::]:40357
+2020-07-31 15:05:35.396335 I | Registry [consul] Registering node: go.micro.service.upload-56f6fea8-f4bd-46a0-865b-fa89ce94cbec
+2020-07-31 15:12:29.388475 I | Registry [consul] Deregistering node: go.micro.service.upload-56f6fea8-f4bd-46a0-865b-fa89ce94cbec
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:13:09.833232 I | Transport [http] Listening on [::]:43629
+2020-07-31 15:13:09.834284 I | Broker [http] Connected to [::]:45251
+2020-07-31 15:13:09.836606 I | Registry [consul] Registering node: go.micro.service.upload-bcb19d4c-aeb5-45fc-8a3a-7ddbbcf02aae
+2020-07-31 15:14:59.937055 I | Registry [consul] Deregistering node: go.micro.service.upload-bcb19d4c-aeb5-45fc-8a3a-7ddbbcf02aae
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:16:01.764718 I | Transport [http] Listening on [::]:35131
+2020-07-31 15:16:01.770507 I | Broker [http] Connected to [::]:41701
+2020-07-31 15:16:01.775403 I | Registry [consul] Registering node: go.micro.service.upload-69b1eac2-420c-4378-91c1-5c77fac097c9
+2020-07-31 15:22:32.565787 I | Registry [consul] Deregistering node: go.micro.service.upload-69b1eac2-420c-4378-91c1-5c77fac097c9
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:23:10.933470 I | Transport [http] Listening on [::]:45339
+2020-07-31 15:23:10.940990 I | Broker [http] Connected to [::]:36085
+2020-07-31 15:23:10.945219 I | Registry [consul] Registering node: go.micro.service.upload-3d866866-726a-41a2-8d3f-4dd9947dac14
+2020-07-31 15:24:41.235744 I | Registry [consul] Deregistering node: go.micro.service.upload-3d866866-726a-41a2-8d3f-4dd9947dac14
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:25:39.283255 I | Transport [http] Listening on [::]:35937
+2020-07-31 15:25:39.284648 I | Broker [http] Connected to [::]:35361
+2020-07-31 15:25:39.288024 I | Registry [consul] Registering node: go.micro.service.upload-1c89972b-da28-4dce-8ea6-3be87ec16ed9
+2020-07-31 15:31:09.203513 I | Registry [consul] Deregistering node: go.micro.service.upload-1c89972b-da28-4dce-8ea6-3be87ec16ed9
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 15:31:51.183603 I | Transport [http] Listening on [::]:45589
+2020-07-31 15:31:51.191261 I | Broker [http] Connected to [::]:41815
+2020-07-31 15:31:51.194705 I | Registry [consul] Registering node: go.micro.service.upload-4d1a8217-5587-47f3-b9cf-7271611f43ba
+2020-07-31 16:35:18.975277 I | Registry [consul] Deregistering node: go.micro.service.upload-4d1a8217-5587-47f3-b9cf-7271611f43ba
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 16:37:09.599122 I | Transport [http] Listening on [::]:35027
+2020-07-31 16:37:09.604860 I | Broker [http] Connected to [::]:38693
+2020-07-31 16:37:09.611620 I | Registry [consul] Registering node: go.micro.service.upload-9d9fec9c-de25-4025-b3f2-a2fefcd21e20
+2020-07-31 16:40:20.392412 I | Registry [consul] Deregistering node: go.micro.service.upload-9d9fec9c-de25-4025-b3f2-a2fefcd21e20
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 16:40:44.317836 I | Transport [http] Listening on [::]:34245
+2020-07-31 16:40:44.319651 I | Broker [http] Connected to [::]:33231
+2020-07-31 16:40:44.326866 I | Registry [consul] Registering node: go.micro.service.upload-0938bbee-1421-4ea3-9d82-543a40b99991
+true
+data already exist, c536e325231ccfb30f3333a9754fa70b84ef1365
+[GIN] 2020/07/31 - 16:57:57 | 200 |   70.169233ms |       127.0.0.1 | POST     "/file/upload?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+2020-07-31 16:58:30.145037 I | Registry [consul] Deregistering node: go.micro.service.upload-0938bbee-1421-4ea3-9d82-543a40b99991

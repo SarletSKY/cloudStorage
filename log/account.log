@@ -165,3 +165,129 @@ true
 2020-07-31 13:02:27.739573 I | Broker [http] Connected to [::]:34881
 2020-07-31 13:02:27.743199 I | Registry [consul] Registering node: go.micro.service.user-9947f307-4ba0-4631-91c1-dbb89fa56398
 2020-07-31 13:02:33.831615 I | Registry [consul] Deregistering node: go.micro.service.user-9947f307-4ba0-4631-91c1-dbb89fa56398
+2020-07-31 13:14:38.772249 I | Transport [http] Listening on [::]:38217
+2020-07-31 13:14:38.773131 I | Broker [http] Connected to [::]:44677
+2020-07-31 13:14:38.778435 I | Registry [consul] Registering node: go.micro.service.user-415bc03c-4046-4eef-b007-a3501d9a7038
+2020-07-31 13:16:54.915649 I | Registry [consul] Deregistering node: go.micro.service.user-415bc03c-4046-4eef-b007-a3501d9a7038
+2020-07-31 13:18:11.568729 I | Transport [http] Listening on [::]:34801
+2020-07-31 13:18:11.569583 I | Broker [http] Connected to [::]:33891
+2020-07-31 13:18:11.574547 I | Registry [consul] Registering node: go.micro.service.user-4e3b5a88-8213-49bf-8ce5-f32fa01f9602
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+2020-07-31 15:00:50.570266 I | Registry [consul] Deregistering node: go.micro.service.user-4e3b5a88-8213-49bf-8ce5-f32fa01f9602
+2020-07-31 15:01:45.416234 I | Transport [http] Listening on [::]:37835
+2020-07-31 15:01:45.434891 I | Broker [http] Connected to [::]:39027
+2020-07-31 15:01:45.439777 I | Registry [consul] Registering node: go.micro.service.user-6b2efb5f-fe9a-4502-9cae-ef8350443373
+2020-07-31 15:04:53.234462 I | Registry [consul] Deregistering node: go.micro.service.user-6b2efb5f-fe9a-4502-9cae-ef8350443373
+2020-07-31 15:05:41.400955 I | Transport [http] Listening on [::]:33933
+2020-07-31 15:05:41.403976 I | Broker [http] Connected to [::]:46447
+2020-07-31 15:05:41.411553 I | Registry [consul] Registering node: go.micro.service.user-f3865fff-a339-49dc-804e-efc4cd41de18
+stmt &{0xc00015ecc0 select file_name from tbl_user_file where user_name=? and file_name=? <nil> {{0 0} 0 0 0 0} <nil> 0xc0004b6300 <nil> {0 0} false [{0xc00048c000 0xc0004b6300}] 0}
+row sql: Scan error on column index 0, name "file_name": destination not a pointer
+存在 false
+2020-07-31 15:12:28.295421 I | Registry [consul] Deregistering node: go.micro.service.user-f3865fff-a339-49dc-804e-efc4cd41de18
+2020-07-31 15:13:16.070044 I | Transport [http] Listening on [::]:46175
+2020-07-31 15:13:16.072633 I | Broker [http] Connected to [::]:39355
+2020-07-31 15:13:16.078386 I | Registry [consul] Registering node: go.micro.service.user-8f5fa26c-9049-4448-b171-bdf1de64b59d
+stmt &{0xc0000e6cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc0004b6700 <nil> {0 0} false [{0xc00048c000 0xc0004b6700}] 0}
+存在 false
+2020-07-31 15:14:58.825810 I | Registry [consul] Deregistering node: go.micro.service.user-8f5fa26c-9049-4448-b171-bdf1de64b59d
+2020-07-31 15:16:08.101395 I | Transport [http] Listening on [::]:32965
+2020-07-31 15:16:08.104831 I | Broker [http] Connected to [::]:37501
+2020-07-31 15:16:08.115557 I | Registry [consul] Registering node: go.micro.service.user-a3adfba6-6461-4a33-812a-3bf0da02fca2
+stmt &{0xc00015ecc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc000168c00 <nil> {0 0} false [{0xc00048c000 0xc000168c00}] 0}
+row sql: no rows in result set
+存在 false
+stmt &{0xc00015ecc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc00046e400 <nil> {0 0} false [{0xc00048c000 0xc00046e400}] 0}
+row sql: Scan error on column index 0, name "file_name": destination not a pointer
+存在 false
+2020-07-31 15:22:31.460191 I | Registry [consul] Deregistering node: go.micro.service.user-a3adfba6-6461-4a33-812a-3bf0da02fca2
+2020-07-31 15:23:17.130875 I | Transport [http] Listening on [::]:45747
+2020-07-31 15:23:17.132519 I | Broker [http] Connected to [::]:41393
+2020-07-31 15:23:17.135208 I | Registry [consul] Registering node: go.micro.service.user-7b6cacd8-9ec6-48bb-9d7c-fb5fa08add73
+2020-07-31 15:24:40.116866 I | Registry [consul] Deregistering node: go.micro.service.user-7b6cacd8-9ec6-48bb-9d7c-fb5fa08add73
+2020-07-31 15:25:45.139341 I | Transport [http] Listening on [::]:44373
+2020-07-31 15:25:45.140263 I | Broker [http] Connected to [::]:36757
+2020-07-31 15:25:45.143749 I | Registry [consul] Registering node: go.micro.service.user-095bfee9-766f-4377-bb59-e6994e53476e
+stmt &{0xc0000d8cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc00007c3c0 <nil> {0 0} false [{0xc000496080 0xc00007c3c0}] 0}
+row sql: no rows in result set
+sql: no rows in result set
+存在 false
+stmt &{0xc0000d8cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc000596040 <nil> {0 0} false [{0xc000496080 0xc000596040}] 0}
+row sql: no rows in result set
+sql: no rows in result set
+存在 false
+2020-07-31 15:31:08.099458 I | Registry [consul] Deregistering node: go.micro.service.user-095bfee9-766f-4377-bb59-e6994e53476e
+2020-07-31 15:31:57.256094 I | Transport [http] Listening on [::]:41423
+2020-07-31 15:31:57.258416 I | Broker [http] Connected to [::]:40727
+2020-07-31 15:31:57.262157 I | Registry [consul] Registering node: go.micro.service.user-de7b1e79-e65e-4e8d-a5b5-f96156cf9217
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc000428c40 <nil> {0 0} false [{0xc00050e080 0xc000428c40}] 0}
+admin 2.log
+row sql: no rows in result set
+sql: no rows in result set
+存在 false
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc000428dc0 <nil> {0 0} false [{0xc00050e080 0xc000428dc0}] 0}
+admin 2.log
+又该名字；了 2.log
+存在 true
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc00019e9c0 <nil> {0 0} false [{0xc00050e080 0xc00019e9c0}] 0}
+admin 2.log
+又该名字；了 2.log
+存在 true
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc00019ebc0 <nil> {0 0} false [{0xc00050e080 0xc00019ebc0}] 0}
+admin 4.log
+row sql: no rows in result set
+sql: no rows in result set
+存在 false
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc00019ed80 <nil> {0 0} false [{0xc00050e080 0xc00019ed80}] 0}
+admin 4.log
+又该名字；了 4.log
+存在 true
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc0004ff740 <nil> {0 0} false [{0xc00050e080 0xc0004ff740}] 0}
+admin 2.log
+又该名字；了 2.log
+存在 true
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc0001aee40 <nil> {0 0} false [{0xc00050e080 0xc0001aee40}] 0}
+admin 2.log
+又该名字；了 2.log
+存在 true
+stmt &{0xc0000d0cc0 select file_name from tbl_user_file where user_name=? and file_name=? limit 1 <nil> {{0 0} 0 0 0 0} <nil> 0xc000180200 <nil> {0 0} false [{0xc00050e080 0xc000180200}] 0}
+admin 2.log
+又该名字；了 2.log
+存在 true
+2020-07-31 16:35:17.736765 I | Registry [consul] Deregistering node: go.micro.service.user-de7b1e79-e65e-4e8d-a5b5-f96156cf9217
+2020-07-31 16:37:15.385808 I | Transport [http] Listening on [::]:42987
+2020-07-31 16:37:15.388045 I | Broker [http] Connected to [::]:44697
+2020-07-31 16:37:15.392589 I | Registry [consul] Registering node: go.micro.service.user-0ddc0853-bebd-4e39-8001-ff091112e13d
+2020-07-31 16:40:18.896525 I | Registry [consul] Deregistering node: go.micro.service.user-0ddc0853-bebd-4e39-8001-ff091112e13d
+2020-07-31 16:40:50.221341 I | Transport [http] Listening on [::]:43727
+2020-07-31 16:40:50.221911 I | Broker [http] Connected to [::]:33343
+2020-07-31 16:40:50.226689 I | Registry [consul] Registering node: go.micro.service.user-74e2608a-f20d-4bfe-ae1a-60dd65d0f88d
+sql: no rows in result set
+sql: no rows in result set
+true
+sql: no rows in result set
+2020-07-31 16:58:29.000056 I | Registry [consul] Deregistering node: go.micro.service.user-74e2608a-f20d-4bfe-ae1a-60dd65d0f88d

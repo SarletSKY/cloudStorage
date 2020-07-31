@@ -1737,3 +1737,773 @@ d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
 [GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
 微服务micro框架启动：开始监听...
 [GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 13:15:00 | 304 |     207.532µs | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/31 - 13:15:00 | 304 |      147.04µs | 192.168.126.135 | GET      "/static/js/jquery-3.2.1.min.js"
+[GIN] 2020/07/31 - 13:15:00 | 200 |   18.264166ms | 192.168.126.135 | GET      "/static/css/fileinput.min.css"
+[GIN] 2020/07/31 - 13:15:00 | 304 |      92.848µs | 192.168.126.135 | GET      "/static/js/piexif.min.js"
+[GIN] 2020/07/31 - 13:15:00 | 304 |       78.55µs | 192.168.126.135 | GET      "/static/js/sortable.min.js"
+[GIN] 2020/07/31 - 13:15:00 | 304 |      66.357µs | 192.168.126.135 | GET      "/static/js/purify.min.js"
+[GIN] 2020/07/31 - 13:15:00 | 304 |      97.262µs | 192.168.126.135 | GET      "/static/js/fileinput.min.js"
+[GIN] 2020/07/31 - 13:15:00 | 304 |      75.684µs | 192.168.126.135 | GET      "/static/js/theme.js"
+[GIN] 2020/07/31 - 13:15:14 | 200 |   13.171749ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 13:15:15 | 200 |    67.19354ms | 192.168.126.135 | POST     "/user/info?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
+[GIN] 2020/07/31 - 13:15:15 | 200 |   15.590095ms | 192.168.126.135 | POST     "/file/query?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 13:18:21 | 302 |     189.219µs | 192.168.126.135 | GET      "/user/signup"
+[GIN] 2020/07/31 - 13:18:30 | 200 |   32.368777ms | 192.168.126.135 | POST     "/user/signup"
+[GIN] 2020/07/31 - 13:18:31 | 302 |      37.873µs | 192.168.126.135 | GET      "/user/signin"
+2020-07-31 13:18:38.422289 I | 
+2020-07-31 13:18:38.436012 I | 
+[GIN] 2020/07/31 - 13:18:38 | 200 |    50.64046ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 13:18:38 | 304 |     292.123µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 13:18:38 | 200 |    7.492437ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:18:38 | 200 |    8.678625ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:18:46 | 200 |    7.897659ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:18:46 | 200 |    3.675761ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:19:12 | 200 |    7.304762ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:19:12 | 200 |    7.324629ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:19:33 | 200 |   20.571824ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae&filename=1.log"
+[GIN] 2020/07/31 - 13:19:56 | 304 |     114.314µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 13:19:56 | 304 |    6.358417ms | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 13:19:56 | 304 |     100.467µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 13:19:56 | 304 |     108.948µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 13:19:56 | 304 |       82.31µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 13:19:56 | 304 |     102.632µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 13:19:56 | 304 |    2.643973ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 13:19:56 | 200 |    4.965594ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:19:56 | 200 |    5.542694ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:20:24 | 200 |    6.034755ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 13:20:25 | 304 |     133.381µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 13:20:25 | 304 |      99.212µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 13:20:25 | 304 |     410.481µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 13:20:25 | 304 |      98.116µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 13:20:25 | 304 |     132.088µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 13:20:25 | 304 |     161.013µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 13:20:25 | 200 |    4.083758ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:20:25 | 200 |    4.346989ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:20:28 | 200 |   17.135485ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae&filename=2.log"
+[GIN] 2020/07/31 - 13:20:29 | 304 |     125.727µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 13:20:30 | 200 |      4.9427ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 13:20:30 | 200 |     6.69426ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:40 | 200 |     304.988µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:36:40 | 304 |     121.787µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:36:40 | 304 |     147.995µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:36:40 | 304 |     119.583µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:36:40 | 304 |      98.839µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:36:40 | 304 |     128.795µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:36:40 | 304 |     123.151µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:36:40 | 200 |   13.610831ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:40 | 200 |    10.24651ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:45 | 200 |     4.54595ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:45 | 200 |    4.114921ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:48 | 200 |    4.800341ms | 192.168.126.135 | POST     "/user/info?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+[GIN] 2020/07/31 - 14:36:48 | 200 |    3.765474ms | 192.168.126.135 | POST     "/file/query?username=admin&token=9f847ee3023930558a94d86efc82d7bf5f23a9ae"
+2020-07-31 14:36:49.894976 I | 
+2020-07-31 14:36:49.903338 I | 
+[GIN] 2020/07/31 - 14:36:49 | 200 |   39.418735ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 14:36:49 | 304 |     269.205µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:36:50 | 200 |    5.568035ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:36:50 | 200 |     5.38592ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:37:10 | 200 |   10.468166ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1..log"
+[GIN] 2020/07/31 - 14:37:17 | 200 |     406.706µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:37:17 | 304 |     114.356µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:37:17 | 304 |      96.043µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:37:18 | 304 |      119.82µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:37:18 | 304 |     144.242µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:37:18 | 304 |      94.283µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:37:18 | 304 |      164.87µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:37:18 | 200 |    3.785869ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:37:18 | 200 |     6.39075ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:37:37 | 200 |     8.40178ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:42:18 | 200 |     692.478µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     591.779µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     102.475µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     121.177µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     122.137µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     127.561µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:42:19 | 304 |     705.966µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:42:19 | 200 |   14.081193ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:42:19 | 200 |    4.766883ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:42:23 | 200 |   21.463487ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:42:26 | 304 |     125.025µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:42:26 | 200 |    4.430519ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:42:26 | 200 |    3.842571ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:48:23 | 200 |   15.651723ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:48:24 | 200 |     257.495µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:48:25 | 200 |    2.914034ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:48:25 | 200 |    4.493238ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:48:28 | 200 |    4.788431ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:49:26 | 200 |     229.398µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:49:26 | 200 |    7.741396ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:49:26 | 200 |    2.820415ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:49:29 | 200 |   12.356409ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:51:30 | 200 |     262.361µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:51:30 | 304 |       65.21µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:51:30 | 304 |      87.493µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:51:30 | 304 |      77.869µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:51:30 | 304 |      69.746µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:51:30 | 304 |      90.404µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:51:30 | 304 |      244.03µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:51:30 | 200 |    7.457931ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:51:30 | 200 |    3.877164ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:51:34 | 200 |   18.298436ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:51:39 | 304 |      73.191µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:51:39 | 200 |    2.943969ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:51:39 | 200 |    4.332428ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:04 | 200 |     285.009µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:05 | 304 |      68.801µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:52:05 | 304 |      53.047µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:52:05 | 304 |      56.239µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:52:05 | 304 |      73.765µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:52:05 | 304 |      67.703µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:52:05 | 304 |       91.44µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:52:05 | 200 |     6.43312ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:05 | 200 |    3.126382ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:08 | 200 |    5.363474ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:52:28 | 200 |     192.122µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:28 | 200 |    2.886237ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:28 | 200 |    2.440602ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      95.907µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      66.327µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      55.751µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      51.215µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      52.022µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      61.196µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:52:29 | 304 |      74.535µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:52:29 | 200 |    3.418125ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:29 | 200 |    2.631988ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:31 | 200 |    17.72535ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:52:37 | 304 |      66.913µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:37 | 200 |    4.079337ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:52:38 | 200 |    4.553645ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:38 | 200 |    2.722557ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:45 | 200 |    5.775952ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:52:47 | 304 |      66.684µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:48 | 200 |    3.267291ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:48 | 200 |    3.081495ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:52 | 304 |     104.847µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:52 | 304 |      67.661µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:52:52 | 304 |      71.511µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:52:52 | 304 |      70.826µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:52:52 | 304 |       67.24µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:52:52 | 304 |      54.782µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:52:52 | 304 |       69.71µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:52:52 | 200 |    3.096195ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:52 | 200 |    5.523509ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:53 | 304 |      89.439µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:52:53 | 304 |      88.654µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:52:53 | 304 |      34.287µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:52:53 | 304 |     703.342µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:52:53 | 304 |      69.681µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:52:53 | 304 |      112.16µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:52:54 | 304 |      84.047µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:52:54 | 200 |    5.236378ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:52:54 | 200 |      4.2237ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:53:45 | 200 |     283.908µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:53:46 | 304 |     125.172µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:53:46 | 304 |    1.446022ms | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:53:46 | 304 |     101.629µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:53:46 | 304 |      91.681µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:53:46 | 304 |      130.76µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:53:46 | 304 |     130.425µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:53:46 | 200 |    9.704361ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:53:46 | 200 |    5.134754ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:53:48 | 200 |    4.049312ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:53:53 | 304 |      68.244µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:53:53 | 304 |       74.74µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:53:53 | 304 |      56.211µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:53:53 | 304 |       53.24µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:53:53 | 304 |      66.457µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:53:53 | 304 |      57.158µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:53:53 | 304 |     295.035µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:53:53 | 200 |    3.051001ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:53:53 | 200 |    3.055726ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:02 | 200 |    9.023262ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:54:05 | 200 |     203.768µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:54:05 | 304 |     104.856µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:54:05 | 304 |      70.486µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:54:05 | 304 |      61.527µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:54:05 | 304 |      62.706µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:54:05 | 304 |      69.051µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:54:05 | 304 |      72.348µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:54:05 | 200 |    2.341047ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:05 | 200 |    3.040711ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:07 | 200 |    12.03057ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=11.log"
+[GIN] 2020/07/31 - 14:54:10 | 304 |      66.521µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:54:10 | 200 |    4.221093ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:10 | 200 |    2.998356ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:30 | 200 |    7.581946ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:54:33 | 200 |      215.15µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:54:34 | 200 |    4.512894ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:34 | 200 |    4.611965ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:54:39 | 200 |    6.853533ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:55:01 | 200 |      235.14µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:55:01 | 304 |       83.31µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:55:01 | 304 |     123.492µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:55:01 | 304 |      63.581µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:55:01 | 304 |      83.569µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:55:01 | 304 |     157.244µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:55:01 | 304 |      69.469µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:55:01 | 200 |    7.664973ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:01 | 200 |    4.587071ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:03 | 200 |    6.157074ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:55:20 | 200 |      209.34µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:55:20 | 304 |      83.369µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:55:20 | 304 |      58.358µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:55:20 | 304 |     121.915µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:55:20 | 304 |      59.038µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:55:20 | 304 |     103.674µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:55:20 | 304 |      89.467µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:55:20 | 200 |    2.913518ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:20 | 200 |    3.334527ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:25 | 200 |    12.33104ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:55:31 | 304 |      94.678µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:55:32 | 200 |    2.965409ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:32 | 200 |     4.76913ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:48 | 200 |    7.564576ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:55:48 | 304 |     173.499µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:55:48 | 304 |     101.929µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:55:48 | 304 |      91.861µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:55:48 | 304 |      96.903µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:55:48 | 304 |     100.151µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:55:48 | 304 |      79.886µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:55:48 | 200 |    2.840302ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:48 | 200 |    3.223193ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:51 | 200 |    5.171028ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:55:53 | 304 |     101.627µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:55:54 | 200 |    5.482645ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:55:54 | 200 |    3.075894ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:56:41 | 200 |     158.308µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:56:41 | 304 |    1.232932ms | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:56:41 | 304 |     897.141µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:56:41 | 304 |      68.942µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:56:41 | 304 |       70.29µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:56:41 | 304 |     100.457µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:56:41 | 304 |       70.83µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:56:41 | 200 |    8.071491ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:56:42 | 200 |    3.647092ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:56:44 | 200 |   13.638569ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:58:20 | 304 |     128.767µs | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/31 - 14:58:33 | 200 |   24.399538ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=2.log"
+[GIN] 2020/07/31 - 14:58:37 | 200 |      335.18µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:58:37 | 304 |      68.507µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 14:58:37 | 304 |      52.825µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 14:58:37 | 304 |      60.837µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 14:58:37 | 304 |      51.946µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 14:58:37 | 304 |       82.15µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 14:58:37 | 304 |       73.52µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 14:58:37 | 200 |    6.765167ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:58:37 | 200 |     2.42073ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:58:44 | 200 |   12.420211ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01&filename=1.log"
+[GIN] 2020/07/31 - 14:58:45 | 304 |      65.819µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 14:58:46 | 200 |    3.890372ms | 192.168.126.135 | POST     "/user/info?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN] 2020/07/31 - 14:58:46 | 200 |    2.747726ms | 192.168.126.135 | POST     "/file/query?username=admin&token=1aecc42b5c41135644fe102900ed10735f23bc01"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+2020-07-31 15:05:52.363328 I | 
+2020-07-31 15:05:52.377097 I | 
+[GIN] 2020/07/31 - 15:05:52 | 200 |   85.005306ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 15:05:52 | 304 |      4.2218ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:05:52 | 200 |    4.232305ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:05:52 | 200 |    6.268852ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:05:59 | 200 |   62.531652ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=1.log"
+[GIN] 2020/07/31 - 15:06:06 | 200 |    4.426706ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:06:06 | 200 |    4.101742ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 15:13:32 | 304 |     781.615µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:13:32 | 304 |     651.849µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 15:13:32 | 304 |     106.413µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 15:13:32 | 304 |     115.691µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 15:13:32 | 304 |     113.345µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 15:13:32 | 304 |     160.864µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 15:13:32 | 304 |    2.182242ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 15:13:33 | 200 |   31.904812ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:13:33 | 200 |    17.66779ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:13:36 | 200 |   12.364358ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=1.log"
+[GIN] 2020/07/31 - 15:13:39 | 200 |    6.620263ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:13:39 | 200 |    6.372881ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 15:16:33 | 304 |     298.833µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:16:33 | 304 |     183.857µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 15:16:33 | 304 |     221.139µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 15:16:33 | 304 |    1.116737ms | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 15:16:33 | 304 |     101.609µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 15:16:33 | 304 |      104.26µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 15:16:34 | 304 |     288.813µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 15:16:34 | 200 |    35.93725ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:16:34 | 200 |      9.1753ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:16:38 | 200 |    9.427785ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=3.log"
+[GIN] 2020/07/31 - 15:16:39 | 200 |    5.260703ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:16:39 | 200 |    4.102021ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:18:16 | 200 |   29.112665ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=3.log"
+[GIN] 2020/07/31 - 15:18:18 | 200 |    3.250672ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:18:18 | 200 |    3.460498ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 15:26:02 | 304 |     175.906µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:26:02 | 304 |     817.078µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 15:26:02 | 304 |     115.566µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 15:26:02 | 304 |      187.77µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 15:26:02 | 304 |     116.698µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 15:26:02 | 304 |     154.701µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 15:26:03 | 304 |     526.934µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 15:26:03 | 200 |    19.51845ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:26:03 | 200 |    8.778752ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:26:07 | 200 |   13.161311ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=4.log"
+[GIN] 2020/07/31 - 15:26:10 | 200 |    5.625254ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:26:10 | 200 |    4.368166ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:29:38 | 200 |   17.436173ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=3.logg"
+[GIN] 2020/07/31 - 15:29:40 | 304 |     119.952µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:29:40 | 200 |    3.574591ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:29:40 | 200 |    4.416929ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 15:32:03 | 304 |    1.488708ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:32:04 | 304 |     803.699µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 15:32:04 | 304 |     128.685µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 15:32:04 | 304 |     114.172µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 15:32:04 | 304 |     153.863µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 15:32:04 | 304 |     253.419µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 15:32:05 | 304 |    2.109903ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 15:32:05 | 200 |   57.904103ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:32:05 | 200 |   14.173804ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:32:10 | 200 |   14.630526ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 15:32:30 | 200 |    5.156942ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:32:30 | 200 |    6.086156ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+2020-07-31 15:32:33.072091 I | 文件名已经存在
+[GIN] 2020/07/31 - 15:32:33 | 500 |    8.699142ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+2020-07-31 15:32:41.984914 I | 文件名已经存在
+[GIN] 2020/07/31 - 15:32:41 | 500 |    3.925104ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 15:32:45 | 200 |   20.114203ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=4.log"
+[GIN] 2020/07/31 - 15:32:47 | 200 |    9.033497ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:32:47 | 200 |    7.804047ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+2020-07-31 15:32:50.567176 I | 文件名已经存在
+[GIN] 2020/07/31 - 15:32:50 | 500 |    3.495559ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=a64e9fede92c55932ce82d77891f77a1f015a9f1&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=4.log"
+[GIN] 2020/07/31 - 15:32:54 | 304 |      115.63µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 15:32:54 | 304 |      94.909µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 15:32:54 | 304 |     128.093µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 15:32:54 | 304 |      76.345µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 15:32:54 | 304 |      82.796µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 15:32:54 | 304 |      89.324µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 15:32:54 | 304 |     214.596µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 15:32:55 | 200 |   14.835427ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 15:32:55 | 200 |    7.575002ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+2020-07-31 15:33:51.455674 I | 文件名已经存在
+[GIN] 2020/07/31 - 15:33:51 | 500 |    8.610643ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:31:17 | 200 |   34.063313ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:31:17 | 200 |    7.032134ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:31:26 | 304 |     422.503µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:31:27 | 304 |     167.956µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:31:27 | 304 |     251.259µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:31:27 | 304 |    1.117167ms | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/31 - 16:31:27 | 304 |       545.3µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:31:27 | 304 |     272.874µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:31:27 | 304 |      608.57µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:31:28 | 304 |      189.04µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:31:28 | 200 |   13.254381ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:31:29 | 200 |   11.642896ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:31:37 | 200 |   31.911021ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:31:37 | 200 |   13.860322ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+2020-07-31 16:32:32.244606 I | 文件名已经存在
+[GIN] 2020/07/31 - 16:32:32 | 500 |   17.951691ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:32:39 | 200 |   20.343022ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:32:39 | 200 |    2.631846ms | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:32:39 | 200 |    9.388224ms | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    3.141702ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    2.414294ms | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    2.689908ms | 192.168.126.135 | GET      "/static/css/custom.css"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    1.133679ms | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    1.887088ms | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    1.443469ms | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    1.336319ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:32:40 | 200 |    7.385382ms | 192.168.126.135 | GET      "/static/js/theme/default/layer.css?v=3.1.0"
+[GIN] 2020/07/31 - 16:32:40 | 200 |      47.796µs | 192.168.126.135 | GET      "/favicon.ico"
+[GIN] 2020/07/31 - 16:32:41 | 200 |      67.606µs | 192.168.126.135 | POST     "/user/info?username=null&token=null"
+[GIN] 2020/07/31 - 16:32:41 | 200 |    1.137432ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 16:32:41 | 200 |     628.091µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:32:41 | 200 |     663.826µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:32:41 | 200 |     1.27832ms | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/31 - 16:32:41 | 200 |     488.387µs | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/31 - 16:32:41 | 200 |    1.350218ms | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:32:41 | 200 |      50.679µs | 192.168.126.135 | GET      "/favicon.ico"
+[GIN] 2020/07/31 - 16:33:06 | 200 |      487.23µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     123.438µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     132.501µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     179.483µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     152.292µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     134.012µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:33:07 | 304 |     129.557µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:33:08 | 200 |   12.472778ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:33:08 | 200 |   19.629757ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+2020-07-31 16:33:12.184396 I | 文件名已经存在
+[GIN] 2020/07/31 - 16:33:12 | 500 |   10.767523ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:35:09 | 304 |     228.698µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:35:11 | 304 |      147.21µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:35:11 | 304 |     149.841µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:35:11 | 304 |     166.224µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:35:11 | 304 |     534.976µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:35:11 | 304 |     116.479µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:35:12 | 304 |     179.075µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:35:12 | 200 |   24.953145ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:35:13 | 200 |   20.685282ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 16:43:51 | 304 |    4.340704ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:43:51 | 304 |     872.831µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:43:51 | 304 |     176.049µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:43:51 | 304 |      117.41µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:43:51 | 304 |     115.191µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:43:51 | 304 |     146.437µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:43:52 | 304 |    1.065401ms | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:43:52 | 200 |   61.175618ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:43:52 | 200 |   22.623635ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:43:57 | 200 |   46.541874ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=3.log"
+[GIN] 2020/07/31 - 16:43:58 | 200 |    5.656164ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:43:59 | 200 |   10.639492ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:44:02 | 200 |    5.119519ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:44:15 | 200 |    6.690165ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:44:15 | 200 |     12.1239ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:44:20 | 200 |    5.322871ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:44:22 | 200 |    8.867635ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:44:23 | 200 |     6.53412ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:48:03 | 200 |     9.25064ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:51:37 | 200 |   31.570563ms | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:51:37 | 200 |   13.317486ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:51:38 | 200 |   12.718083ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:51:39 | 304 |     254.269µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:51:39 | 304 |     582.561µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:51:39 | 304 |       281.1µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:51:39 | 304 |      124.99µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:51:39 | 304 |     376.607µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:51:40 | 304 |     115.975µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:51:40 | 304 |     127.528µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:51:40 | 200 |    6.571157ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:51:40 | 200 |    4.063498ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:51:42 | 200 |    5.646409ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:51:44 | 304 |      93.323µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:51:44 | 200 |    7.477295ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:51:44 | 200 |     9.35115ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:05 | 200 |     278.686µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:05 | 304 |      124.27µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:52:05 | 304 |      85.093µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:52:05 | 304 |      95.171µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:52:05 | 304 |      98.369µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:52:05 | 304 |     120.588µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:52:05 | 304 |      100.47µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:52:06 | 200 |    6.665886ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:06 | 200 |    5.931917ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:52:08 | 200 |    4.705461ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:52:09 | 304 |     113.965µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:10 | 200 |    5.729217ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:10 | 200 |    3.935002ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:23 | 200 |     449.669µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:23 | 304 |     111.014µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:52:23 | 304 |     115.605µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:52:23 | 304 |     896.816µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:52:23 | 304 |     126.189µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:52:23 | 304 |     127.666µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:52:24 | 304 |     132.702µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:52:24 | 200 |    6.776211ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:24 | 200 |    5.550887ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:52:26 | 200 |    4.818035ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:52:44 | 200 |     301.654µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:44 | 304 |     149.326µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:52:44 | 304 |     146.261µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:52:44 | 304 |     159.641µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:52:44 | 304 |     127.473µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:52:44 | 304 |     101.572µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:52:45 | 304 |     173.939µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:52:45 | 200 |    11.93632ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:45 | 200 |    8.601022ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:52:49 | 200 |    5.222948ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:52:51 | 304 |      91.651µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:52 | 200 |    6.466884ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:52 | 200 |    7.610055ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:57 | 200 |     242.342µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:52:58 | 304 |     125.898µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:52:58 | 304 |     160.108µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:52:58 | 304 |     114.442µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:52:58 | 304 |      93.606µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:52:58 | 304 |     147.004µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:52:58 | 304 |      90.505µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:52:58 | 200 |    6.472564ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:52:58 | 200 |    5.347513ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:53:01 | 200 |     5.54874ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:53:05 | 304 |     119.394µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:06 | 200 |    6.058788ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:06 | 200 |   11.739751ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:53:10 | 200 |    4.832941ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:53:12 | 304 |     263.623µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:13 | 200 |    4.013073ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:13 | 200 |    5.845671ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:30 | 200 |     852.831µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:31 | 304 |      94.075µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:53:31 | 304 |     179.087µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:53:31 | 304 |     137.278µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:53:31 | 304 |     152.148µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:53:31 | 304 |     129.013µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:53:31 | 304 |     133.468µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:53:31 | 200 |    7.790044ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:31 | 200 |     4.80273ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:53:34 | 200 |    3.901519ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:53:35 | 304 |      97.768µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:35 | 304 |     443.782µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:35 | 200 |    4.618544ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:35 | 200 |    6.347503ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:51 | 200 |     614.286µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:52 | 304 |     132.736µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:53:52 | 304 |     112.376µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:53:52 | 304 |      69.327µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:53:52 | 304 |     134.858µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:53:52 | 304 |     162.344µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:53:52 | 304 |      91.419µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:53:52 | 200 |   16.483941ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:52 | 200 |   12.531796ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:53:58 | 200 |    4.980984ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:53:59 | 304 |     157.083µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:53:59 | 200 |    7.990133ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:53:59 | 200 |    6.589528ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:03 | 200 |      311.24µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     120.416µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     113.894µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     136.155µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     230.928µs | 192.168.126.135 | GET      "/static/js/auth.js"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     111.114µs | 192.168.126.135 | GET      "/static/js/layer.js"
+[GIN] 2020/07/31 - 16:57:03 | 304 |     132.639µs | 192.168.126.135 | GET      "/static/img/avatar.jpg"
+[GIN] 2020/07/31 - 16:57:04 | 200 |   20.234153ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:04 | 200 |     5.92596ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:07 | 200 |   15.665001ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=4.log"
+[GIN] 2020/07/31 - 16:57:09 | 304 |     113.886µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:57:09 | 200 |    5.283253ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:09 | 200 |     3.89513ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+1
+2
+[GIN] 2020/07/31 - 16:57:11 | 200 |   10.679758ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0&filename=2.log"
+[GIN] 2020/07/31 - 16:57:12 | 304 |      94.806µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:57:13 | 200 |    8.321094ms | 192.168.126.135 | POST     "/user/info?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:13 | 200 |    5.143577ms | 192.168.126.135 | POST     "/file/query?username=admin&token=4438f1f521567b78ae5aab1ea1e278d75f23c2d0"
+[GIN] 2020/07/31 - 16:57:34 | 302 |    1.356054ms | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/31 - 16:57:34 | 304 |     120.592µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 16:57:39 | 200 |     773.271µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 16:57:40 | 200 |    1.849365ms | 192.168.126.135 | GET      "/static/css/bootstrap.min.css"
+[GIN] 2020/07/31 - 16:57:40 | 200 |   34.408564ms | 192.168.126.135 | GET      "/static/css/bootstrap-theme.min.css"
+[GIN] 2020/07/31 - 16:57:40 | 200 |    32.81912ms | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 16:57:40 | 200 |   40.731249ms | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 16:57:40 | 200 |   47.795389ms | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 16:57:40 | 200 |      38.162µs | 192.168.126.135 | GET      "/favicon.ico"
+[GIN] 2020/07/31 - 16:57:41 | 302 |        26.9µs | 192.168.126.135 | GET      "/user/signup"
+[GIN] 2020/07/31 - 16:57:41 | 304 |     744.731µs | 192.168.126.135 | GET      "/static/view/signup.html"
+[GIN] 2020/07/31 - 16:57:46 | 200 |   41.139447ms | 192.168.126.135 | POST     "/user/signup"
+[GIN] 2020/07/31 - 16:57:47 | 302 |      33.553µs | 192.168.126.135 | GET      "/user/signin"
+2020-07-31 16:57:50.767177 I | 
+2020-07-31 16:57:50.773480 I | 
+[GIN] 2020/07/31 - 16:57:50 | 200 |   28.159509ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 16:57:50 | 304 |      91.048µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:57:51 | 200 |    5.366008ms | 192.168.126.135 | POST     "/user/info?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN] 2020/07/31 - 16:57:51 | 200 |   10.015331ms | 192.168.126.135 | POST     "/file/query?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN] 2020/07/31 - 16:57:52 | 304 |     138.194µs | 192.168.126.135 | GET      "/static/view/upload.html"
+[GIN] 2020/07/31 - 16:57:58 | 304 |     232.023µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:57:58 | 200 |    4.924148ms | 192.168.126.135 | POST     "/user/info?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN] 2020/07/31 - 16:57:58 | 200 |    4.310545ms | 192.168.126.135 | POST     "/file/query?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN] 2020/07/31 - 16:58:02 | 200 |   15.086767ms |       127.0.0.1 | POST     "/file/update?op=0&filehash=c536e325231ccfb30f3333a9754fa70b84ef1365&username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e&filename=1.log"
+[GIN] 2020/07/31 - 16:58:03 | 304 |     215.972µs | 192.168.126.135 | GET      "/static/view/home.html"
+[GIN] 2020/07/31 - 16:58:03 | 200 |   10.296461ms | 192.168.126.135 | POST     "/user/info?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN] 2020/07/31 - 16:58:03 | 200 |    3.867661ms | 192.168.126.135 | POST     "/file/query?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
