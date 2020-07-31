@@ -247,3 +247,10 @@ data already exist, a64e9fede92c55932ce82d77891f77a1f015a9f1
 2020-07-31 11:51:52.846304 I | Transport [http] Listening on [::]:41023
 2020-07-31 11:51:52.847325 I | Broker [http] Connected to [::]:45973
 2020-07-31 11:51:52.850779 I | Registry [consul] Registering node: go.micro.service.transfer-8c8f0533-705e-42c0-8f8d-43f84e9eb6f2
+2020-07-31 11:58:17.787774 I | Registry [consul] Deregistering node: go.micro.service.transfer-8c8f0533-705e-42c0-8f8d-43f84e9eb6f2
+2020-07-31 13:02:25.713303 I | 文件转移服务启动中，开始监听转移任务队列...
+2020-07-31 13:02:25.714526 I | 开始监听转移消息队列
+2020-07-31 13:02:25.737479 I | Transport [http] Listening on [::]:33677
+2020-07-31 13:02:25.737653 I | Broker [http] Connected to [::]:38441
+2020-07-31 13:02:25.742169 I | Registry [consul] Registering node: go.micro.service.transfer-a847ca79-08b7-427e-8d95-7464bb511721
+2020-07-31 13:02:37.113384 I | Registry [consul] Deregistering node: go.micro.service.transfer-a847ca79-08b7-427e-8d95-7464bb511721

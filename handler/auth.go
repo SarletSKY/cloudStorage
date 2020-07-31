@@ -15,7 +15,7 @@ func HTTPInterceptor(c *gin.Context) {
 
 	c.Abort() //报错后面的方法不用在执行
 	// 验证token
-	if len(username) < 3 || !middleware.ValidToToken(token) {
+	if len(username) < 3 || !middleware.ValidToToken(username, token) {
 		resp := util.NewRespMsg(int(common.StatusInvalidToken), "token无效", nil)
 		c.JSON(http.StatusOK, resp)
 		return

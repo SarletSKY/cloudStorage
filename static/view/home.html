@@ -221,6 +221,12 @@
                 alert(msg);
             },
             success: function(body) {
+                var resp = body;
+                console.log(resp);
+                if (resp.data.Code == 10006) {
+                    alert("文件名已经存在，请重新输入");
+                    window.location.href = '/static/view/home.html';
+                }
                 alert("文件名修改成功");
                 window.location.href = '/static/view/home.html';
             }

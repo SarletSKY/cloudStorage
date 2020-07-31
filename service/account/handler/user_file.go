@@ -6,6 +6,7 @@ import (
 	"filestore-server-study/common"
 	"filestore-server-study/db"
 	userProto "filestore-server-study/service/account/proto"
+	"fmt"
 )
 
 // 获取用户文件列表
@@ -40,7 +41,17 @@ func (u *User) UserFileRename(ctx context.Context, req *userProto.ReqUserFileRen
 	fileName := req.NewFileName
 	username := req.Username
 
+	// TODO: 重命名之前查数据库有不有该名字，不能重复
+	exist := db.QueryUserFileNameExist(username, filehash, fileName)
+	fmt.Println(exist)
+	if exist {
+		resp.Code = common.FileAlreadExists
+		resp.Message = "文件名已经存在，请重新输入"
+		return fmt.Errorf("文件名已经存在")
+	}
+
 	_ = db.UpdateUserFileInfoDB(username, fileName, filehash)
+
 	// TODO: 6. 将用户文件表中更改的那条数据重新获取出来，序列化返回
 	userFile, err := db.QueryUserFileDB(username, filehash)
 	if err != nil {

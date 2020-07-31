@@ -748,3 +748,23 @@ ERR Client sent AUTH, but no password is set
 2020-07-31 11:51:48.947385 I | Transport [http] Listening on [::]:43823
 2020-07-31 11:51:48.955098 I | Broker [http] Connected to [::]:46369
 2020-07-31 11:51:48.959671 I | Registry [consul] Registering node: go.micro.service.upload-6ba8cf39-ba9f-4a4b-9b6c-c7aa7c91fffc
+2020-07-31 11:58:15.690766 I | Registry [consul] Deregistering node: go.micro.service.upload-6ba8cf39-ba9f-4a4b-9b6c-c7aa7c91fffc
+[]
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] POST   /file/upload              --> filestore-server-study/service/upload/api.DoUploadHandler (4 handlers)
+[GIN-debug] POST   /file/fastupload          --> filestore-server-study/service/upload/api.FastUploadUserFile (4 handlers)
+[GIN-debug] POST   /file/mpupload/init       --> filestore-server-study/service/upload/api.InitMultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/uppart     --> filestore-server-study/service/upload/api.MultipartUpload (4 handlers)
+[GIN-debug] POST   /file/mpupload/complete   --> filestore-server-study/service/upload/api.CompleteMultipartUpload (4 handlers)
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:28080
+2020-07-31 13:02:21.852941 I | Transport [http] Listening on [::]:35285
+2020-07-31 13:02:21.853317 I | Broker [http] Connected to [::]:37019
+2020-07-31 13:02:21.858564 I | Registry [consul] Registering node: go.micro.service.upload-4916d3e3-746b-4478-8c31-261e80012d97
+2020-07-31 13:02:34.923032 I | Registry [consul] Deregistering node: go.micro.service.upload-4916d3e3-746b-4478-8c31-261e80012d97

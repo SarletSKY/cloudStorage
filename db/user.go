@@ -112,6 +112,7 @@ func GetUserToken(username string) (string, error) {
 		fmt.Println("Failed to prepare statement query token failed ,err", err.Error())
 		return "", err
 	}
+	defer stmt.Close()
 
 	err = stmt.QueryRow(username).Scan(&token)
 	if err != nil {

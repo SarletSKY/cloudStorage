@@ -6,7 +6,7 @@ const (
 	// OSSEndpoint:  oss 地址
 	OSSEndpoint = "oss-cn-shenzhen.aliyuncs.com"
 	// OSSAccesskeyID : oss访问key
-	OSSAccesskeyID = "LTAI4G5Aw9B9abFVKHMjZHb4"
+	OSSAccesskeyID = ""
 	// OSSAccessKeySecret : oss访问key secret
-	OSSAccessKeySecret = "iGuQvEhS1WFJgirRs1MwOrvMKd4xk0"
+	OSSAccessKeySecret = ""
 )

@@ -1720,3 +1720,20 @@ d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
 [GIN] 2020/07/31 - 11:52:43 | 200 |     6.13943ms | 192.168.126.135 | POST     "/user/info?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
 d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
 [GIN] 2020/07/31 - 11:52:43 | 200 |   16.333127ms | 192.168.126.135 | POST     "/file/query?username=admin&token=d84c00811a6c47d27b293df4c0dc0b545f23958a"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
