@@ -4,7 +4,6 @@ import (
 	"context"
 	"filestore-server-study/common"
 	userProto "filestore-server-study/service/account/proto"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"

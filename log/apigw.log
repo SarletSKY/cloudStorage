@@ -2507,3 +2507,92 @@ d84c00811a6c47d27b293df4c0dc0b545f23958a -----zwx----
 [GIN] 2020/07/31 - 16:58:03 | 304 |     215.972µs | 192.168.126.135 | GET      "/static/view/home.html"
 [GIN] 2020/07/31 - 16:58:03 | 200 |   10.296461ms | 192.168.126.135 | POST     "/user/info?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
 [GIN] 2020/07/31 - 16:58:03 | 200 |    3.867661ms | 192.168.126.135 | POST     "/file/query?username=admin2&token=0e086e31db77bb63fdbf2d290ef4d98c5f23dd0e"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 17:15:45 | 302 |      87.739µs | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/31 - 17:15:55 | 200 |   25.242828ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 17:22:35 | 200 |    7.538093ms | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 17:22:35 | 304 |     197.074µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 17:22:35 | 304 |     111.368µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 17:22:35 | 304 |     199.805µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 17:22:35 | 200 |   13.211713ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 17:22:39 | 200 |    8.327833ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 17:23:39 | 200 |     293.659µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 17:23:39 | 304 |     190.184µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 17:23:39 | 304 |     135.488µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 17:23:39 | 304 |     109.027µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 17:23:41 | 200 |   14.699261ms | 192.168.126.135 | POST     "/user/signin"
+[GIN] 2020/07/31 - 17:23:41 | 302 |      30.837µs | 192.168.126.135 | GET      "/user/signin"
+[GIN] 2020/07/31 - 17:23:42 | 304 |     252.935µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 17:27:04 | 200 |      332.33µs | 192.168.126.135 | GET      "/static/view/signin.html"
+[GIN] 2020/07/31 - 17:27:04 | 304 |     124.441µs | 192.168.126.135 | GET      "/static/js/jquery.min.js"
+[GIN] 2020/07/31 - 17:27:04 | 304 |     124.502µs | 192.168.126.135 | GET      "/static/js/popper.min.js"
+[GIN] 2020/07/31 - 17:27:04 | 304 |      96.249µs | 192.168.126.135 | GET      "/static/js/bootstrap.min.js"
+[GIN] 2020/07/31 - 17:27:10 | 200 |    8.432737ms | 192.168.126.135 | POST     "/user/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/07/31 - 17:29:35 | 200 |   19.495813ms | 192.168.126.135 | POST     "/user/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /static/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /user/signup              --> filestore-server-study/service/apigw/handler.SignUpUser (3 handlers)
+[GIN-debug] GET    /user/signin              --> filestore-server-study/service/apigw/handler.SignInUser (3 handlers)
+[GIN-debug] POST   /user/signup              --> filestore-server-study/service/apigw/handler.DoSignUpUser (3 handlers)
+[GIN-debug] POST   /user/signin              --> filestore-server-study/service/apigw/handler.DoSignInUser (3 handlers)
+[GIN-debug] POST   /user/info                --> filestore-server-study/service/apigw/handler.QueryUserInfo (5 handlers)
+[GIN-debug] POST   /file/query               --> filestore-server-study/service/apigw/handler.GetManyFileMetaInfo (5 handlers)
+[GIN-debug] POST   /file/update              --> filestore-server-study/service/apigw/handler.UpdateFileInfo (5 handlers)
+微服务micro框架启动：开始监听...
+[GIN-debug] Listening and serving HTTP on :8080
