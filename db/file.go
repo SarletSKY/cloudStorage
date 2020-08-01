@@ -27,7 +27,6 @@ func AddFileInfoTodb(fileSha1 string, fileName string, fileSize int64, fileAdd s
 
 	result, err := stmt.Exec(fileSha1, fileName, fileSize, fileAdd)
 	if err != nil {
-		fmt.Println("1")
 		fmt.Println("sql exec failed,err: ", err.Error())
 		return false
 	}

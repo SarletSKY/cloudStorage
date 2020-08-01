@@ -86,6 +86,14 @@ func DoSignInUser(c *gin.Context) {
 		return
 	}
 
+	if rpcResp.Code == common.StatusLoginFailed {
+		c.JSON(http.StatusOK, gin.H{
+			"code": rpcResp.Code,
+			"msg":  "登录失败，用户名或密码错误，请重新输入",
+		})
+		return
+	}
+
 	if rpcResp.Code != common.StatusOK {
 		c.JSON(http.StatusOK, gin.H{
 			"code": rpcResp.Code,

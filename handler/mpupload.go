@@ -257,7 +257,7 @@ func CompleteMultipartUpload(c *gin.Context) {
 
 	// 加入到文件表与用户文件表数据库中
 	_ = db.AddFileInfoTodb(fileHash, fileName, fileSize, MergeDir+fileHash)
-	_ = db.OnUserFileUploadFinshedDB(username, fileName, fileHash, fileSize)
+	_ = db.OnUserFileUploadFinshedDB(username, fileName, fileHash, fileSize, time.Now().Format("2006-01-02 15:04:05"))
 
 	// TODO: 6. 并且删除分块文件与redis数据库的分块文件
 	_, delHashErr := conn.Do("DEL", HashUpIDKeyPrefix+fileHash)

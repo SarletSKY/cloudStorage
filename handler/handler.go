@@ -152,7 +152,7 @@ func DoUploadHandler(c *gin.Context) {
 	// 解析上下文获取username
 
 	username := c.Request.FormValue("username")
-	suc := db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize)
+	suc := db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize, time.Now().Format("2006-01-02 15:04:05"))
 	if !suc {
 		errCode = -5
 	}
@@ -191,7 +191,7 @@ func FastUploadUserFile(c *gin.Context) {
 	}
 
 	// 成功则秒传[上传用户文件表]
-	suc := db.OnUserFileUploadFinshedDB(username, filename, filehash, filesize)
+	suc := db.OnUserFileUploadFinshedDB(username, filename, filehash, filesize, time.Now().Format("2006-01-02 15:04:05"))
 	if suc {
 		resp := util.RespMsg{
 			Code: 0,

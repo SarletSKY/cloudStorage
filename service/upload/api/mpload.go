@@ -25,15 +25,15 @@ type MultipartUploadInfo struct {
 	FileHash    string
 	FileSize    int
 	UploadID    string
-	BlockSize   int
-	BlockCount  int
-	BlockExists []int // 已经上传完成的分块索引列表
+	ChunkSize   int
+	ChunkCount  int
+	ChunkExists []int // 已经上传完成的分块索引列表
 }
 
 // 将数据string进行封装起来成常量
 const (
-	BlockKeyPrefix    = "MP_"                    // 分块上传的redis前缀
-	BlockDir          = config.BlockLocalRootDir // 分块的所在目录
+	ChunkKeyPrefix    = "MP_"                    // 分块上传的redis前缀
+	ChunkDir          = config.ChunkLocalRootDir // 分块的所在目录
 	MergeDir          = config.MergeLocalRootDir // 合并的目录
 	TempDir           = config.TempLocalRootDir  // 临时文件目录
 	HashUpIDKeyPrefix = "HASH_UPID_"             // 文件hash映射的uploadId对应的redis的前缀
@@ -41,8 +41,8 @@ const (
 
 // 初始化[也就是判断有没有这些文件]
 func init() {
-	if err := os.MkdirAll(BlockDir, 0744); err != nil {
-		fmt.Println("not found mkdir file" + BlockDir)
+	if err := os.MkdirAll(ChunkDir, 0744); err != nil {
+		fmt.Println("not found mkdir file" + ChunkDir)
 		os.Exit(1)
 	}
 	if err := os.MkdirAll(MergeDir, 0744); err != nil {
@@ -94,11 +94,11 @@ func InitMultipartUpload(c *gin.Context) {
 
 	// 5.1 首次上传则新建uploadID
 	// 5.2 断点续传则根据uploadID获取已上传的文件分块列表
-	BlockExist := []int{} // 块完成的数量
+	chunksExist := []int{} // 块完成的数量
 	if uploadId == "" {
 		uploadId = username + fmt.Sprintf("%x", time.Now().UnixNano())
 	} else {
-		blocks, err := redis.Values(conn.Do("HGETALL", BlockKeyPrefix+uploadId))
+		chunks, err := redis.Values(conn.Do("HGETALL", ChunkKeyPrefix+uploadId))
 		if err != nil {
 			c.JSON(http.StatusOK, gin.H{
 				"code": -3,
@@ -108,13 +108,13 @@ func InitMultipartUpload(c *gin.Context) {
 		}
 
 		// 续传
-		for i := 0; i < len(blocks); i += 2 {
-			k := string(blocks[i].([]byte))
-			v := string(blocks[i+1].([]byte))
-			if strings.HasPrefix(k, "block_") && v == "1" {
+		for i := 0; i < len(chunks); i += 2 {
+			k := string(chunks[i].([]byte))
+			v := string(chunks[i+1].([]byte))
+			if strings.HasPrefix(k, "chkidx_") && v == "1" {
 				//block_6 -> 6
 				blockIndex, _ := strconv.Atoi(k[7:])
-				BlockExist = append(BlockExist, blockIndex)
+				chunksExist = append(chunksExist, blockIndex)
 			}
 		}
 	}
@@ -124,20 +124,20 @@ func InitMultipartUpload(c *gin.Context) {
 		FileHash:    filehash,
 		FileSize:    filesize,
 		UploadID:    uploadId,        //ID使用用户名加时间戳
-		BlockSize:   5 * 1024 * 1024, // 5MB
-		BlockCount:  int(math.Ceil(float64(filesize) / (5 * 1024 * 1024))),
-		BlockExists: BlockExist,
+		ChunkSize:   5 * 1024 * 1024, // 5MB
+		ChunkCount:  int(math.Ceil(float64(filesize) / (5 * 1024 * 1024))),
+		ChunkExists: chunksExist,
 	}
 	// 6. 上传到redis
-	if len(mpInfo.BlockExists) <= 0 {
-		hkey := BlockKeyPrefix + mpInfo.UploadID
-		conn.Do("HSET", hkey, "blockcount", mpInfo.BlockCount)
+	if len(mpInfo.ChunkExists) <= 0 {
+		hkey := ChunkKeyPrefix + mpInfo.UploadID
+		conn.Do("HSET", hkey, "chunkcount", mpInfo.ChunkCount)
 		conn.Do("HSET", hkey, "filehash", mpInfo.FileHash)
 		conn.Do("HSET", hkey, "filesize", mpInfo.FileSize)
 		conn.Do("EXPIRE", hkey, 43200) // 半天的时间，时间一过就会清除。
 		conn.Do("SET", HashUpIDKeyPrefix+filehash, mpInfo.UploadID, "EX", 43200)
+		fmt.Println("退出")
 	}
-
 	// 返回响应
 	c.JSON(http.StatusOK, gin.H{
 		"code": 0,
@@ -150,15 +150,15 @@ func InitMultipartUpload(c *gin.Context) {
 func MultipartUpload(c *gin.Context) {
 	//username := request.Form.Get("username")
 	uploadID := c.Request.FormValue("uploadid")
-	blockcount := c.Request.FormValue("index")
-	blockhash := c.Request.FormValue("chkhash")
+	chunkIndex := c.Request.FormValue("index")
+	chunkSha1 := c.Request.FormValue("chkhash")
 	//获取连接池
 	conn := redisPool.GetRedisPool().Get()
 	defer conn.Close()
 
 	// 获取文件句柄，用于存储分块内容[在本地也创建起来]
 	// 创建文件先要查找有没有该文件夹，不然会报错
-	filepath := BlockDir + uploadID + "/" + blockcount
+	filepath := ChunkDir + uploadID + "/" + chunkIndex
 	os.MkdirAll(path.Dir(filepath), 0744)
 
 	file, err := os.Create(filepath)
@@ -183,19 +183,19 @@ func MultipartUpload(c *gin.Context) {
 
 	// 对比下hash，配置正确才允许下一步
 	cmpSha1, err := util.ComputeSha1ByShell(filepath)
-	if err != nil || cmpSha1 != blockhash {
+	if err != nil || cmpSha1 != chunkSha1 {
 		fmt.Printf("Verify chunk sha1 failed, compare OK: %t, err:%+v\n",
-			cmpSha1 == blockhash, err)
+			cmpSha1 == chunkSha1, err)
 		c.JSON(http.StatusBadRequest, gin.H{
 			"code": -2,
-			"msg":  "Verify hash failed, chkIdx:" + blockcount,
+			"msg":  "Verify hash failed, chkIdx:" + chunkIndex,
 			"data": nil,
 		})
 		return
 	}
 
 	// 更新redis状态
-	conn.Do("HSET", BlockKeyPrefix+uploadID, "block_"+blockcount, 1)
+	conn.Do("HSET", ChunkKeyPrefix+uploadID, "chkidx_"+chunkIndex, 1)
 
 	c.JSON(http.StatusOK, gin.H{
 		"code": 0,
@@ -220,7 +220,7 @@ func CompleteMultipartUpload(c *gin.Context) {
 	blockTotalCount := 0
 	blockCount := 0
 	// redis从key值获取数据
-	data, err := redis.Values(conn.Do("HGETALL", BlockKeyPrefix+uploadId)) // 获取redis uploadid所有数据
+	data, err := redis.Values(conn.Do("HGETALL", ChunkKeyPrefix+uploadId)) // 获取redis uploadid所有数据
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"code": -1,
@@ -232,9 +232,9 @@ func CompleteMultipartUpload(c *gin.Context) {
 	for i := 0; i < len(data); i += 2 { // 这里为什么是加2？因为额每个data有key与value，所以下一层级是要+2
 		k := string(data[i].([]byte))
 		v := string(data[i+1].([]byte))
-		if k == "blockcount" {
+		if k == "chunkcount" {
 			blockTotalCount, _ = strconv.Atoi(v)
-		} else if strings.HasPrefix(k, "block_") && v == "1" {
+		} else if strings.HasPrefix(k, "chkidx_") && v == "1" {
 			blockCount++ // 将分块的实际上传的数量，在redis中消息获取出来查看
 		}
 	}
@@ -249,7 +249,7 @@ func CompleteMultipartUpload(c *gin.Context) {
 	}
 	// TODO: 6. 进行文件合并
 	// TODO: 11. 修改
-	srcPath := BlockDir + uploadId + "/"
+	srcPath := ChunkDir + uploadId + "/"
 	destPath := MergeDir + fileHash
 	cmd := fmt.Sprintf("cd %s && ls | sort -n | xargs cat > %s", srcPath, destPath)
 	mergeRes, err := util.ExecLinuxShell(cmd)
@@ -266,11 +266,11 @@ func CompleteMultipartUpload(c *gin.Context) {
 
 	// 加入到文件表与用户文件表数据库中
 	_ = db.AddFileInfoTodb(fileHash, fileName, fileSize, MergeDir+fileHash)
-	_ = db.OnUserFileUploadFinshedDB(username, fileName, fileHash, fileSize)
+	_ = db.OnUserFileUploadFinshedDB(username, fileName, fileHash, fileSize, time.Now().Format("2006-01-02 15:04:05"))
 
 	// TODO: 6. 并且删除分块文件与redis数据库的分块文件
 	_, delHashErr := conn.Do("DEL", HashUpIDKeyPrefix+fileHash)
-	delUploadId, delUploadInfoErr := redis.Int64(conn.Do("DEL", BlockKeyPrefix+uploadId))
+	delUploadId, delUploadInfoErr := redis.Int64(conn.Do("DEL", ChunkKeyPrefix+uploadId))
 	if delHashErr != nil || delUploadInfoErr != nil || delUploadId != 1 {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"code": -4,
@@ -279,7 +279,7 @@ func CompleteMultipartUpload(c *gin.Context) {
 		})
 	}
 
-	if suc := util.RemovePathByShell(BlockDir + uploadId); !suc {
+	if suc := util.RemovePathByShell(ChunkDir + uploadId); !suc {
 		fmt.Printf("Failed to delete chunks as upload canceled, uploadID:%s\n", uploadId)
 	}
 

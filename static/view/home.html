@@ -129,7 +129,6 @@
                     var x = document.getElementById('filetbl').insertRow();
                     var cell = x.insertCell();
                     cell.innerHTML = data[i].FileHash.substr(0, 20) + "...";
-
                     cell = x.insertCell();
                     cell.innerHTML = data[i].FileName;
 
@@ -224,7 +223,6 @@
             success: function(body) {
                 var resp = body;
                 console.log(resp);
-                console.log(resp.code);
                 if (resp.code == 10006){
                     alert("文件名已经存在，操作失败")
                 }else{

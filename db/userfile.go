@@ -3,7 +3,6 @@ package db
 import (
 	"filestore-server-study/db/mysql"
 	"fmt"
-	"time"
 )
 
 type TableUserFile struct {
@@ -16,7 +15,7 @@ type TableUserFile struct {
 }
 
 // 上传文件到user_file表
-func OnUserFileUploadFinshedDB(username, filename, filehash string, filesize int64) bool {
+func OnUserFileUploadFinshedDB(username, filename, filehash string, filesize int64, uploadAt string) bool {
 	stmt, err := mysql.DBConn().Prepare("insert ignore into tbl_user_file (`user_name`,`file_name`,`file_size`,`file_sha1`,`upload_at`,`status`) " +
 		" values (?,?,?,?,?,1)")
 	if err != nil {
@@ -25,7 +24,7 @@ func OnUserFileUploadFinshedDB(username, filename, filehash string, filesize int
 	}
 	defer stmt.Close()
 
-	_, err = stmt.Exec(username, filename, filesize, filehash, time.Now())
+	_, err = stmt.Exec(username, filename, filesize, filehash, uploadAt)
 	if err != nil {
 		fmt.Println(err.Error())
 		return false

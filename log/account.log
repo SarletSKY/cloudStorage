@@ -307,3 +307,176 @@ sql: no rows in result set
 2020-07-31 17:30:26.541577 I | Broker [http] Connected to [::]:44429
 2020-07-31 17:30:26.546639 I | Registry [consul] Registering node: go.micro.service.user-d8c5986a-b484-4284-8ade-e7ab5ea87fbb
 2020-07-31 17:30:32.803853 I | Registry [consul] Deregistering node: go.micro.service.user-d8c5986a-b484-4284-8ade-e7ab5ea87fbb
+2020-07-31 17:34:59.757079 I | Transport [http] Listening on [::]:43665
+2020-07-31 17:34:59.757307 I | Broker [http] Connected to [::]:37459
+2020-07-31 17:34:59.762946 I | Registry [consul] Registering node: go.micro.service.user-5636cea3-701c-400d-9ec8-056650b84d68
+2020-07-31 17:44:04.509479 I | Registry [consul] Deregistering node: go.micro.service.user-5636cea3-701c-400d-9ec8-056650b84d68
+2020-07-31 17:44:34.163430 I | Transport [http] Listening on [::]:38787
+2020-07-31 17:44:34.164733 I | Broker [http] Connected to [::]:46435
+2020-07-31 17:44:34.168225 I | Registry [consul] Registering node: go.micro.service.user-fdf95575-f28b-42c0-80b5-fd6a31020b96
+2020-07-31 17:47:15.366181 I | Registry [consul] Deregistering node: go.micro.service.user-fdf95575-f28b-42c0-80b5-fd6a31020b96
+2020-07-31 17:47:42.257646 I | Transport [http] Listening on [::]:41439
+2020-07-31 17:47:42.257858 I | Broker [http] Connected to [::]:40015
+2020-07-31 17:47:42.264130 I | Registry [consul] Registering node: go.micro.service.user-63fc1715-8453-4b53-986a-f38a3d0b710d
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+true
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+2020-07-31 17:58:49.105912 I | Registry [consul] Deregistering node: go.micro.service.user-63fc1715-8453-4b53-986a-f38a3d0b710d
+2020-07-31 17:59:13.198897 I | Transport [http] Listening on [::]:38445
+2020-07-31 17:59:13.226794 I | Broker [http] Connected to [::]:39729
+2020-07-31 17:59:13.229755 I | Registry [consul] Registering node: go.micro.service.user-52aee8c4-3400-4cf1-90f6-f489aded9eda
+2020-07-31 17:59:50.802144 I | Registry [consul] Deregistering node: go.micro.service.user-52aee8c4-3400-4cf1-90f6-f489aded9eda
+2020-07-31 18:00:03.730816 I | Transport [http] Listening on [::]:40965
+2020-07-31 18:00:03.730949 I | Broker [http] Connected to [::]:35753
+2020-07-31 18:00:03.733440 I | Registry [consul] Registering node: go.micro.service.user-f951c35a-64d1-4082-9f9d-18f4d3250155
+true
+2020-07-31 18:01:07.071454 I | Registry [consul] Deregistering node: go.micro.service.user-f951c35a-64d1-4082-9f9d-18f4d3250155
+2020-07-31 18:01:55.269518 I | Transport [http] Listening on [::]:39361
+2020-07-31 18:01:55.272055 I | Broker [http] Connected to [::]:37035
+2020-07-31 18:01:55.275922 I | Registry [consul] Registering node: go.micro.service.user-a1fb7526-91f6-450d-b36e-707275266d8f
+2020-07-31 18:13:47.920239 I | Registry [consul] Deregistering node: go.micro.service.user-a1fb7526-91f6-450d-b36e-707275266d8f
+2020-07-31 18:15:39.913922 I | Transport [http] Listening on [::]:37475
+2020-07-31 18:15:39.918749 I | Broker [http] Connected to [::]:34763
+2020-07-31 18:15:39.923325 I | Registry [consul] Registering node: go.micro.service.user-87eeb268-4808-4952-af3e-b3fcde26a5a4
+sql: no rows in result set
+2020-07-31 18:26:50.046144 I | Registry [consul] Deregistering node: go.micro.service.user-87eeb268-4808-4952-af3e-b3fcde26a5a4
+2020-07-31 18:30:15.847886 I | Transport [http] Listening on [::]:41509
+2020-07-31 18:30:15.849540 I | Broker [http] Connected to [::]:37823
+2020-07-31 18:30:15.853453 I | Registry [consul] Registering node: go.micro.service.user-7b638420-fc80-48b0-8dca-828ea8c6c633
+2020-07-31 18:33:15.401874 I | Registry [consul] Deregistering node: go.micro.service.user-7b638420-fc80-48b0-8dca-828ea8c6c633
+2020-07-31 18:34:17.284904 I | Transport [http] Listening on [::]:34057
+2020-07-31 18:34:17.285219 I | Broker [http] Connected to [::]:34869
+2020-07-31 18:34:17.291346 I | Registry [consul] Registering node: go.micro.service.user-62e6286b-32cc-4bc5-96c2-d0e039d72039
+true
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+2020-07-31 18:42:12.098818 I | Registry [consul] Deregistering node: go.micro.service.user-62e6286b-32cc-4bc5-96c2-d0e039d72039
+2020-07-31 18:43:37.782418 I | Transport [http] Listening on [::]:44369
+2020-07-31 18:43:37.793144 I | Broker [http] Connected to [::]:36873
+2020-07-31 18:43:37.797663 I | Registry [consul] Registering node: go.micro.service.user-edc7ae32-1ae9-4f3d-bf12-b5b526e47c58
+true
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+2020-07-31 18:55:26.110469 I | Registry [consul] Deregistering node: go.micro.service.user-edc7ae32-1ae9-4f3d-bf12-b5b526e47c58
+2020-07-31 18:57:34.086708 I | Transport [http] Listening on [::]:41163
+2020-07-31 18:57:34.090606 I | Broker [http] Connected to [::]:40211
+2020-07-31 18:57:34.094600 I | Registry [consul] Registering node: go.micro.service.user-4e5e89bf-85d4-4aca-8f44-78af9fd63258
+true
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+2020-07-31 22:52:28.486058 I | Registry [consul] Deregistering node: go.micro.service.user-4e5e89bf-85d4-4aca-8f44-78af9fd63258
+2020-07-31 22:54:20.030820 I | Transport [http] Listening on [::]:34321
+2020-07-31 22:54:20.032702 I | Broker [http] Connected to [::]:41155
+2020-07-31 22:54:20.040994 I | Registry [consul] Registering node: go.micro.service.user-1acbc414-073c-45d1-9cdd-c6d622dc15e4
+2020-07-31 22:55:00.400784 I | Registry [consul] Deregistering node: go.micro.service.user-1acbc414-073c-45d1-9cdd-c6d622dc15e4
+2020-08-01 13:35:17.497817 I | Transport [http] Listening on [::]:33563
+2020-08-01 13:35:17.503355 I | Broker [http] Connected to [::]:39723
+2020-08-01 13:35:17.517850 I | Registry [consul] Registering node: go.micro.service.user-b39b51f0-5840-40ac-9e97-3dbd463c16f6
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+sql: no rows in result set
+2020-08-01 13:42:07.310102 I | Registry [consul] Deregistering node: go.micro.service.user-b39b51f0-5840-40ac-9e97-3dbd463c16f6
+2020-08-01 13:42:29.918570 I | Transport [http] Listening on [::]:38333
+2020-08-01 13:42:29.919888 I | Broker [http] Connected to [::]:43299
+2020-08-01 13:42:29.923384 I | Registry [consul] Registering node: go.micro.service.user-e2ed6e01-7ff9-4c47-a79f-1e84b41f6e50
+sql: no rows in result set
+2020-08-01 14:11:09.779632 I | Registry [consul] Deregistering node: go.micro.service.user-e2ed6e01-7ff9-4c47-a79f-1e84b41f6e50
+2020-08-01 14:14:07.537864 I | Transport [http] Listening on [::]:37703
+2020-08-01 14:14:07.539110 I | Broker [http] Connected to [::]:43185
+2020-08-01 14:14:07.540841 I | Registry [consul] Registering node: go.micro.service.user-0b37f08b-0e25-4c8b-a6b7-c86487206cba
+true
+2020-08-01 14:18:25.003750 I | Registry [consul] Deregistering node: go.micro.service.user-0b37f08b-0e25-4c8b-a6b7-c86487206cba
+2020-08-01 14:18:57.901603 I | Transport [http] Listening on [::]:43717
+2020-08-01 14:18:57.902252 I | Broker [http] Connected to [::]:41981
+2020-08-01 14:18:57.904510 I | Registry [consul] Registering node: go.micro.service.user-a6c1d449-23a9-4e58-b810-bf0e01dc7d57
+2020-08-01 14:24:42.844671 I | Registry [consul] Deregistering node: go.micro.service.user-a6c1d449-23a9-4e58-b810-bf0e01dc7d57
+2020-08-01 14:25:05.676464 I | Transport [http] Listening on [::]:36105
+2020-08-01 14:25:05.680971 I | Broker [http] Connected to [::]:41059
+2020-08-01 14:25:05.683597 I | Registry [consul] Registering node: go.micro.service.user-60f5f9fd-c5d0-4463-862f-97dc7fca426c
+2020-08-01 14:27:24.032596 I | Registry [consul] Deregistering node: go.micro.service.user-60f5f9fd-c5d0-4463-862f-97dc7fca426c
+2020-08-01 14:27:45.758421 I | Transport [http] Listening on [::]:36343
+2020-08-01 14:27:45.758540 I | Broker [http] Connected to [::]:36433
+2020-08-01 14:27:45.762779 I | Registry [consul] Registering node: go.micro.service.user-70264d49-7439-4ca9-8c5a-efb41e288a0c
+2020-08-01 14:31:43.260530 I | Registry [consul] Deregistering node: go.micro.service.user-70264d49-7439-4ca9-8c5a-efb41e288a0c
+2020-08-01 14:31:55.825995 I | Transport [http] Listening on [::]:40717
+2020-08-01 14:31:55.826148 I | Broker [http] Connected to [::]:37839
+2020-08-01 14:31:55.828220 I | Registry [consul] Registering node: go.micro.service.user-2f693965-7d0e-46d7-8386-6435091626f7
+2020-08-01 14:36:05.639879 I | Registry [consul] Deregistering node: go.micro.service.user-2f693965-7d0e-46d7-8386-6435091626f7
+2020-08-01 14:36:28.678829 I | Transport [http] Listening on [::]:41541
+2020-08-01 14:36:28.679634 I | Broker [http] Connected to [::]:40275
+2020-08-01 14:36:28.681286 I | Registry [consul] Registering node: go.micro.service.user-2d5fcacf-2fc1-4efa-83c6-9718ef6993da
+2020-08-01 14:37:29.800032 I | Registry [consul] Deregistering node: go.micro.service.user-2d5fcacf-2fc1-4efa-83c6-9718ef6993da
+2020-08-01 14:37:56.482021 I | Transport [http] Listening on [::]:33379
+2020-08-01 14:37:56.482143 I | Broker [http] Connected to [::]:36883
+2020-08-01 14:37:56.487178 I | Registry [consul] Registering node: go.micro.service.user-b1e65cf7-b13d-4a39-a328-f8b43038a7ad
+2020-08-01 14:47:45.834617 I | Registry [consul] Deregistering node: go.micro.service.user-b1e65cf7-b13d-4a39-a328-f8b43038a7ad
+2020-08-01 15:25:52.211470 I | Transport [http] Listening on [::]:34343
+2020-08-01 15:25:52.226219 I | Broker [http] Connected to [::]:45711
+2020-08-01 15:25:52.227838 I | Registry [consul] Registering node: go.micro.service.user-a2634ebd-b0b5-447f-bc1b-bbf733a1d139
+2020-08-01 15:35:59.291277 I | Registry [consul] Deregistering node: go.micro.service.user-a2634ebd-b0b5-447f-bc1b-bbf733a1d139
+2020-08-01 15:36:13.584483 I | Transport [http] Listening on [::]:38023
+2020-08-01 15:36:13.584585 I | Broker [http] Connected to [::]:40467
+2020-08-01 15:36:13.586648 I | Registry [consul] Registering node: go.micro.service.user-fcc971c0-aacd-45a9-822f-bb3cafb60fd7
+true
+sql: no rows in result set
+2020-08-01 16:02:54.784750 I | Registry [consul] Deregistering node: go.micro.service.user-fcc971c0-aacd-45a9-822f-bb3cafb60fd7
+2020-08-01 16:11:07.940117 I | Transport [http] Listening on [::]:33311
+2020-08-01 16:11:07.946525 I | Broker [http] Connected to [::]:35233
+2020-08-01 16:11:07.949827 I | Registry [consul] Registering node: go.micro.service.user-fbb85a7f-9622-49c2-8eda-083b6215ed30
+2020-08-01 16:15:18.640675 I | Registry [consul] Deregistering node: go.micro.service.user-fbb85a7f-9622-49c2-8eda-083b6215ed30
+2020-08-01 16:15:40.142885 I | Transport [http] Listening on [::]:34507
+2020-08-01 16:15:40.149029 I | Broker [http] Connected to [::]:40561
+2020-08-01 16:15:40.151365 I | Registry [consul] Registering node: go.micro.service.user-79d96319-7f5b-4fe4-8de7-9c48822102e9
+2020-08-01 16:17:25.905163 I | Registry [consul] Deregistering node: go.micro.service.user-79d96319-7f5b-4fe4-8de7-9c48822102e9
+2020-08-01 16:17:46.313729 I | Transport [http] Listening on [::]:43895
+2020-08-01 16:17:46.314443 I | Broker [http] Connected to [::]:39785
+2020-08-01 16:17:46.315992 I | Registry [consul] Registering node: go.micro.service.user-1f079362-ba4f-4a54-a530-22a9d3a366ad
+2020-08-01 16:26:27.841198 I | Registry [consul] Deregistering node: go.micro.service.user-1f079362-ba4f-4a54-a530-22a9d3a366ad

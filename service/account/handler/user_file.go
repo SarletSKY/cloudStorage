@@ -37,18 +37,18 @@ func (u *User) UserFileRename(ctx context.Context, req *userProto.ReqUserFileRen
 
 	// 通过sha1获取文件的元信息 op是指客户端需要操作的类型的标志
 	filehash := req.Filehash
-	fileName := req.NewFileName
+	newFileName := req.NewFileName
 	username := req.Username
 
 	// TODO: 重命名之前查数据库有不有该名字，不能重复
-	exist := db.QueryUserFileNameExist(username, fileName)
+	exist := db.QueryUserFileNameExist(username, newFileName)
 	if exist {
 		resp.Code = common.FileAlreadExists
 		resp.Message = "文件名已经存在，请重新输入"
 		return nil
 	}
 
-	_ = db.UpdateUserFileInfoDB(username, fileName, filehash)
+	_ = db.UpdateUserFileInfoDB(username, newFileName, filehash)
 
 	// TODO: 6. 将用户文件表中更改的那条数据重新获取出来，序列化返回
 	userFile, err := db.QueryUserFileDB(username, filehash)

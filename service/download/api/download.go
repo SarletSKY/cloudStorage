@@ -115,11 +115,11 @@ func RangeDownload(c *gin.Context) {
 	fmt.Println("range-download-fpath: " + fpath)
 
 	// 打开文件
-	file, err := os.Open(fileMeta.Location)
+	file, err := os.Open(fpath)
 	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"code": common.StatusServerError,
-			"msg":  "server error",
+			"msg":  err.Error(),
 		})
 		return
 	}
@@ -128,12 +128,11 @@ func RangeDownload(c *gin.Context) {
 	// 写数据到前端页面去
 	c.Writer.Header().Set("Content-Type", "application/octet-stream") // 下载二进制流
 	c.Writer.Header().Set("content-disposition", "attachment; filename=\""+userFileInfo.FileName+"\"")
-	http.ServeFile(c.Writer, c.Request, fileMeta.Location)
+	c.File(fpath)
 }
 
 // 生成文件下载地址
 func DownloadURL(c *gin.Context) {
-	fmt.Println("赵薇熊：")
 	// TODO: 8. 对下载地址进行修改
 	filehash := c.Request.FormValue("filehash")
 	// 从文件表查找信息

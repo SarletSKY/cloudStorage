@@ -36,6 +36,7 @@ func init() {
 
 // 上传文件[POST]
 func DoUploadHandler(c *gin.Context) {
+	username := c.Request.FormValue("username")
 	errCode := 0
 	defer func() {
 		c.Header("Access-Control-Allow-Origin", "*")
@@ -68,6 +69,13 @@ func DoUploadHandler(c *gin.Context) {
 		FileName:       header.Filename,
 		Location:       config.TempLocalRootDir + header.Filename,
 		UpdateFileTime: time.Now().Format("2006-01-02 15:04:05"),
+	}
+
+	// TODO: 上传文件之前要确保用户文件名不会重复
+	exist := db.QueryUserFileNameExist(username, fileMeta.FileName)
+	if exist {
+		errCode = -7
+		return
 	}
 
 	// 2.1 备份数据到本地 （利用copy进行处理）
@@ -165,8 +173,7 @@ func DoUploadHandler(c *gin.Context) {
 	// 5.3 升级上传接口,将文件上传到用户文件表上
 	// 解析上下文获取username
 
-	username := c.Request.FormValue("username")
-	suc = db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize)
+	suc = db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize, fileMeta.UpdateFileTime)
 	if !suc {
 		errCode = -6
 	} else {
@@ -207,7 +214,7 @@ func FastUploadUserFile(c *gin.Context) {
 	}
 
 	// 成功则秒传[上传用户文件表]
-	suc := db.OnUserFileUploadFinshedDB(username, filename, filehash, filesize)
+	suc := db.OnUserFileUploadFinshedDB(username, filename, filehash, filesize, time.Now().Format("2006-01-02 15:04:05"))
 	if suc {
 		resp := util.RespMsg{
 			Code: 0,

@@ -61,6 +61,5 @@ func signIn(username, password string) (token string, err error) {
 		return "", err
 	}
 	token = jsonit.Get(body, "data").Get("Token").ToString()
-	fmt.Println("signin token: " + token)
 	return token, nil
 }
