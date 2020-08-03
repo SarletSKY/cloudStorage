@@ -4,9 +4,8 @@ import (
 	"encoding/json"
 	"filestore-server-study/common"
 	"filestore-server-study/config"
-	"filestore-server-study/db"
-	"filestore-server-study/meta"
 	"filestore-server-study/mq"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/store/ceph"
 	"filestore-server-study/store/oss"
 	"filestore-server-study/util"
@@ -16,7 +15,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 )
 
@@ -65,15 +63,14 @@ func DoUploadHandler(c *gin.Context) {
 
 	// 2.2 对数据进行储存[就是对元信息进行初始化赋值]
 	// TODO: 7. 对存进本地/tmp/路径修改打牌ceph
-	fileMeta := meta.FileMeta{
+	fileMeta := dbCli.FileMeta{
 		FileName:       header.Filename,
 		Location:       config.TempLocalRootDir + header.Filename,
 		UpdateFileTime: time.Now().Format("2006-01-02 15:04:05"),
 	}
 
 	// TODO: 上传文件之前要确保用户文件名不会重复
-	exist := db.QueryUserFileNameExist(username, fileMeta.FileName)
-	if exist {
+	if exists, _ := dbCli.QueryUserFileNameExist(username, fileMeta.FileName); exists {
 		errCode = -7
 		return
 	}
@@ -106,7 +103,7 @@ func DoUploadHandler(c *gin.Context) {
 		//文件存储到ceph
 		// 读出文件数据
 		data, _ := ioutil.ReadAll(newFile)
-		cephFilePath := "/ceph/" + fileMeta.FileSha1
+		cephFilePath := config.CephRootDir + "/" + fileMeta.FileSha1
 		err = ceph.PutObject("userfile", cephFilePath, data)
 		if err != nil {
 			fmt.Println("upload ceph err: " + err.Error())
@@ -116,7 +113,7 @@ func DoUploadHandler(c *gin.Context) {
 		}
 		fileMeta.Location = cephFilePath
 	} else if config.CurrentStoreType == common.StoreOSS {
-		ossPath := "oss/" + fileMeta.FileSha1
+		ossPath := config.OSSRootDir + fileMeta.FileSha1
 		// oss存储分两种，异步与同步
 		if !config.AsyncTransferEnable {
 			err = oss.Bucket().PutObject(ossPath, newFile)
@@ -140,7 +137,8 @@ func DoUploadHandler(c *gin.Context) {
 			}
 			msg, _ := json.Marshal(data)
 			// 先生成生产者
-			suc := mq.Publish(config.TransExchangeName,
+			suc := mq.Publish(
+				config.TransExchangeName,
 				config.TransOSSRoutingKey,
 				msg,
 			)
@@ -164,8 +162,8 @@ func DoUploadHandler(c *gin.Context) {
 			fileMeta.Location = cephFilePath*/
 
 	//meta.UploadFileMeta(fileMeta)
-	suc := meta.UploadFileMetaDB(fileMeta)
-	if !suc {
+	dbResp, err := dbCli.AddFileInfoTodb(fileMeta)
+	if err != nil || !dbResp.Suc {
 		errCode = -6
 		return
 	}
@@ -173,8 +171,8 @@ func DoUploadHandler(c *gin.Context) {
 	// 5.3 升级上传接口,将文件上传到用户文件表上
 	// 解析上下文获取username
 
-	suc = db.OnUserFileUploadFinshedDB(username, fileMeta.FileName, fileMeta.FileSha1, fileMeta.FileSize, fileMeta.UpdateFileTime)
-	if !suc {
+	dbResp, err = dbCli.OnUserFileUploadFinshedDB(username, fileMeta)
+	if err != nil || !dbResp.Suc {
 		errCode = -6
 	} else {
 		errCode = 0
@@ -192,18 +190,18 @@ func FastUploadUserFile(c *gin.Context) {
 
 	username := c.Request.FormValue("username")
 	filename := c.Request.FormValue("filename")
-	filesize, _ := strconv.ParseInt(c.Request.FormValue("filesize"), 10, 64)
+	//filesize, _ := strconv.ParseInt(c.Request.FormValue("filesize"), 10, 64)
 	filehash := c.Request.FormValue("filehash")
 
 	// 向文件表中查找有没有上传过
-	fileMeta, err := db.GetFileInfoTodb(filehash)
+	dbResp, err := dbCli.GetFileInfoTodb(filehash)
 	if err != nil {
 		fmt.Println(err.Error())
 		c.Status(http.StatusInternalServerError)
 		return
 	}
 	// 查不到数据，秒传数据失败
-	if fileMeta == nil {
+	if !dbResp.Suc || dbResp.Data == nil {
 		// 返回前端
 		resp := util.RespMsg{
 			Code: -1,
@@ -213,9 +211,12 @@ func FastUploadUserFile(c *gin.Context) {
 		return
 	}
 
+	tblFile := dbCli.ToTableFile(dbResp.Data)
+	fMeta := dbCli.TableFileToFileMeta(tblFile)
+	fMeta.FileName = filename
 	// 成功则秒传[上传用户文件表]
-	suc := db.OnUserFileUploadFinshedDB(username, filename, filehash, filesize, time.Now().Format("2006-01-02 15:04:05"))
-	if suc {
+	dbResp, err = dbCli.OnUserFileUploadFinshedDB(username, fMeta)
+	if err == nil && dbResp.Suc {
 		resp := util.RespMsg{
 			Code: 0,
 			Msg:  "秒传成功",

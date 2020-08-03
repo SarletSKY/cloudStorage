@@ -43,6 +43,7 @@ cd $GOPATH/src/filestore-server-study
 # 或者也可以通过docker/k8s进行部署
 
 services="
+dbproxy
 upload
 download
 transfer

@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"filestore-server-study/common"
-	"filestore-server-study/db"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/util"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -56,7 +56,7 @@ func ValidToToken(username string, token string) bool {
 		return false
 	}
 
-	tokenToDB, err := db.GetUserToken(username)
+	tokenToDB, err := dbCli.GetUserToken(username)
 	if err != nil || tokenToDB != token {
 		return false
 	}

@@ -19,6 +19,7 @@ account
 upload
 download
 transfer
+dbproxy
 "
 
 for service in $services
@@ -26,4 +27,5 @@ do
     stop_process $service
 done
 
+rm -fr /home/zwx/go/src/filestore-server-study/log/
 echo "执行完毕"

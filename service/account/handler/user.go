@@ -4,8 +4,8 @@ import (
 	"context"
 	"filestore-server-study/common"
 	"filestore-server-study/config"
-	"filestore-server-study/db"
 	proto "filestore-server-study/service/account/proto"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/util"
 	"fmt"
 	"time"
@@ -36,9 +36,8 @@ func (u *User) Signup(ctx context.Context, req *proto.ReqSignup, resp *proto.Res
 	encPassword := util.Sha1([]byte(password + config.PasswordSalt))
 
 	// 将数据加到数据库
-	suc := db.SignUpUserdb(username, encPassword)
-	fmt.Println(suc)
-	if suc {
+	dbResp, err := dbCli.SignUpUserdb(username, encPassword)
+	if err == nil || dbResp.Suc {
 		resp.Code = common.StatusOK
 		resp.Message = "注册成功"
 	} else {
@@ -53,16 +52,16 @@ func (u *User) Signin(ctx context.Context, req *proto.ReqSignin, resp *proto.Res
 	username := req.Username
 	password := req.Password
 	encPwd := util.Sha1([]byte(password + config.PasswordSalt))
-	suc := db.SignInUserdb(username, encPwd)
-	if !suc {
+	dbResp, err := dbCli.SignInUserdb(username, encPwd)
+	if err != nil || !dbResp.Suc {
 		resp.Code = common.StatusLoginFailed
 		return nil
 	}
 
 	// 生成token凭证 [token 40位  md5加密]
 	token := GetToken(username)
-	suc = db.RegisterTokendb(username, token)
-	if !suc {
+	dbResp, err = dbCli.RegisterTokendb(username, token)
+	if err != nil || !dbResp.Suc {
 		resp.Code = common.StatusServerError
 		return nil
 	}
@@ -82,18 +81,20 @@ func (u *User) UserInfo(ctx context.Context, req *proto.ReqUserInfo, resp *proto
 		return
 	}*/
 	// 向数据库查询信息
-	user, err := db.QueryUserInfodb(username)
+	dbResp, err := dbCli.QueryUserInfodb(username)
 	if err != nil {
 		resp.Code = common.StatusServerError
 		resp.Message = "服务错误"
 		return nil
 	}
 
-	if user.Username == "" {
+	if !dbResp.Suc {
 		resp.Code = common.StatusUserNotExists
 		resp.Message = "用户不存在"
 		return nil
 	}
+
+	user := dbCli.ToTableUser(dbResp.Data)
 
 	// 组装信息返回
 	resp.Code = common.StatusOK

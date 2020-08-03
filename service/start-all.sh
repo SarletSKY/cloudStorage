@@ -32,6 +32,7 @@ mkdir -p $logpath
 cd $GOPATH/src/filestore-server-study
 
 services="
+dbproxy
 upload
 download
 transfer

@@ -5,8 +5,8 @@ import (
 	redisPool "filestore-server-study/cache/redis"
 	"filestore-server-study/common"
 	"filestore-server-study/config"
-	"filestore-server-study/db"
 	"filestore-server-study/mq"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/util"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
@@ -65,9 +65,9 @@ func InitMultipartUpload(c *gin.Context) {
 		return
 	}
 	// 2. 查询用户有没有上传过文件，判断文件是否存在
-	if db.IsUserFileUpload(username, filehash) {
+	if exists, _ := dbCli.IsUserFileUpload(username, filehash); exists {
 		c.JSON(http.StatusOK, gin.H{
-			"code": 10006,
+			"code": common.FileAlreadExists,
 			"msg":  "file exists",
 		})
 		return
@@ -136,7 +136,6 @@ func InitMultipartUpload(c *gin.Context) {
 		conn.Do("HSET", hkey, "filesize", mpInfo.FileSize)
 		conn.Do("EXPIRE", hkey, 43200) // 半天的时间，时间一过就会清除。
 		conn.Do("SET", HashUpIDKeyPrefix+filehash, mpInfo.UploadID, "EX", 43200)
-		fmt.Println("退出")
 	}
 	// 返回响应
 	c.JSON(http.StatusOK, gin.H{
@@ -264,16 +263,42 @@ func CompleteMultipartUpload(c *gin.Context) {
 	}
 	log.Println(mergeRes)
 
+	fileMeta := dbCli.FileMeta{
+		FileSha1:       fileHash,
+		FileName:       fileName,
+		FileSize:       int64(fileSize),
+		Location:       MergeDir + fileHash,
+		UpdateFileTime: time.Now().Format("2006-01-02 15:04:05"),
+	}
+
 	// 加入到文件表与用户文件表数据库中
-	_ = db.AddFileInfoTodb(fileHash, fileName, fileSize, MergeDir+fileHash)
-	_ = db.OnUserFileUploadFinshedDB(username, fileName, fileHash, fileSize, time.Now().Format("2006-01-02 15:04:05"))
+	_, ferr := dbCli.AddFileInfoTodb(fileMeta)
+	_, uferr := dbCli.OnUserFileUploadFinshedDB(username, fileMeta)
+
+	if ferr != nil || uferr != nil {
+		errMsg := ""
+		if ferr != nil {
+			errMsg = ferr.Error()
+		} else {
+			errMsg = uferr.Error()
+		}
+		log.Println(errMsg)
+		c.JSON(
+			http.StatusOK,
+			gin.H{
+				"code": -4,
+				"msg":  "数据更新失败",
+				"data": errMsg,
+			})
+		return
+	}
 
 	// TODO: 6. 并且删除分块文件与redis数据库的分块文件
 	_, delHashErr := conn.Do("DEL", HashUpIDKeyPrefix+fileHash)
 	delUploadId, delUploadInfoErr := redis.Int64(conn.Do("DEL", ChunkKeyPrefix+uploadId))
 	if delHashErr != nil || delUploadInfoErr != nil || delUploadId != 1 {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"code": -4,
+			"code": -5,
 			"msg":  "数据更新失败",
 			"data": nil,
 		})
@@ -284,10 +309,10 @@ func CompleteMultipartUpload(c *gin.Context) {
 	}
 
 	// TODO: 异步处理mq
-	ossPath := "oss/" + fileHash
+	ossPath := config.OSSRootDir + fileHash
 	transMsg := mq.TransferData{
-		FileHash:      fileHash,
-		CurLocation:   config.MergeLocalRootDir + fileHash,
+		FileHash:      fileMeta.FileSha1,
+		CurLocation:   fileMeta.Location,
 		DestLocation:  ossPath,
 		DestStoreType: common.StoreOSS,
 	}

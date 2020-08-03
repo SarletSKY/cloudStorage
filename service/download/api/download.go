@@ -3,8 +3,7 @@ package api
 import (
 	"filestore-server-study/common"
 	"filestore-server-study/config"
-	"filestore-server-study/db"
-	"filestore-server-study/meta"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/store/ceph"
 	"filestore-server-study/store/oss"
 	"fmt"
@@ -27,22 +26,24 @@ func DownLoadFile(c *gin.Context) {
 
 	// 获取具体文件信息
 	//fileMeta := meta.GetFileMeta(filehash)
-	fileMeta, err := meta.GetFileMetaDB(filehash)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
+	dbfResp, fErr := dbCli.GetFileInfoTodb(filehash)
+	dbfUserResp, fUserErr := dbCli.QueryUserFileDB(username, filehash)
+	if fErr != nil || fUserErr != nil || !dbfResp.Suc || !dbfUserResp.Suc {
+		c.JSON(http.StatusOK, gin.H{
+			"code": common.StatusServerError,
+			"msg":  "server error",
+		})
 		return
 	}
+
+	fileMeta := dbCli.ToTableFile(dbfResp.Data)
+	userFileInfo := dbCli.ToTableUserFile(dbfUserResp.Data)
 	// TODO: 6. 对下载接口进行修改
-	userFileInfo, err := db.QueryUserFileDB(username, filehash)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
 	// TODO: 7. 对下载方式进行判断ceph
 	var fileBytes []byte
-	if strings.HasPrefix(fileMeta.Location, config.MergeLocalRootDir) {
+	if strings.HasPrefix(fileMeta.FileAdd.String, config.MergeLocalRootDir) {
 		// 打开文件
-		file, err := os.Open(fileMeta.Location)
+		file, err := os.Open(fileMeta.FileAdd.String)
 		if err != nil {
 			c.Status(http.StatusInternalServerError)
 			return
@@ -55,21 +56,22 @@ func DownLoadFile(c *gin.Context) {
 			c.Status(http.StatusInternalServerError)
 			return
 		}
-	} else if strings.HasPrefix(fileMeta.Location, "/ceph") { // 从ceph下载
+	} else if strings.HasPrefix(fileMeta.FileAdd.String, config.CephRootDir) { // 从ceph下载
 		fmt.Println("to download file from ceph...")
 		bucket := ceph.GetCephBucket("userfile")
-		fileBytes, err = bucket.Get(fileMeta.Location)
+		var err error
+		fileBytes, err = bucket.Get(fileMeta.FileAdd.String)
 		if err != nil {
 			fmt.Println(err.Error())
 			c.Status(http.StatusInternalServerError)
 			return
 		}
-	} else if strings.HasPrefix(fileMeta.Location, config.OSSRootDir) { // 从oss下载
+	} else if strings.HasPrefix(fileMeta.FileAdd.String, config.OSSRootDir) { // 从oss下载
 		fmt.Println("to download file from oss...")
 		var err1 error
 		var err2 error
 		var rc io.ReadCloser
-		rc, err1 = oss.Bucket().GetObject(fileMeta.Location)
+		rc, err1 = oss.Bucket().GetObject(fileMeta.FileAdd.String)
 		if err1 == nil {
 			fileBytes, err2 = ioutil.ReadAll(rc)
 			if err2 == nil {
@@ -83,7 +85,7 @@ func DownLoadFile(c *gin.Context) {
 
 	// 写数据到前端页面去
 	c.Header("content-disposition", "attachment; filename=\""+userFileInfo.FileName+"\"")
-	c.FileAttachment(fileMeta.Location, userFileInfo.FileName)
+	c.FileAttachment(fileMeta.FileAdd.String, userFileInfo.FileName)
 	c.Data(http.StatusOK, "application/octet-stream", fileBytes)
 }
 
@@ -95,23 +97,21 @@ func RangeDownload(c *gin.Context) {
 
 	// 获取具体文件信息
 	//fileMeta := meta.GetFileMeta(filehash)
-	fileMeta, err := meta.GetFileMetaDB(filehash)
-	if err != nil {
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-	// TODO: 6. 对下载接口进行修改
-	userFileInfo, err := db.QueryUserFileDB(username, filehash)
-	if err != nil {
+	dbfResp, fErr := dbCli.GetFileInfoTodb(filehash)
+	dbfUserResp, fUserErr := dbCli.QueryUserFileDB(username, filehash)
+
+	if fErr != nil || fUserErr != nil || !dbfResp.Suc || !dbfUserResp.Suc {
 		c.JSON(http.StatusOK, gin.H{
 			"code": common.StatusServerError,
 			"msg":  "server error",
 		})
 		return
 	}
+	// TODO: 6. 对下载接口进行修改   userFileInfo
+	userFileInfo := dbCli.ToTableUserFile(dbfUserResp.Data)
 
 	// TODO: 8. 使用本地目录文件
-	fpath := config.MergeLocalRootDir + fileMeta.FileSha1
+	fpath := config.MergeLocalRootDir + filehash
 	fmt.Println("range-download-fpath: " + fpath)
 
 	// 打开文件
@@ -136,13 +136,15 @@ func DownloadURL(c *gin.Context) {
 	// TODO: 8. 对下载地址进行修改
 	filehash := c.Request.FormValue("filehash")
 	// 从文件表查找信息
-	row, err := db.GetFileInfoTodb(filehash)
+	dbResp, err := dbCli.GetFileInfoTodb(filehash)
 	if err != nil {
 		c.JSON(http.StatusOK, gin.H{
 			"code": common.StatusServerError,
 			"msg":  "server error",
 		})
 	}
+
+	row := dbCli.ToTableFile(dbResp.Data)
 
 	// TODO: 8. 在oss中下载文件，不加上下载不了，因为要跨域请求。已经转移到auth.go文件
 	// 进行判断是oss还是ceph下载地址
