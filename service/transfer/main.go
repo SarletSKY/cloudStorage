@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"encoding/json"
 	"filestore-server-study/config"
-	"filestore-server-study/db"
 	"filestore-server-study/mq"
+	dbCli "filestore-server-study/service/dbproxy/client"
 	"filestore-server-study/store/oss"
 	"log"
 	"os"
@@ -39,8 +39,16 @@ func ProcessTransfer(msg []byte) bool {
 		return false
 	}
 	// 更改用户表的数据
-	_ = db.UpdateFileLocationdb(transData.FileHash, transData.DestLocation)
+	resp, err := dbCli.UpdateFileLocationdb(transData.FileHash, transData.DestLocation)
 
+	if err != nil {
+		log.Println(err.Error())
+		return false
+	}
+	if !resp.Suc {
+		log.Println("更新数据异常，请检查：" + transData.FileHash)
+		return false
+	}
 	return true
 }
 
